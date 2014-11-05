@@ -30,6 +30,14 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 	<?php woo_footer_before(); ?>
 	
+<!-- 		<nav class="social-bottom">
+			<ul>
+				<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
+				<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
+				<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
+			</ul>
+		</nav> -->
+
 		<section id="footer-widgets" class="col-full col-<?php echo $total; ?> fix">
 	
 			<?php $i = 0; while ( $i < $total ) { $i++; ?>
@@ -47,23 +55,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<footer id="footer" class="col-full">
 	
 			<div id="copyright" class="col-left">
-			<?php if( isset( $woo_options['woo_footer_left'] ) && $woo_options['woo_footer_left'] == 'true' ) {
-	
-					echo stripslashes( $woo_options['woo_footer_left_text'] );
-	
-			} else { ?>
-				<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php _e( 'All Rights Reserved.', 'woothemes' ); ?></p>
-			<?php } ?>
+			
 			</div>
 	
 			<div id="credit" class="col-right">
-	        <?php if( isset( $woo_options['woo_footer_right'] ) && $woo_options['woo_footer_right'] == 'true' ) {
-	
-	        	echo stripslashes( $woo_options['woo_footer_right_text'] );
-	
-			} else { ?>
-				<p><?php _e( 'Powered by', 'woothemes' ); ?> <a href="<?php echo esc_url( 'http://www.wordpress.org' ); ?>">WordPress</a>. <?php _e( 'Designed by', 'woothemes' ); ?> <a href="<?php echo ( isset( $woo_options['woo_footer_aff_link'] ) && ! empty( $woo_options['woo_footer_aff_link'] ) ? esc_url( $woo_options['woo_footer_aff_link'] ) : esc_url( 'http://www.woothemes.com' ) ) ?>"><img src="<?php echo esc_url( get_template_directory_uri().'/images/woothemes.png' ); ?>" width="74" height="19" alt="Woo Themes" /></a></p>
-			<?php } ?>
+	       
 			</div>
 	
 		</footer><!-- /#footer  -->

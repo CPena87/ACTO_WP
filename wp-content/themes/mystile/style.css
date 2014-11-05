@@ -304,7 +304,7 @@ body {
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  padding: 0 1.618em;
+  padding: 0;
   background: #fcfcfc;
 }
 img {
@@ -579,11 +579,10 @@ ul.nav li a {
 }
 /* 2.3 Header */
 #header {
-  padding: 1.618em 0 0;
-  margin-bottom: 3.631em;
-  border-bottom: 4px double #e8e4e3;
+  padding: 0 35px;
   clear: both;
   position: relative;
+  margin-top:35px;
 }
 #header #logo {
   float: left;
@@ -3100,3 +3099,60 @@ img.ui-datepicker-trigger {
 .ie8 #top select {
   display: none !important;
 }
+
+/* ESTILOS GENERADOS DE FORMA EXTERNA */
+
+/* HEADER */
+span.amount{color: #fff; padding-right: 35px; font-size: 30px;}
+span.contents{color:#fff; background: #ff8000; padding: 10px; border-radius: 20px;}
+.cart-nav{}
+
+.social-top ul{float:left; margin:25px 0 0;}
+.social-top li{display: block; float:left;}
+.social-top ul li a{text-decoration: none; color:transparent; font-size:0px; margin:0 15px;}
+.social-top li a.facebook{background-image: url("../mystile/images/facebook.png"); height: 20px; width: 10px; display: block; background-position: 0px 0px; background-repeat: no-repeat; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.social-top li a.facebook:hover{background-position:0 -20px; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.social-top li a.twitter{background-image: url("../mystile/images/twitter.png"); height: 20px; width: 25px; display: block; background-position: 0px 0px; background-repeat: no-repeat; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.social-top li a.twitter:hover{background-position:0 -20px; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.social-top li a.pinterest{background-image: url("../mystile/images/pinterest.png"); height: 20px; width: 20px; display: block; background-position: 0px 0px; background-repeat: no-repeat; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.social-top li a.pinterest:hover{background-position:0 -20px; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+
+
+.cart-nav li:hover{background:none;}
+li.cart a span.contens{background:#ff8000 url("../mystyle/images/cart.png"); background-repeat:no-repeat; background-position:0; display:block; border-radius:5px; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+li.cart a span.contents:hover{background:#b85c00; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+
+
+

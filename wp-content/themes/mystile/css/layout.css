@@ -41,7 +41,9 @@ INDEX
     -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
   }
   body {
-    padding: 0 3.631em;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
   }
   table {
     font-size: 1em !important;
@@ -59,6 +61,9 @@ INDEX
     zoom: 1;
     list-style: none;
   }
+ /* ul.nav li:hover{
+    background: #ff8000;
+  }*/
   ul.nav li a {
     display: block;
     padding: .53em 1em;
@@ -113,12 +118,12 @@ INDEX
     color: #9f9693;
   }
   #top ul.nav > li a:hover {
-    background: #f7f7f7;
+    background: #ff8000;
     text-decoration: none;
     color: #6c6360;
   }
   #top ul.nav > li:hover {
-    background: #f7f7f7;
+    background: #ff8000;
   }
   #top ul.nav ul {
     background: #f7f7f7;
@@ -189,8 +194,6 @@ INDEX
     /* LEVEL 3 */
   }
   #header #navigation ul.nav > li a {
-    border: 1px solid #fcfcfc;
-    background: #fcfcfc;
     font-weight: bold;
     position: relative;
     -webkit-border-radius: 0.236em;
@@ -198,18 +201,21 @@ INDEX
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
+    color:#fff;
   }
   #header #navigation ul.nav > li a:hover {
-    border-color: #e8e4e3;
-    background: #fff;
+    border-radius: 0;
+    background-color: #ff8000;
   }
   #header #navigation ul.nav > li:hover a {
     border-color: #e8e4e3;
-    background: #fff;
   }
   #header #navigation ul.nav > li.current-menu-item > a,
   #header #navigation ul.nav > li.current_page_item > a {
-    color: #ff4800;
+    color: #fff;
+    font-weight: bold;
+    background: #ff8000;
+    border-radius: 0;
   }
   #header #navigation ul.nav > li.parent a {
     -webkit-border-bottom-left-radius: 0;
@@ -574,28 +580,29 @@ INDEX
     font-weight: normal;
     content: "S";
   }
-  #header {
+/*  #header {
     padding-bottom: 1.618em;
     padding-top: 3.631em;
-  }
-  #header:after {
+  }*/
+/*  #header:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden;
     clear: both;
-  }
+  }*/
   #header hgroup {
     float: left;
   }
   #header #navigation {
-    float: right;
+    float: left;
     clear: none;
     border: 0;
     background: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
     width: auto;
+    margin-top:20px;
   }
   #main.fullwidth,
   .layout-full #main,
@@ -660,6 +667,12 @@ INDEX
     margin: 0 -3.631em;
     padding: 0 3.631em;
   }
+
+  /* Auxiliares */
+
+  /* Colores */
+
+.bg-head{background-color: rgba(0, 0, 0, 0.8);}
   /*-------------------------------------------------------------------------------------------*/
   /* 7. WOOCOMMERCE */
   /*-------------------------------------------------------------------------------------------*/
