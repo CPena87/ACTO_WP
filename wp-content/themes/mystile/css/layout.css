@@ -202,10 +202,20 @@ INDEX
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     color:#fff;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   #header #navigation ul.nav > li a:hover {
     border-radius: 0;
     background-color: #ff8000;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   #header #navigation ul.nav > li:hover a {
     border-color: #e8e4e3;
@@ -583,8 +593,8 @@ INDEX
 /*  #header {
     padding-bottom: 1.618em;
     padding-top: 3.631em;
-  }*/
-/*  #header:after {
+  }
+  #header:after {
     content: "\0020";
     display: block;
     height: 0;
@@ -663,16 +673,12 @@ INDEX
     margin: 0;
   }
   .footer-wrap {
-    background: #f7f7f7;
-    margin: 0 -3.631em;
-    padding: 0 3.631em;
+    background: #989898;
+    margin: 0 -15px;
+    padding: 0;
+    border-top:10px solid #f3f3f3;
   }
 
-  /* Auxiliares */
-
-  /* Colores */
-
-.bg-head{background-color: rgba(0, 0, 0, 0.8);}
   /*-------------------------------------------------------------------------------------------*/
   /* 7. WOOCOMMERCE */
   /*-------------------------------------------------------------------------------------------*/

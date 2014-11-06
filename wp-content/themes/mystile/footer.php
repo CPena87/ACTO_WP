@@ -15,6 +15,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  */
 	global $woo_options;
 	
+	echo '<div class="container-fluid">';
 	echo '<div class="footer-wrap">';
 
 	$total = 4;
@@ -30,15 +31,15 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 	<?php woo_footer_before(); ?>
 	
-<!-- 		<nav class="social-bottom">
+		<nav class="social-bottom">
 			<ul>
 				<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 				<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
 				<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
 			</ul>
-		</nav> -->
+		</nav>
 
-		<section id="footer-widgets" class="col-full col-<?php echo $total; ?> fix">
+		<section id="footer-widgets" class="col-full col-md-12 <!-- col-<?php //echo $total; ?> fix -->">
 	
 			<?php $i = 0; while ( $i < $total ) { $i++; ?>
 				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
@@ -55,7 +56,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<footer id="footer" class="col-full">
 	
 			<div id="copyright" class="col-left">
-			
+			asd
 			</div>
 	
 			<div id="credit" class="col-right">
@@ -65,6 +66,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		</footer><!-- /#footer  -->
 	
 	</div><!-- / footer-wrap -->
+</div><!-- /container-fluid-->
 
 </div><!-- /#wrapper -->
 <?php wp_footer(); ?>

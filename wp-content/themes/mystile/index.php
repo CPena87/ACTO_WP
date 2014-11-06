@@ -18,7 +18,24 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	
 ?>
     
-    <div id="content" class="col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
+<div class="container-fluid home-bg">
+	<div class="row">
+		<div class="quoteline col-md-6">
+			<div id="take" class="carousel-
+			caption jumbotron">
+				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
+	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
+	        </div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Copiar la apertura de <div class="container"> en cada portada o single del theme -->
+<div class="cont-full container">
+
+    <div id="content" class="row col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
     
     	<?php woo_main_before(); ?>
     
@@ -77,5 +94,13 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
         <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "true" ) get_sidebar(); ?>
 
     </div><!-- /#content -->
+
+    <div class="row">
+    	<div class="col-md-10">
+
+    	</div>
+    </div>
+
+</div>
 		
 <?php get_footer(); ?>

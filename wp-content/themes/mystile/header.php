@@ -37,11 +37,11 @@ global $woo_options, $woocommerce;
 
 <body>
 
-<div class="container-fluid bg-head">
+<div id="wrapper" class="container-fluid ">
 	<?php woo_header_before(); ?>
 	<div class="row">
-		<header id="header" class="col-md-12">
-		    <hgroup class="col-md-1">
+		<header id="header" class="col-md-12 bg-head">
+		    <hgroup class="col-md-logo col-md-offset-1">
 
 		    	 <?php
 				    $logo = esc_url( get_template_directory_uri() . '/images/logo.png' );
@@ -58,7 +58,7 @@ global $woo_options, $woocommerce;
 
 	        <?php woo_nav_before(); ?>
 
-			<nav id="navigation" class="col-md-6 col-sm-offset-1" role="navigation">
+			<nav id="navigation" class="col-md-6" role="navigation">
 
 				<?php
 				if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
@@ -93,7 +93,7 @@ global $woo_options, $woocommerce;
 			</nav>
 			<!-- Fin Navegacion -->
 
-			<nav class="col-md-2 social-top">
+			<nav class="col-md-esp social-top">
 				<ul>
 					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
@@ -103,10 +103,11 @@ global $woo_options, $woocommerce;
 
 		</header><!-- /#header -->
 	</div>
+
+
 </div>
 
-<div class="container">
-
+<!-- Copiar la apertura de <div class="container"> en cada portada o single del theme -->
 
     
 
