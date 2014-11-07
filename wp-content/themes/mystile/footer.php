@@ -31,13 +31,6 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 	<?php woo_footer_before(); ?>
 	
-		<nav class="social-bottom">
-			<ul>
-				<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
-				<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
-				<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
-			</ul>
-		</nav>
 
 		<section id="footer-widgets" class="col-full col-md-12 <!-- col-<?php //echo $total; ?> fix -->">
 	
@@ -54,18 +47,65 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		</section><!-- /#footer-widgets  -->
 	<?php } // End IF Statement ?>
 		<footer id="footer" class="col-full">
+
+		<div class="col-md-4">
+
+				<?php
+				    $logo = esc_url( get_template_directory_uri() . '/images/logo.png' );
+					if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' ) { $logo = $woo_options['woo_logo']; }
+					if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' && is_ssl() ) { $logo = preg_replace("/^http:/", "https:", $woo_options['woo_logo']); }
+				?>
+				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
+				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+				    </a>
+			    <?php } ?>
+		</div>
 	
-			<div id="copyright" class="col-left">
-			asd
-			</div>
+		<div class="col-md-2">
+			<h5 class="footnav-title">Siguenos</h5>
+			<ul class="social-bottom">
+				<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
+				<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
+				<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
+			</ul>
+		</div>
+
+		<nav class="col-md-2">
+			<h5 class="footnav-title">Editorial</h5>
+			<ul class="foot-col">
+				<li><a href="" title="" rel="">Novedades</a></li>
+				<li><a href="" title="" rel="">Catálogo</a></li>
+				<li><a href="" title="" rel="">Autores</a></li>
+				<li><a href="" title="" rel="">Distribuición</a></li>
+				<li><a href="" title="" rel="">Sobre Acto</a></li>
+			</ul>
+		</nav>
+
+		<nav class="col-md-2">
+			<h5 class="footnav-title">Medios</h5>
+			<ul class="foot-col">
+				<li><a href="" title="" rel="">Actividades</a></li>
+				<li><a href="" title="" rel="">Editorial</a></li>
+				<li><a href="" title="" rel="">Prensa</a></li>
+				<li><a href="" title="" rel="">Destacados</a></li>
+			</ul>
+		</nav>
+		
+		<address class="col-md-2">
+			<h5 class="footnav-title">Contacto</h5>
+			<span class="foot-address">
+				<p>Teléfono: <a href="tel:+56945456789" rel="help">(+56)45456789</a></p>
+				
+			</span>
+			<span class="foot-address">
+				<p>Mail: <a href="mailto:contacto@acto.cl" rel="help">contacto@acto.cl</a></p>
+				
+			</span>
+		</address>
 	
-			<div id="credit" class="col-right">
-	       
-			</div>
-	
-		</footer><!-- /#footer  -->
-	
-	</div><!-- / footer-wrap -->
+		</footer><!-- /#footer -->
+	</div> <!-- / footer-wrap-->
 </div><!-- /container-fluid-->
 
 </div><!-- /#wrapper -->

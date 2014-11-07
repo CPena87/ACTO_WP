@@ -590,9 +590,9 @@ INDEX
     font-weight: normal;
     content: "S";
   }
-/*  #header {
-    padding-bottom: 1.618em;
-    padding-top: 3.631em;
+  #header {
+    padding-bottom: 0.618em;
+    padding-top: 1.631em;
   }
   #header:after {
     content: "\0020";
@@ -600,7 +600,7 @@ INDEX
     height: 0;
     overflow: hidden;
     clear: both;
-  }*/
+  }
   #header hgroup {
     float: left;
   }

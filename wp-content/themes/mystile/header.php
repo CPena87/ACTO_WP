@@ -37,11 +37,13 @@ global $woo_options, $woocommerce;
 
 <body>
 
-<div id="wrapper" class="container-fluid ">
+<div id="wrapper" >
 	<?php woo_header_before(); ?>
-	<div class="row">
-		<header id="header" class="col-md-12 bg-head">
-		    <hgroup class="col-md-logo col-md-offset-1">
+	
+		<div class="bg-head">
+			<header id="header" class="col-full">
+		
+		    		<hgroup class="col-md-logo">
 
 		    	 <?php
 				    $logo = esc_url( get_template_directory_uri() . '/images/logo.png' );
@@ -93,16 +95,18 @@ global $woo_options, $woocommerce;
 			</nav>
 			<!-- Fin Navegacion -->
 
-			<nav class="col-md-esp social-top">
+			<nav class="col-md-esp fleft social-top">
 				<ul>
 					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
 					<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
 				</ul>
 			</nav>
+		    	
 
 		</header><!-- /#header -->
-	</div>
+		</div>
+
 
 
 </div>
