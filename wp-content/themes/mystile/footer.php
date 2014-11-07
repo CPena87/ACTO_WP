@@ -74,32 +74,32 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Editorial</h5>
 			<ul class="foot-col">
-				<li><a href="" title="" rel="">Novedades</a></li>
-				<li><a href="" title="" rel="">Catálogo</a></li>
-				<li><a href="" title="" rel="">Autores</a></li>
-				<li><a href="" title="" rel="">Distribuición</a></li>
-				<li><a href="" title="" rel="">Sobre Acto</a></li>
+				<li><a href="/" title="Novedades" rel="nofollow">Novedades</a></li>
+				<li><a href="/" title="Catálogo" rel="nofollow">Catálogo</a></li>
+				<li><a href="/" title="Autores" rel="nofollow">Autores</a></li>
+				<li><a href="/" title="Distribuición" rel="nofollow">Distribuición</a></li>
+				<li><a href="/" title="Sobre Acto" rel="faq">Sobre Acto</a></li>
 			</ul>
 		</nav>
 
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Medios</h5>
 			<ul class="foot-col">
-				<li><a href="" title="" rel="">Actividades</a></li>
-				<li><a href="" title="" rel="">Editorial</a></li>
-				<li><a href="" title="" rel="">Prensa</a></li>
-				<li><a href="" title="" rel="">Destacados</a></li>
+				<li><a href="/" title="Actividades" rel="nofollow">Actividades</a></li>
+				<li><a href="/" title="Editorial" rel="nofollow">Editorial</a></li>
+				<li><a href="/" title="Prensa" rel="nofollow">Prensa</a></li>
+				<li><a href="/" title="Destacados" rel="nofollow">Destacados</a></li>
 			</ul>
 		</nav>
 		
 		<address class="col-md-2">
 			<h5 class="footnav-title">Contacto</h5>
 			<span class="foot-address">
-				<p>Teléfono: <a href="tel:+56945456789" rel="help">(+56)45456789</a></p>
+				<p>Teléfono: <a href="tel:+56945456789" title="Comunicate con nosotrs" rel="help">(+56)45456789</a></p>
 				
 			</span>
 			<span class="foot-address">
-				<p>Mail: <a href="mailto:contacto@acto.cl" rel="help">contacto@acto.cl</a></p>
+				<p>Mail: <a href="mailto:contacto@acto.cl" title="Escribenos" rel="help">contacto@acto.cl</a></p>
 				
 			</span>
 		</address>

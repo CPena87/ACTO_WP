@@ -3263,7 +3263,16 @@ transition: all 0.5s ease-in-out;}
 .foot-col li{color:#ffffff; list-style:none;}
 .foot-address{color: #fff; text-decoration: none;}
 .foot-address p{margin-bottom: 15px; line-height: 140%;}
-.foot-address a{color:#fff; text-decoration: none;}
+.foot-address a{color:#fff; text-decoration: none;-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.foot-address a:hover{color:#ff8000;-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
 
 /* Botonera Redes Sociales*/
 .social-bottom ul{float:left; margin:25px 0 0;}

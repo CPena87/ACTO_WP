@@ -33,9 +33,9 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 </div>
 
 <!-- Copiar la apertura de <div class="container"> en cada portada o single del theme -->
-<div class="cont-full container">
+<div id="content" class="cont-full">
 
-    <div id="content" class="row col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
+    <div id="content" class="container col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
     
     	<?php woo_main_before(); ?>
     
@@ -95,9 +95,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     </div><!-- /#content -->
 
-    <div class="row">
-    	<div class="col-md-10">
-
+    <div class="container">
+    	<div class="row">
+    		 <div class="col-md-9">
+    		 	<div class="col-md-3">
+    			asd
+	    		</div>
+	    		<div class="col-md-6">
+	    			asd
+	    		</div>
+	    		<div class="col-md-9">
+	    			asd
+	    		</div>
+    		 </div>
+    		 <div class="col-md-3">
+    		 	<h3>Reseñas</h3>
+    		 </div>
     	</div>
     </div>
 
