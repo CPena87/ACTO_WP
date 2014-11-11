@@ -95,22 +95,52 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     </div><!-- /#content -->
 
-    <div class="container">
+    <div class="container mtop30">
     	<div class="row">
-    		 <div class="col-md-9">
-    		 	<div class="col-md-3">
-    			asd
-	    		</div>
-	    		<div class="col-md-6">
-	    			asd
-	    		</div>
-	    		<div class="col-md-9">
-	    			asd
-	    		</div>
+    		 <div class="col-md-9 sortcontent mbottom30">
+    		 	<h2>Noticias</h2>
+    		 	<figure class="col-md-4 relevance">
+    		 		<img src="<?php bloginfo('template_directory'); ?>/images/relevance-1.jpg" alt="">
+    				<figcaption>
+    					<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
+    					<p>I used to think the world was this great place where everybody.</p>
+    				</figcaption>
+	    		</figure>
+	    		<figure class="col-md-8 relevance">
+	    			<img src="<?php bloginfo('template_directory'); ?>/images/relevance-2.jpg" alt="">
+	    			<figcaption>
+						<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
+    					<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. </p>
+    				</figcaption>
+	    		</figure>
+	    		<figure class="col-md-12 relevance">
+	    			<img src="<?php bloginfo('template_directory'); ?>/images/relevance-3.jpg" alt="">
+    				<figcaption>
+    					<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
+    					<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke.</p>
+    				</figcaption>
+   	    		</figure>
+   	    		<a class="go-cta news" href="/" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
     		 </div>
-    		 <div class="col-md-3">
-    		 	<h3>Reseñas</h3>
-    		 </div>
+    		 <aside class="col-md-3 sidecall pleft0">
+    		 	<h2>Reseñas</h2>
+    		 	<article class="quote">
+    		 		<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+    		 		<p>I used to think the world was this great place where everybody.</p>
+    		 		<a class="namerev" href="">Ruperthuz Honorato</a>
+    		 		<span class="tagrev"><a href="">Debates Contemporáneos</a></span>
+    		 	</article>
+    		 	<article class="sales mtop55">
+    		 		<h4>Venta y Distribuición</h4>
+    		 		<p class="brdbttm">I used to think the world was this great place where everybody.</p>
+    		 		<a href="">Lorem Ipsum</a>
+    		 		<p>I used to think the world was this great place where everybody.</p>
+    		 		<a href="">Lorem Ipsum</a>
+    		 		<p>I used to think the world was this great place where everybody.</p>
+    		 		<a href="">Lorem Ipsum</a>
+    		 		<p>I used to think the world was this great place where everybody.</p>
+    		 	</article>
+    		 </aside>
     	</div>
     </div>
 

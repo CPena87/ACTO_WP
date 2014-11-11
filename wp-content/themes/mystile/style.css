@@ -3240,9 +3240,36 @@ transition: all 0.5s ease-in-out;}
 -ms-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
+/* Botones de enlace externo */
+.go-cta{background: #ff8000; color: #fff; padding: 5px 5px 10px 60px;
+font-size: 20px !important;
+font-weight: bold;
+font-family: "Open Sans";
+margin: 15px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out; }
+.go-cta:hover{background:#b85c00; color:#fff; padding: 5px 5px 10px 60px;
+font-size: 20px !important;
+font-weight: bold;
+font-family: "Open Sans";
+margin: 15px;-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+/* Iconos */
+.news, .news:hover
+{background-image: url("images/news-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
 /* Auxiliares */
 .cta-center{margin: 0 auto; display: table; float: none; text-align: center; padding: 2% 30px;}
 .fleft{float:left;}
+.mtop30{margin-top:30px;}
+.mtop55{margin-top:55px;}
+.mbottom30{margin-bottom:30px;}
+.pleft0{padding-left: 0;}
 
 /* Colores */
 
@@ -3312,6 +3339,56 @@ transition: all 0.5s ease-in-out;}
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
 /* Fin botonera redes sociales*/
+
+/* Estilos para columnas por sorteo */
+.sortcontent h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 15px 20px;}
+figure.relevance{height: 260px; margin-bottom: 10px;}
+.relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; bottom:80px;}
+.relevance h3{padding-top: 10px; margin-bottom: 5px;}
+.relevance h3 a{padding: 10px 0 0 10px; color: #fff; font-size: 20px; text-decoration:none;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.relevance h3 a:hover{color:#ff8000; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.relevance p{color: #fff; padding: 0 10px 5px; font-size: 12px; margin-bottom: 0;}
+
+/* Estilos para sidebar llamado a editores */
+.sidecall h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 0 20px; }
+/* Quote desde reseña */
+.quote, .sales{border-top: 10px solid #ff8000; padding-top: 15px; margin-bottom:25px;}
+.quote img{margin:0 auto; display: block;}
+.quote p{font-size: 12px; font-family: "Open Sans"; color: #ff8000; text-align:center; margin:10px 0 0;}
+a.reviewer{text-align: center; color:#ff8000;}
+a.namerev{text-align: center; color:#ff8000;display: block; font-weight: bold; font-size: 22px;}
+span.tagrev{clear: both; display: table; text-align: center; padding: 5px 5px; background: #ff8000; margin: 5px auto 0;}
+.tagrev a{color:#fff; font-size: 12px;}
+/* Llamado a Venta y Distribición */
+.sales h4{color:#ff8000; text-align: left; text-transform: uppercase; font-size: 18px; font-family: "Open Sans"; font-weight: bold; margin-bottom:5px;}
+p.brdbttm{font-size: 14px !important; border-bottom: 1px solid #777777; padding-bottom: 10px; margin-bottom: 5px !important;} 
+.sales p{font-size: 12px; line-height: 140%; color: #777777; text-align: left; margin-bottom: 10px;}
+.sales a{color:#ff8000; font-size:14px; font-weight: bold;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
