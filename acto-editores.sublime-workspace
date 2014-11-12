@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"launch",
+				"launchdata"
+			],
+			[
 				"font",
-				"font-weight"
+				"font-size"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"template",
+				"template_directory"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"backgroun",
+				"background-repeat"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"bol",
+				"bold"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"foot",
+				"foot-address"
+			],
+			[
+				"pad",
+				"padding-left"
 			],
 			[
 				"font-",
 				"font-variant"
-			],
-			[
-				"background",
-				"background-image"
 			],
 			[
 				"url",
@@ -24,16 +68,8 @@
 				"strong	Tag"
 			],
 			[
-				"h",
-				"h3	Tag"
-			],
-			[
 				"conten",
 				"contenedor-footer"
-			],
-			[
-				"padding",
-				"padding-top"
 			],
 			[
 				"paddin",
@@ -76,10 +112,6 @@
 				"panel-body"
 			],
 			[
-				"margi",
-				"margin-left"
-			],
-			[
 				"fon",
 				"font-size"
 			],
@@ -96,20 +128,12 @@
 				"background-color"
 			],
 			[
-				"pad",
-				"padding-bottom"
-			],
-			[
 				"te",
 				"text-align"
 			],
 			[
 				"i",
 				"italic"
-			],
-			[
-				"bol",
-				"bolder"
 			],
 			[
 				"f",
@@ -192,14 +216,6 @@
 				"transparent"
 			],
 			[
-				"bor",
-				"border-top"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
 				"ma",
 				"margin"
 			],
@@ -214,10 +230,6 @@
 			[
 				"wid",
 				"width"
-			],
-			[
-				"backgroun",
-				"background-color"
 			]
 		]
 	},
@@ -227,7 +239,7 @@
 			"file": "wp-content/themes/mystile/index.php",
 			"settings":
 			{
-				"buffer_size": 3094,
+				"buffer_size": 10363,
 				"line_ending": "Windows"
 			}
 		},
@@ -235,7 +247,7 @@
 			"file": "wp-content/themes/mystile/header.php",
 			"settings":
 			{
-				"buffer_size": 4603,
+				"buffer_size": 4583,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,15 +255,23 @@
 			"file": "wp-content/themes/mystile/footer.php",
 			"settings":
 			{
-				"buffer_size": 2007,
+				"buffer_size": 3991,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n// File Security Check\nif ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {\n    die ( 'You do not have sufficient permissions to access this page!' );\n}\n?><?php\n/**\n * Index Template\n *\n * Here we setup all logic and XHTML that is required for the index template, used as both the homepage\n * and as a fallback template, if a more appropriate template file doesn't exist for a specific context.\n *\n * @package WooFramework\n * @subpackage Template\n */\n	get_header();\n	global $woo_options;\n	\n?>\n\n    \n    <div id=\"content\" class=\"col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == \"true\" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == \"false\" ) echo 'no-sidebar'; ?>\">\n    \n    	<?php woo_main_before(); ?>\n    \n		<section id=\"main\" class=\"col-left\">  \n		\n		<?php mystile_homepage_content(); ?>		\n		\n		<?php woo_loop_before(); ?>\n		\n		<?php if ( $woo_options[ 'woo_homepage_blog' ] == \"true\" ) { \n			$postsperpage = $woo_options['woo_homepage_blog_perpage'];\n		?>\n		\n		<?php\n			\n			$the_query = new WP_Query( array( 'posts_per_page' => $postsperpage ) );\n			\n        	if ( have_posts() ) : $count = 0;\n        ?>\n        \n			<?php /* Start the Loop */ ?>\n			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $count++; ?>\n\n				<?php\n					/* Include the Post-Format-specific template for the content.\n					 * If you want to overload this in a child theme then include a file\n					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.\n					 */\n					get_template_part( 'content', get_post_format() );\n				?>\n\n			<?php \n				endwhile; \n				// Reset Post Data\n				wp_reset_postdata();\n			?>\n			\n			\n\n		<?php else : ?>\n        \n            <article <?php post_class(); ?>>\n                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>\n            </article><!-- /.post -->\n        \n        <?php endif; ?>\n        \n        <?php } // End query to see if the blog should be displayed ?>\n        \n        <?php woo_loop_after(); ?>\n		                \n		</section><!-- /#main -->\n		\n		<?php woo_main_after(); ?>\n\n        <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == \"true\" ) get_sidebar(); ?>\n\n    </div><!-- /#content -->\n		\n<?php get_footer(); ?>",
+			"settings":
+			{
+				"buffer_size": 2368,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 80390,
+				"buffer_size": 89384,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,7 +279,7 @@
 			"file": "wp-content/themes/mystile/css/bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 120958,
+				"buffer_size": 121071,
 				"line_ending": "Unix"
 			}
 		},
@@ -275,7 +295,7 @@
 			"file": "wp-content/themes/mystile/css/layout.css",
 			"settings":
 			{
-				"buffer_size": 23156,
+				"buffer_size": 23152,
 				"line_ending": "Unix"
 			}
 		}
@@ -449,6 +469,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aux",
+			"wrap",
+			"header-wrap",
+			"col-md-esp",
 			"item",
 			"col-md",
 			"amount",
@@ -572,11 +596,7 @@
 			".mainNav ul li a",
 			"ventajaVertical",
 			".boxSoftware",
-			"        <?",
-			".ventajaBox",
-			"h4",
-			"ventajaUNo",
-			"ventajaBox"
+			"        <?"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -594,7 +614,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -602,15 +622,15 @@
 					"file": "wp-content/themes/mystile/index.php",
 					"settings":
 					{
-						"buffer_size": 3094,
+						"buffer_size": 10363,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3064,
-								3064
+								9590,
+								9590
 							]
 						],
 						"settings":
@@ -619,7 +639,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 77.0,
+						"translation.y": 4820.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -629,25 +649,25 @@
 					"file": "wp-content/themes/mystile/header.php",
 					"settings":
 					{
-						"buffer_size": 4603,
+						"buffer_size": 4583,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1519,
-								1519
+								1577,
+								1577
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 314.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -657,15 +677,15 @@
 					"file": "wp-content/themes/mystile/footer.php",
 					"settings":
 					{
-						"buffer_size": 2007,
+						"buffer_size": 3991,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1210,
-								894
+								3641,
+								3641
 							]
 						],
 						"settings":
@@ -675,7 +695,32 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 176.0,
+						"translation.y": 284.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 2368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 671.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -683,23 +728,23 @@
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "wp-content/themes/mystile/style.css",
 					"settings":
 					{
-						"buffer_size": 80390,
+						"buffer_size": 89384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15978,
-								15978
+								89363,
+								89363
 							]
 						],
 						"settings":
@@ -710,42 +755,42 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11274.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/mystile/css/bootstrap.css",
-					"settings":
-					{
-						"buffer_size": 120958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								80259,
-								80259
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 94852.0,
+						"translation.y": 59645.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
+					"file": "wp-content/themes/mystile/css/bootstrap.css",
+					"settings":
+					{
+						"buffer_size": 121071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80204,
+								79258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 66147.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "wp-content/themes/mystile/css/bootstrap.min.css",
 					"settings":
 					{
@@ -756,34 +801,35 @@
 						"selection":
 						[
 							[
-								57837,
-								57837
+								18936,
+								18936
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"word_wrap": true
 						},
-						"translation.x": 459126.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 4042.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "wp-content/themes/mystile/css/layout.css",
 					"settings":
 					{
-						"buffer_size": 23156,
+						"buffer_size": 23152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14988,
-								14988
+								13401,
+								13401
 							]
 						],
 						"settings":
@@ -794,7 +840,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11173.0,
+						"translation.y": 9788.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

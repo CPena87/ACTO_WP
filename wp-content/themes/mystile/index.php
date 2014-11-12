@@ -95,7 +95,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     </div><!-- /#content -->
 
-    <div class="container mtop30">
+    <section class="container mtop30">
     	<div class="row">
     		 <div class="col-md-9 sortcontent mbottom30">
     		 	<h2>Noticias</h2>
@@ -142,8 +142,134 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     		 	</article>
     		 </aside>
     	</div>
-    </div>
+    </section>
 
 </div>
+
+<!-- Corresponde a los destacados del catálogo -->
+<section class="cont-full light-grey">
+	<div class="container">
+    	<div class="row">
+    		<div class="col-md-12 outstanding mtop30 mbottom30">
+
+    			<h2>Destacados</h2>
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10">
+		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior">
+		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
+		    					<p>Umberto Eco</p>
+		    				</header>
+		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
+		    				<footer class="inferior">
+			    				<span class="price">$25000</span>
+			    				<span class="oferta">$19500</span>
+		    				</footer>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
+
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10">
+		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior">
+		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
+		    					<p>Umberto Eco</p>
+		    				</header>
+		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
+		    				<section class="inferior">
+			    				<span class="price">$25000</span>
+			    				<span class="oferta">$19500</span>
+		    				</section>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
+
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10">
+		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior">
+		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
+		    					<p>Umberto Eco</p>
+		    				</header>
+		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
+		    				<section class="inferior">
+			    				<span class="price">$25000</span>
+			    				<span class="oferta">$19500</span>
+		    				</section>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
+
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10">
+		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior">
+		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
+		    					<p>Umberto Eco</p>
+		    					<p>Andrea Nuñez</p>
+		    					<p>Rodrigo Sotomayor</p>
+		    					<p>Joaquín Jara</p>
+		    				</header>
+		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
+		    				<section class="inferior">
+			    				<span class="price">$25000</span>
+			    				<span class="oferta">$19500</span>
+		    				</section>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
+
+    		</div>
+    	</div>
+    </div>
+</section>
+<!-- Fin destacados del catálogo -->
+
+<!-- Variacion de subcontenidos -->
+<section class="cont-full">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Lanzamientos -->
+				<div class="col-md-4 mtop30 mbottom30">
+					<h2>Lanzamientos</h2>
+					<figure class="launch">
+						<img  src="<?php bloginfo('template_directory'); ?>/images/book-launch.jpg" alt="">
+						<figcaption class="launchdata light-grey">
+							<header>
+								<h4>Anna Karenina</h4>
+								<span>Leo Tolstoi</span>
+							</header>
+							<p>Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.</p>
+							<a href="/" title="Ver Catálogo" rel="nofollow">Ver Catálogo</a>
+						</figcaption>
+					</figure>
+				</div>
+				<!-- Fin Lanzamientos -->
+
+				<!-- Comentarios -->
+				<div class="col-md-4 mtop30 mbottom30">
+					<h2>Comentarios</h2>
+				</div>
+				<!-- Fin Comentarios -->
+
+				<!-- Newsletter -->
+				<div class="col-md-4 mtop30 mbottom30">
+					<h2>Newsletter</h2>
+				</div>
+				<!-- Fin newsletter -->
+			</div>	
+		</div>
+	</div>
+</section>
 		
 <?php get_footer(); ?>
