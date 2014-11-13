@@ -198,6 +198,8 @@ input[type="submit"],
 input[type="image"],
 button {
   cursor: pointer;
+  float: left;
+  clear: both;
 }
 /* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img {
@@ -2876,6 +2878,7 @@ input[type=email] {
   -webkit-appearance: none;
   -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.03), inset 0 1px 2px #d8d4d3, 0 1px #ffffff;
   box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.03), inset 0 1px 2px #d8d4d3, 0 1px #ffffff;
+  float: left; clear: both;
 }
 input[type=text]:focus,
 input.input-text:focus,
@@ -3408,9 +3411,11 @@ a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; ba
 .launchdata p{font-size: 12px; line-height: 150%; margin-top: 5px; margin-bottom: 20px; }
 .launchdata a{font-size: 14px; color:#ff8000; text-decoration: underline;}
 
+.subs{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 35px; text-transform: uppercase; padding-left: 10px; margin: 10px 0px 15px;}
 
-
-
-
+.brdbottom{border-bottom:1px solid #313131; margin-bottom: 15px; padding-bottom: 5px;}
+.brdbottom a{font-size: 14px; color: #ff8000; font-weight: bold; }
+.comments{font-family: "Bree Serif", sans-serif; font-weight: 100; font-size: 15px; margin-bottom: 5px; line-height:150%;}
+.send-news{}
 
 

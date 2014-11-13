@@ -241,7 +241,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 			<div class="col-md-12">
 				<!-- Lanzamientos -->
 				<div class="col-md-4 mtop30 mbottom30">
-					<h2>Lanzamientos</h2>
+					<h2 class="subs">Lanzamientos</h2>
 					<figure class="launch">
 						<img  src="<?php bloginfo('template_directory'); ?>/images/book-launch.jpg" alt="">
 						<figcaption class="launchdata light-grey">
@@ -258,13 +258,30 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
 				<!-- Comentarios -->
 				<div class="col-md-4 mtop30 mbottom30">
-					<h2>Comentarios</h2>
+					<h2 class="subs">Comentarios</h2>
+					<article class="brdbottom">
+						<p class="comments">“And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers.”</p>
+					<a href="">Por Umberto Eco</a>
+					</article>
+					<article class="brdbottom">
+						<p class="comments">“And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers.”</p>
+					<a href="">Por Umberto Eco</a>
+					</article>
 				</div>
 				<!-- Fin Comentarios -->
 
 				<!-- Newsletter -->
 				<div class="col-md-4 mtop30 mbottom30">
-					<h2>Newsletter</h2>
+					<h2 class="subs">Newsletter</h2>
+					<form class="send-news">
+						<h4>Suscribete al newsletter</h4>
+						<p>I used to think the world was this great place where everybody.</p>
+						<label for="contacto-nombre">Nombre</label>
+						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre">
+						<label for="contacto-nombre">Email</label>
+						<input type="email" id="contacto-nombre" placeholder="Ingresa tu Nombre">
+						<input type="submit" placeholder="Enviar">
+					</form>
 				</div>
 				<!-- Fin newsletter -->
 			</div>	
