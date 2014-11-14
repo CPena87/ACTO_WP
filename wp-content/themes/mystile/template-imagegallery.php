@@ -38,7 +38,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		            		the_content();
 		            	}
 		            ?>
-               		<?php query_posts( 'showposts=60&post_type=post' ); ?>
+               		<?php query_posts( 'showposts=120&post_type=post' ); ?>
                 	<?php
                 		if ( have_posts() ) {
                 			while ( have_posts() ) { the_post();

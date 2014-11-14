@@ -44,8 +44,11 @@ foreach ( $includes as $i ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
-
-
+add_post_type_support('page', 'excerpt');
+if ( function_exists('add_theme_support') ) {
+add_theme_support('post-thumbnails');
+add_image_size('encabezado', 172, 134, true );
+};
 
 
 

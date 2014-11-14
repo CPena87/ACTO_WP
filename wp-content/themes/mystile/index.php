@@ -33,65 +33,9 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 </div>
 
 <!-- Copiar la apertura de <div class="container"> en cada portada o single del theme -->
-<div id="content" class="cont-full">
+<div id="content" class="cont-full white">
 
     <div id="content" class="container col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
-    
-    	<?php woo_main_before(); ?>
-    
-		<section id="main" class="col-left">  
-		
-		<?php mystile_homepage_content(); ?>		
-		
-		<?php woo_loop_before(); ?>
-		
-		<?php if ( $woo_options[ 'woo_homepage_blog' ] == "true" ) { 
-			$postsperpage = $woo_options['woo_homepage_blog_perpage'];
-		?>
-		
-		<?php
-			
-			$the_query = new WP_Query( array( 'posts_per_page' => $postsperpage ) );
-			
-        	if ( have_posts() ) : $count = 0;
-        ?>
-        
-			<?php /* Start the Loop */ ?>
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $count++; ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php 
-				endwhile; 
-				// Reset Post Data
-				wp_reset_postdata();
-			?>
-			
-			
-
-		<?php else : ?>
-        
-            <article <?php post_class(); ?>>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-            </article><!-- /.post -->
-        
-        <?php endif; ?>
-        
-        <?php } // End query to see if the blog should be displayed ?>
-        
-        <?php woo_loop_after(); ?>
-		                
-		</section><!-- /#main -->
-		
-		<?php woo_main_after(); ?>
-
-        <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "true" ) get_sidebar(); ?>
 
     </div><!-- /#content -->
 
@@ -227,7 +171,61 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    			</figcaption>
 		    		</figure>
 		    		<!-- Fin datos de libro -->
+<?php woo_main_before(); ?>
+    
+		<section id="main" class="col-left">  
+		
+		<?php mystile_homepage_content(); ?>		
+		
+		<?php woo_loop_before(); ?>
+		
+		<?php if ( $woo_options[ 'woo_homepage_blog' ] == "true" ) { 
+			$postsperpage = $woo_options['woo_homepage_blog_perpage'];
+		?>
+		
+		<?php
+			
+			$the_query = new WP_Query( array( 'posts_per_page' => $postsperpage ) );
+			
+        	if ( have_posts() ) : $count = 0;
+        ?>
+        
+			<?php /* Start the Loop */ ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $count++; ?>
 
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+				?>
+
+			<?php 
+				endwhile; 
+				// Reset Post Data
+				wp_reset_postdata();
+			?>
+			
+			
+
+		<?php else : ?>
+        
+            <article <?php post_class(); ?>>
+                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+            </article><!-- /.post -->
+        
+        <?php endif; ?>
+        
+        <?php } // End query to see if the blog should be displayed ?>
+        
+        <?php woo_loop_after(); ?>
+		                
+		</section><!-- /#main -->
+		
+		<?php woo_main_after(); ?>
+
+        <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "true" ) get_sidebar(); ?>
     		</div>
     	</div>
     </div>
@@ -235,7 +233,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 <!-- Fin destacados del catálogo -->
 
 <!-- Variacion de subcontenidos -->
-<section class="cont-full">
+<section class="cont-full white">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -276,11 +274,14 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 					<form class="send-news">
 						<h4>Suscribete al newsletter</h4>
 						<p>I used to think the world was this great place where everybody.</p>
+					
+
 						<label for="contacto-nombre">Nombre</label>
-						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre">
+						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre" />
 						<label for="contacto-nombre">Email</label>
-						<input type="email" id="contacto-nombre" placeholder="Ingresa tu Nombre">
-						<input type="submit" placeholder="Enviar">
+						<input type="email" id="contacto-nombre" placeholder="Ingresa tu Nombre" />
+						<input type="submit" placeholder="Enviar" />
+
 					</form>
 				</div>
 				<!-- Fin newsletter -->

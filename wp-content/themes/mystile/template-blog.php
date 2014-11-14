@@ -31,6 +31,19 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
+
+    <div class="container-fluid novedad-bg">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1">
+                <div id="take" class="carousel-
+                caption jumbotron fleft">
+                    <h1>Prensa</h1>
+                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- #content Starts -->
     <div id="content" class="col-full">
     
@@ -67,7 +80,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         	} else {
         ?>
             <article <?php post_class(); ?>>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+                <p><?php _e( 'Lo sentimos, página en construcción.', 'woothemes' ); ?></p>
             </article><!-- /.post -->
         <?php } // End IF Statement ?> 
         
