@@ -39,13 +39,13 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				<p class="date fright">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
 			</header>
 		  <?php 
-		    	if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { 
+		    	if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'novedades' ) { 
 		    		woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
 		    	} 
 		    ?>
 	
 			<section class="entry">
-			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
 			<?php woo_post_meta(); ?>
 			</section>
 	

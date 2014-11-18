@@ -1,4 +1,3 @@
-<?php var_dump($posts) ?>
 <?php
 // File Security Check
 if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
@@ -7,7 +6,19 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php get_header(); ?>
 
+<div class="container-fluid home-bg">
+	<div class="row">
+		<div class="quoteline col-md-6">
+			<div id="take" class="carousel-
+			caption jumbotron">
+				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
+	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
+	        </div>
 
+		</div>
+	</div>
+</div>
     
     <div id="content" class="col-full">
     	
@@ -67,7 +78,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					 * If you want to overload this in a child theme then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content-archive', get_post_format() );
+					get_template_part( 'content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>

@@ -5,7 +5,19 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 }
 ?>
 <?php get_header(); ?>
-    
+<div class="container-fluid home-bg">
+	<div class="row">
+		<div class="quoteline col-md-6">
+			<div id="take" class="carousel-
+			caption jumbotron">
+				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
+	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
+	        </div>
+
+		</div>
+	</div>
+</div>    
     <div id="content" class="col-full">
     	
     	<?php woo_main_before(); ?>

@@ -51,7 +51,10 @@ add_image_size('encabezado', 870, 200, true );
 // add_image_size('libros',);
 };
 
-//Post type register
+
+
+
+    //Post type register
 
 add_action('init', 'novedades_register');
 function novedades_register() {
@@ -107,6 +110,9 @@ function resenas_register() {
     register_post_type('resenas', $args);
     flush_rewrite_rules();
 }
+
+register_taxonomy('autores', array('product'), array("hierarchical" => true, "label" => "Autores", "singular_label" => "Autor", "rewrite" => 'hierarchical'));
+
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
 /*-----------------------------------------------------------------------------------*/

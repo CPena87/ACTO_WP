@@ -499,7 +499,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"<open folders>"
@@ -763,7 +763,8 @@
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 840.0,
@@ -970,7 +971,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11024.0,
+						"translation.y": 11092.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

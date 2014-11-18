@@ -92,7 +92,7 @@ if (!function_exists( 'woo_post_meta')) {
 <aside class="post-meta">
 	<ul>
 		<li class="post-category">
-			Categorías <?php the_category( ', ') ?>
+			<?php the_category( ', ') ?>
 		</li>
 		<?php the_tags( '<li class="tags">', ', ', '</li>' ); ?>
 	</ul>
