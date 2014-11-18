@@ -37,7 +37,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <div class="col-md-6">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
-                    <h1>Actividades</h1>
+                    <h1>Novedades</h1>
                     <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 

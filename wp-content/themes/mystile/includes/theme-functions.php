@@ -66,8 +66,8 @@ if (!function_exists( 'woo_pagenav')) {
 			if ( get_next_posts_link() || get_previous_posts_link() ) {
 		?>
             <nav class="nav-entries fix">
-                <?php next_posts_link( '<span class="nav-prev fl">'. __( '<span class="meta-nav">&larr;</span> Older posts', 'woothemes' ) . '</span>' ); ?>
-                <?php previous_posts_link( '<span class="nav-next fr">'. __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'woothemes' ) . '</span>' ); ?>
+                <?php next_posts_link( '<span class="nav-prev fl">'. __( '<span class="meta-nav"></span> Older posts', 'woothemes' ) . '</span>' ); ?>
+                <?php previous_posts_link( '<span class="nav-next fr">'. __( 'Newer posts <span class="meta-nav"></span>', 'woothemes' ) . '</span>' ); ?>
             </nav>
 		<?php
 			}
@@ -92,13 +92,9 @@ if (!function_exists( 'woo_post_meta')) {
 <aside class="post-meta">
 	<ul>
 		<li class="post-category">
-			<?php the_category( ', ') ?>
+			Categorías <?php the_category( ', ') ?>
 		</li>
 		<?php the_tags( '<li class="tags">', ', ', '</li>' ); ?>
-		<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'excerpt' ) { ?>
-			<li class="comments"><?php comments_popup_link( __( 'Leave a comment', 'woothemes' ), __( '1 Comment', 'woothemes' ), __( '% Comments', 'woothemes' ) ); ?></li>
-		<?php } ?>
-		<?php edit_post_link( __( 'Edit', 'woothemes' ), '<li class="edit">', '</li>' ); ?>
 	</ul>
 </aside>
 <?php

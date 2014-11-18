@@ -330,7 +330,7 @@ a {
   font-weight: bold;
 }
 a:hover {
-  color: #ff4800;
+  color: #b85c00;
   text-decoration: none;
 }
 .clear {
@@ -762,8 +762,9 @@ ul.nav li a {
   font-weight: bold;
 }
 #breadcrumbs .sep {
-  color: #e3dad7;
-  padding: 0 .618em;
+  color: #ff8000;
+  padding: 0 2px;
+  font-weight: bold;
 }
 /*-------------------------------------------------------------------------------------------*/
 /* 3. POSTS */
@@ -799,7 +800,7 @@ ul.nav li a {
 }
 .post,
 .type-page {
-  margin: 0 0 3.631em;
+  margin: 0 0 15px;
   /* 3.1 Images */
 }
 .post header:after,
@@ -813,22 +814,25 @@ ul.nav li a {
 .post .post-meta,
 .type-page .post-meta {
   margin: 0 0 1.618em 0;
-  border-bottom: 4px double #e8e4e3;
+  border-bottom: 1px solid #e8e4e3;
 }
 .post .post-meta li,
 .type-page .post-meta li {
   display: inline;
   font-size: .857em;
   text-transform: uppercase;
-  margin-right: 1em;
+  margin-right: 5px;
 }
 .post .post-meta li a,
 .type-page .post-meta li a {
-  color: #c1b8b5;
+  color: #fff;
+  background: #ff8000;
+  padding: 5px;
 }
 .post .post-meta li a:hover,
 .type-page .post-meta li a:hover {
-  color: #ff4800;
+  color: #fff;
+  background: #b85c00;
 }
 /*.post .post-meta li.post-category:before,
 .type-page .post-meta li.post-category:before,
@@ -954,12 +958,17 @@ border-radius: 0;
 }
 .post header h1 {
   margin-bottom: 25px;
+  color: #575757;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  text-transform: uppercase;
 }
 /* 3.2 Pagination / WP-Pagenavi / Woo-Pagination */
 .nav-entries,
 .wp-pagenavi,
 .woo-pagination {
-  padding: 1em 1.618em;
+  padding: 1em 0 3em;
 }
 .nav-entries a {
   display: block;
@@ -973,21 +982,27 @@ border-radius: 0;
 .woo-pagination .page-numbers {
   display: inline-block;
   text-decoration: none;
-  padding: .382em .53em;
+  padding: .382em .857em;
   font-weight: bold;
   -webkit-border-radius: 100%;
   border-radius: 100%;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  background: #ff8000;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .woo-pagination .page-numbers:hover {
-  background: #fff;
+  background: #b85c00;
 }
 .woo-pagination .page-numbers.current {
-  background: #ff4800;
+  background: #b85c00;
   color: #fff;
   padding: .382em .857em;
+  border-radius: 0;
 }
 /* 3.3 Single Post Author */
 #post-author {
@@ -3107,15 +3122,16 @@ img.ui-datepicker-trigger {
 /* HEADER */
 
 .bg-head{background-color: rgba(0, 0, 0, 0.5); background-size: cover !important; width: 100% !important; position: absolute; right: 0;
-left: 0;}
-span.amount{color: #fff; padding-right: 10px; font-size: 30px; /*font-family: 'ambleregular';*/}
-span.contents{color:#fff; background: #ff8000; padding: 10px; border-radius: 20px;
+left: 0; z-index: 9999;}
+span.amount{color: #fff; padding-right: 10px; font-size: 20px; /*font-family: 'ambleregular';*/} 
+span.contents{color:#fff; background: #ff8000; padding: 5px; border-radius: 20px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;}
-.cart-nav{}
+.cart-nav{padding-right:0; padding-left: 0; padding-top:15px;}
+a.cart-parent{padding: 20px 0px;}
 
 .social-top ul{float:left; margin:25px 0 0;}
 .social-top li{display: block; float:left;}
@@ -3224,6 +3240,7 @@ transition: all 0.5s ease-in-out;}
 .mtop30{margin-top:30px;}
 .mtop55{margin-top:55px;}
 .mbottom30{margin-bottom:30px;}
+.mbottom50{margin-bottom: 60px;}
 .pleft0{padding-left: 0;}
 .pdbottom10{padding-bottom:10px;}
 
@@ -3367,17 +3384,41 @@ a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; ba
 
 .brdbottom{border-bottom:1px solid #313131; margin-bottom: 15px; padding-bottom: 5px;}
 .brdbottom a{font-size: 14px; color: #ff8000; font-weight: bold; }
-.comments{font-family: "Bree Serif", sans-serif; font-weight: 100; font-size: 15px; margin-bottom: 5px; line-height:150%;}
-.send-news h4{font-size: 18px; font-family: "Open Sans"; text-transform: uppercase; font-weight: bold; color: #ff8000; margin-bottom: 5px;}
+.comments{font-family: "Open Sans", sans-serif; font-weight: 100; font-size: 15px; margin-bottom: 5px; line-height:150%;}
+.send-news h4{font-size: 17px; font-family: "Open Sans"; text-transform: uppercase; font-weight: bold; color: #ff8000; margin-bottom: 5px;}
 .send-news p{margin-bottom: 5px;}
 
 /* Corresponde a estilos de migas pan en general */
 .breadcrumbs{padding: 8px 0; margin-bottom: 0px; list-style: none; background-color: #fff; border-radius: 4px; margin-top: 30px;
 }
+.breadcrumb-trail a{color: #ff8000; font-weight: bold; text-decoration: underline; font-size: 14px;}
+span.trail-end{color: #777; font-weight: bold; font-size: 14px;} 
 .title-data h1 a{font-weight: bold; font-size: 40px; font-family: "Open sans"; text-transform: uppercase; border-left: 10px solid #313131; padding-left: 5px;}
 .author span,
 .date span{font-weight:normal !important;}
 .title-data p.author,
 .title-data p.date {font-weight:bold !important; float: left;}
+
+/* Estilos relacionados al sidebar */
+.sidecontent p{margin-bottom:15px;}
+.sidecontent a{background: #ff8000; padding: 5px; color: #fff;} 
+.sidecontent a:hover{background:#b85c00;}
+.sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 1px;}
+h4.sidebar{font-size: 24px; font-family: Times, serif; font-weight: 300;} 
+h3.sidebar{margin: 20px 0 5px;}
+p.data{margin:5px 0;}
+
+/* Estilos relacionados a page y single Actividades */
+.time-capsule{background: #00aeff; border-radius: 45px; width: 75px; height: 75px; float: left; margin-right: 15px;}
+.time-capsule p{text-align: center; line-height: 130%; color: #fff; padding: 18px;}
+.type-post .activity-content{width:85%; float:left; }
+.entry.act p{float:left; padding-right: 10px;}
+
+
+
+
+
+
+
 
 

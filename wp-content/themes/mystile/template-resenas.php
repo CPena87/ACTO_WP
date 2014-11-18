@@ -6,7 +6,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php
 /**
- * Template Name: Actividades
+ * Template Name: Reseñas
  *
  * The blog page template displays the "blog-style" template on a sub-page. 
  *
@@ -37,7 +37,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <div class="col-md-6 ">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
-                    <h1>Actividades</h1>
+                    <h1>Reseñas</h1>
                     <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 

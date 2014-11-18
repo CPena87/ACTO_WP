@@ -47,15 +47,66 @@ foreach ( $includes as $i ) {
 add_post_type_support('page', 'excerpt');
 if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
-add_image_size('encabezado', 172, 134, true );
+add_image_size('encabezado', 870, 200, true );
+// add_image_size('libros',);
 };
 
+//Post type register
+
+add_action('init', 'novedades_register');
+function novedades_register() {
+    $args = array(
+        'label' => 'Novedades',
+        'singular_label' => 'Novedad',
+        'public' => true,
+        'menu_position' => 14, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'novedades'),
+        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('novedades', $args);
+    flush_rewrite_rules();
+}
 
 
+add_action('init', 'actividades_register');
+function actividades_register() {
+    $args = array(
+        'label' => 'Actividades',
+        'singular_label' => 'Actividad',
+        'public' => true,
+        'menu_position' => 14, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'actividades'),
+        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('actividades', $args);
+    flush_rewrite_rules();
+}
 
-
-
-
+add_action('init', 'resenas_register');
+function resenas_register() {
+    $args = array(
+        'label' => 'Reseñas',
+        'singular_label' => 'Reseña',
+        'public' => true,
+        'menu_position' => 14, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'resenas'),
+        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('resenas', $args);
+    flush_rewrite_rules();
+}
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */
 /*-----------------------------------------------------------------------------------*/

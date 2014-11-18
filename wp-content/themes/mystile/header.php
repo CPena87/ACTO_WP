@@ -43,7 +43,7 @@ global $woo_options, $woocommerce;
 		<div class="bg-head">
 			<header id="header" class="col-full">
 		
-		    		<hgroup class="col-md-logo">
+		    		<hgroup class="col-md-logo col-md-1">
 		    			<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
 		    	
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>

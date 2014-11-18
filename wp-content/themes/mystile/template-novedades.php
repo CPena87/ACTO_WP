@@ -6,7 +6,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php
 /**
- * Template Name: Blog
+ * Template Name: Novedades
  *
  * The blog page template displays the "blog-style" template on a sub-page. 
  *
@@ -37,7 +37,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <div class="col-md-6 ">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
-                    <h1>Prensa</h1>
+                    <h1>Novedades</h1>
                     <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 
@@ -46,7 +46,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     </div>
 </div>
     <!-- #content Starts -->
-    <div id="content" class="col-full">
+    <div id="cont-full" class="col-full">
     
         <?php woo_main_before(); ?>
         
@@ -74,7 +74,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                            
         <!-- Post Starts -->
-        <?php get_template_part( 'content', get_post_format() ); ?>
+        <?php get_template_part( 'contentnov', get_post_format() ); ?>
                                                 
         <?php
         		} // End WHILE Loop
@@ -95,7 +95,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         
         <?php woo_main_after(); ?>
             
-		<?php get_sidebar('content'); ?>
+	
 
     </div><!-- /#content -->    
 		
