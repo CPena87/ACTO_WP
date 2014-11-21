@@ -16,13 +16,13 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'upmediac_actoeditores');
+define('DB_NAME', 'actoedit_act');
 
 /** MySQL database username */
-define('DB_USER', 'upmediac_acto');
+define('DB_USER', 'actoedit_actedit');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'acto803');
+define('DB_PASSWORD', 'actoeditores8039876.');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -79,4 +79,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-

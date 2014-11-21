@@ -1,0 +1,36 @@
+[05-Nov-2014 15:58:24 UTC] PHP Fatal error:  Class 'wp_bootstrap_navwalker' not found in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/header.php on line 86
+[05-Nov-2014 15:58:25 UTC] PHP Fatal error:  Class 'wp_bootstrap_navwalker' not found in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/header.php on line 86
+[06-Nov-2014 20:55:30 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:31 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:32 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:33 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:34 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:41 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:41 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:43 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:44 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[06-Nov-2014 20:55:45 UTC] PHP Fatal error:  Call to undefined function php_bloginfo() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 26
+[14-Nov-2014 15:23:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 44
+[14-Nov-2014 15:25:37 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 44
+[14-Nov-2014 15:31:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 44
+[14-Nov-2014 15:41:24 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 44
+[14-Nov-2014 15:44:35 UTC] PHP Parse error:  syntax error, unexpected T_ENDFOREACH in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 49
+[14-Nov-2014 15:54:19 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 15:54:19 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 15:54:25 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 15:54:26 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 15:55:28 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 15:55:34 UTC] PHP Fatal error:  Call to a member function have_posts() on a non-object in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/index.php on line 216
+[14-Nov-2014 16:08:34 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/header.php on line 53
+[14-Nov-2014 19:23:42 UTC] PHP Fatal error:  Call to undefined function get_the_autor() in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/content.php on line 40
+[17-Nov-2014 14:04:28 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/single.php on line 62
+[17-Nov-2014 14:04:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/single.php on line 62
+[17-Nov-2014 14:04:58 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/single.php on line 62
+[17-Nov-2014 14:09:54 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/single.php on line 60
+[17-Nov-2014 14:10:16 UTC] PHP Parse error:  syntax error, unexpected $end in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/single.php on line 58
+[17-Nov-2014 15:00:20 UTC] PHP Fatal error:  Function name must be a string in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/template-blog.php on line 60
+[17-Nov-2014 15:01:30 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/template-blog.php on line 70
+[17-Nov-2014 16:32:57 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/includes/theme-functions.php on line 99
+[17-Nov-2014 16:34:10 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/includes/theme-functions.php on line 97
+[17-Nov-2014 16:34:12 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/includes/theme-functions.php on line 97
+[17-Nov-2014 16:34:20 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/upmediac/public_html/actoeditores/wp-content/themes/mystile/includes/theme-functions.php on line 97
