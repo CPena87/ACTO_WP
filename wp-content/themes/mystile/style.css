@@ -3413,8 +3413,14 @@ p.data{margin:5px 0;}
 .time-capsule p{text-align: center; line-height: 130%; color: #fff; padding: 18px;}
 .type-post .activity-content{width:85%; float:left; }
 .entry.act p{float:left; padding-right: 10px;}
+.entry p strong{color: #000; font-weight: bold;}
+.entry a{color: #ff8000; font-weight: normal; text-decoration: underline;}
+.entry a:hover{color: #b85c00;}
 
 
+/* Estilos relacionados a los Post Meta */
+.post-meta{float: left; list-style: none;}
+.post-meta ul li{list-style: none;}
 
 
 

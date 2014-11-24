@@ -263,7 +263,7 @@
 			"file": "wp-content/themes/mystile/single-novedades.php",
 			"settings":
 			{
-				"buffer_size": 3461,
+				"buffer_size": 3556,
 				"line_ending": "Windows"
 			}
 		},
@@ -354,6 +354,22 @@
 				"buffer_size": 41220,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "wp-content/plugins/wp-maintenance-mode/assets/css/style.css",
+			"settings":
+			{
+				"buffer_size": 9757,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/plugins/wp-maintenance-mode/assets/css/style-admin.css",
+			"settings":
+			{
+				"buffer_size": 2015,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -380,6 +396,9 @@
 	},
 	"file_history":
 	[
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/includes/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentresena.php",
@@ -504,10 +523,7 @@
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/.htaccess",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/index.php",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/index-one.php",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/ajax.json",
-		"/Users/upmedia/Desktop/house/index.html",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/style7.css",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/page-fullwidth.png"
+		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/ajax.json"
 	],
 	"find":
 	{
@@ -671,6 +687,7 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -735,15 +752,15 @@
 					"file": "wp-content/themes/mystile/single-novedades.php",
 					"settings":
 					{
-						"buffer_size": 3461,
+						"buffer_size": 3556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2729,
-								2729
+								0,
+								0
 							]
 						],
 						"settings":
@@ -875,7 +892,7 @@
 			]
 		},
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -902,7 +919,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 59259.0,
+						"translation.y": 25093.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1043,7 +1060,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 947.0,
+						"translation.y": 964.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1073,6 +1090,62 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 8105.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "wp-content/plugins/wp-maintenance-mode/assets/css/style.css",
+					"settings":
+					{
+						"buffer_size": 9757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1775,
+								1775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1067.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "wp-content/plugins/wp-maintenance-mode/assets/css/style-admin.css",
+					"settings":
+					{
+						"buffer_size": 2015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1349,
+								1349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 774.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -57,30 +57,23 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                           
             <article <?php post_class(); ?>>
-				
-				<header>
-			    	<h1><?php the_title(); ?></h1>
-                    <p class="author fleft"><strong>Autor:</strong> <span><?php the_author(); ?></span></p>
-                    <p class="date fright"><strong>Fecha:</strong> <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
-				</header>
-
-                <?php 
-                if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { 
-                    woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
-                } 
-            ?>
-				
-                <section class="entry">
+                <div class="time-capsule">
+                    <p><span><?php the_time( 'j M' ); ?></span>
+                    </p>
+                </div>
+                <section class="activity-content">
+                    <header class="title-act">
+                        <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                    </header>
                     
+                    <section class="entry act">
+                        <?php the_content(); ?>
+                        <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+                        
+                    </section><!-- /.entry -->
 
-                	<?php the_content(); ?>
-                    <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+                </section>
 
-					
-               	</section><!-- /.entry -->
-
-				<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
-                
             </article><!-- /.post -->
             
             <?php

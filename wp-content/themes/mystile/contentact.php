@@ -42,7 +42,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			</header>
 		  
 			<section class="entry act">
-			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'actividades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
 			<p>Categorias:</p> <?php woo_post_meta(); ?>
 			</section>
 	

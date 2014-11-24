@@ -6,7 +6,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php
 /**
- * Page Template
+ * Page Template Autores
  *
  * This template is the default page template. It is used to display content when someone is viewing a
  * singular view of a page ('page' post_type) unless another page template overrules this one.
@@ -17,35 +17,20 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  */
 	get_header();
 	global $woo_options;
-/**
- * The Variables
- *
- * Setup default variables, overriding them if the "Theme Options" have been saved.
- */
-    
-    $settings = array(
-                    'thumb_w' => 787, 
-                    'thumb_h' => 300, 
-                    'thumb_align' => 'alignleft'
-                    );
-                    
-    $settings = woo_get_dynamic_values( $settings );
 ?>
-<div class="novedad-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div id="take" class="carousel-
-                caption jumbotron fleft">
-                    <h1>Reseñas</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
-                </div>
-
+     <div class="container-fluid home-bg">
+    <div class="row">
+        <div class="quoteline col-md-6">
+            <div id="take" class="carousel-
+            caption jumbotron">
+                <img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+                  <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
+                 <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
             </div>
+
         </div>
     </div>
-</div>
-       
+</div>   
     <div id="content" class="page col-full">
     
     	<?php woo_main_before(); ?>
@@ -60,20 +45,25 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				
 				<header>
 			    	<h1><?php the_title(); ?></h1>
-                    <p class="author fleft"><strong>Autor:</strong> <span><?php the_author(); ?></span></p>
-                    <p class="date fright"><strong>Fecha:</strong> <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
 				</header>
-
-                <?php 
-                if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'resenas' ) { 
-                    woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
-                } 
-            ?>
 				
                 <section class="entry">
-                    
 
                 	<?php the_content(); ?>
+
+                       <?php $autores = get_terms( 'autores'  , array('hide_empty' => false )) ?>
+
+                        <?php foreach($autores as $autor): ?>
+                            <?php $linkautor = get_term_link( $autor); ?>
+                            <li>
+                                <a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
+                                <?php echo get_field('descripcion' , 'autores_'.$autor->term_id) ?>
+                            </li>
+
+                           
+
+                        <?php endforeach ?>
+
                     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
 
 					
@@ -85,21 +75,23 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             
             <?php
             	// Determine wether or not to display comments here, based on "Theme Options".
-            	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) );
+            	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
+            		comments_template();
+            	}
 
 				} // End WHILE Loop
 			} else {
 		?>
-<!-- 			<article <?php post_class(); ?>>
+			<article <?php post_class(); ?>>
             	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-            </article><!-- /.post --> -->
-            <?php } // End IF Statement ?> 
+            </article><!-- /.post -->
+        <?php } // End IF Statement ?>  
         
 		</section><!-- /#main -->
 		
 		<?php woo_main_after(); ?>
 
-        <?php get_sidebar('content'); ?>
+        <?php get_sidebar(); ?>
 
     </div><!-- /#content -->
 		

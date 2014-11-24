@@ -75,7 +75,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 while ( have_posts() ) { the_post(); $count++;
         ?>                                                            
             <!-- Post Starts -->
-            <?php get_template_part( 'contentact', get_post_format() ); ?>
+            <?php get_template_part( 'contentresena', get_post_format() ); ?>
                                                 
         <?php
                 } // End WHILE Loop

@@ -6,18 +6,19 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php get_header(); ?>
 
-<div class="container-fluid home-bg">
-	<div class="row">
-		<div class="quoteline col-md-6">
-			<div id="take" class="carousel-
-			caption jumbotron">
-				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
-	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
-	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
-	        </div>
+<div class="novedad-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div id="take" class="carousel-
+                caption jumbotron fleft">
+                    <h1>Actividades</h1>
+                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
 
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </div>
     
     <div id="content" class="col-full">
@@ -27,66 +28,60 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<section id="main" class="col-left"> 
 
 		<?php if (have_posts()) : $count = 0; ?>
-        
-            <?php if (is_category()) { ?>
-        	<header class="archive-header">
-        		<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php single_cat_title( '', true ); ?></h1> 
-        		<span class="archive-rss"><?php $cat_id = get_cat_ID( single_cat_title( '', false ) ); echo '<a href="' . get_category_feed_link( $cat_id, '' ) . '">' . __( 'RSS feed for this section', 'woothemes' ) . '</a>'; ?></span>
-        	</header>        
-        
-            <?php } elseif (is_day()) { ?>
-            <header class="archive-header">
-            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( get_option( 'date_format' ) ); ?></h1>
-            </header>
-
-            <?php } elseif (is_month()) { ?>
-            <header class="archive-header">
-            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( 'F, Y' ); ?></h1>
-            </header>
-
-            <?php } elseif (is_year()) { ?>
-            <header class="archive-header">
-            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( 'Y' ); ?></h1>
-            </header>
-
-            <?php } elseif (is_author()) { ?>
-            <header class="archive-header">
-            	<h1><?php _e( 'Archive by Author', 'woothemes' ); ?></h1>
-            </header>
-
-            <?php } elseif (is_tag()) { ?>
-            <header class="archive-header">
-            	<h1><?php _e( 'Tag Archives:', 'woothemes' ); ?> <?php single_tag_title( '', true ); ?></h1>
-            </header>
-            
-            <?php } ?>
+                
 
         <?php
-        	// Display the description for this archive, if it's available.
-        	woo_archive_description();
+    
+            $settings = array(
+                    'thumb_w' => 787, 
+                    'thumb_h' => 300, 
+                    'thumb_align' => 'alignleft'
+                    );
+                    
+            $settings = woo_get_dynamic_values( $settings );
+        
+            // Display the description for this archive, if it's available.
+            woo_archive_description();
         ?>
         
 	        <div class="fix"></div>
         
         	<?php woo_loop_before(); ?>
-        	
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); $count++; ?>
+            <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+                <article <?php post_class(); ?>>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+                    <div class="time-capsule">
+                        <p><span><?php the_time( 'j M' ); ?></span>
+                        </p>
+                    </div>
+                    <section class="activity-content">
+                        <header class="title-data">
+                            <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                        </header>
+                      
+                        <section class="entry act">
+                        <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'actividades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+                        <p>Categorias:</p> <?php woo_post_meta(); ?>
+                        </section>
+                
+                          
+                    </section><!--/.post-content -->
 
-			<?php endwhile; ?>
+                </article><!-- /.post -->
+            <?php endwhile; ?>
+            <!-- pagination -->
+           
+            
+            <?php else : ?>
+            <!-- No posts found -->
+            <?php endif; ?>
+
+
             
 	        <?php else: ?>
 	        
 	            <article <?php post_class(); ?>>
-	                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+	                <p><?php _e( 'Lo sentimos, no se encuentra lo que buscas.', 'woothemes' ); ?></p>
 	            </article><!-- /.post -->
 	        
 	        <?php endif; ?>  
@@ -94,12 +89,13 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	        <?php woo_loop_after(); ?>
     
 			<?php woo_pagenav(); ?>
+            <?php wp_reset_query(); ?>   
                 
 		</section><!-- /#main -->
 		
 		<?php woo_main_after(); ?>
 
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('content'); ?>
 
     </div><!-- /#content -->
 		
