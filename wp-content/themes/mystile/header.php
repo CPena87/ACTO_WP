@@ -35,7 +35,7 @@ global $woo_options, $woocommerce;
 
 </head>
 
-<body <?php body_class('white') ?> >
+<body <?php body_class('opal-white') ?> >
 
 <div id="wrapper" >
 	<?php woo_header_before(); ?>

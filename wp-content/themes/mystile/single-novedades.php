@@ -64,6 +64,10 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                     <p class="date fright">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
                 </header>
 
+                <div class="extract clearless">              
+                    <?php the_excerpt(); ?> 
+                </div>
+
                 <?php 
                 if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'novedades' ) { 
                     woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
@@ -71,14 +75,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             ?>
 
                 <section class="entry">
-                    
-
                 	<?php the_content(); ?>
                     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
 
 					
                	</section><!-- /.entry -->
-
 				
             </article><!-- /.post -->
             

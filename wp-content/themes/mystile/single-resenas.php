@@ -56,30 +56,29 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         	if ( have_posts() ) { $count = 0;
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                           
-            <article <?php post_class(); ?>>
-				
-				<header>
-			    	<h1><?php the_title(); ?></h1>
-                    <p class="author fleft"><strong>Autor:</strong> <span><?php the_author(); ?></span></p>
-                    <p class="date fright"><strong>Fecha:</strong> <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
-				</header>
+            <article <?php post_class('post'); ?>>
 
-                <?php 
-                if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'resenas' ) { 
-                    woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
-                } 
-            ?>
-				
-                <section class="entry">
+               <div class="reviewer">       
+                        <img src="<?php bloginfo('template_directory') ?>/images/avatar-male.jpg">        
+                        <div class="sign"></div>      
+                </div>
+
+                <section class="post-content">
+                    <header class="resign-data">
+                        <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                        <p class="author mbottom10">Por: <span class="stronged"><?php the_author(); ?></span></p>
+                    </header>
+
                     
+                    <section class="entry rev-insight">
 
-                	<?php the_content(); ?>
-                    <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+                        <?php the_excerpt(); ?>
+                        <?php the_content(); ?>
+                        <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+                        <?php woo_post_meta(); ?>
+                    </section><!-- /.entry -->
+                </section>
 
-					
-               	</section><!-- /.entry -->
-
-				<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
                 
             </article><!-- /.post -->
             

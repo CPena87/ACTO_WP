@@ -50,23 +50,35 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 				<article <?php post_class('post'); ?>>
 
-                    <section class="post-content">
-                        <!-- <a href="<?php //echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-                        </a> -->
-                    
-                        <header class="title-data">
-                            <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                            <p class="author">Autor: <span><?php the_author(); ?></span></p>
-                            <p class="date fright">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
-                        </header>
-                      <?php 
-                            if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'novedades' ) { 
-                                woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
-                            } 
+                    <div class="reviewer">       
+                        <img src="<?php bloginfo('template_directory') ?>/images/avatar-male.jpg">        
+                        <div class="sign"></div>      
+                    </div>
+
+                    <div class="reviewer">
+                        <?php 
+
+                            $image = get_field('imagen');
+                            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                            if( $image ) {
+
+                                echo wp_get_attachment_image( $image, $size );
+
+                            }
+
                         ?>
+                    </div>
+                    
+                    <section class="post-content">
+                    
+                        <header class="resign-data">
+                            <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                            <p class="author mbottom10">Por: <span class="stronged"><?php the_author(); ?></span></p>
+                        </header>
                 
-                        <section class="entry">
+                        <section class="entry rev-excerpt">
                         <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+                        <a class="fleft" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Continúa Leyendo</a>
                         <?php woo_post_meta(); ?>
                         </section>
                 

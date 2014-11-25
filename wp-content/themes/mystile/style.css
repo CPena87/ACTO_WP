@@ -411,19 +411,17 @@ dl dd {
   margin-bottom: 1.618em;
 }
 blockquote {
-  quotes: "\201C" "\201D";
-  position: relative;
   color: #39302d;
+  border-left: 10px solid #666;
+  font-style: italic;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
-blockquote:before {
-  content: "\201C";
+/*blockquote:before {
   font-family: sans-serif;
   font-size: 3.631em;
-  position: absolute;
-  top: -0.327em;
-  left: -0.53em;
   color: #c6c2c1;
-}
+}*/
 
 /* FONT FACE */
 @font-face {
@@ -3239,14 +3237,21 @@ transition: all 0.5s ease-in-out;}
 .fright{float:right !important;}
 .mtop30{margin-top:30px;}
 .mtop55{margin-top:55px;}
+.mbottom10{margin-bottom:10px;}
 .mbottom30{margin-bottom:30px;}
 .mbottom50{margin-bottom: 60px;}
 .pleft0{padding-left: 0;}
 .pdbottom10{padding-bottom:10px;}
+.ptop15{padding-top: 15px;}
+.clearless{clear:both;}
 
 /* Colores */
 .light-grey{background:#f3f3f3;}
 .white{background:#ffffff;}
+.opal-white{background:#fcfcfc;}
+
+/* Border's */
+.brdbottom{border-bottom:1px solid #575757;}
 
 /* ESTILOS PARA FOOTER */
 h5.footnav-title{background: #000; padding: 5px; color: #fff; font-family: 'Open Sans'; font-weight: 900; font-size: 18px; margin-bottom: 15px;}
@@ -3389,11 +3394,11 @@ a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; ba
 .send-news p{margin-bottom: 5px;}
 
 /* Corresponde a estilos de migas pan en general */
-.breadcrumbs{padding: 8px 0; margin-bottom: 0px; list-style: none; background-color: #fff; border-radius: 4px; margin-top: 30px;
+.breadcrumbs{padding: 8px 0; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 4px; margin-top: 30px;
 }
 .breadcrumb-trail a{color: #ff8000; font-weight: bold; text-decoration: underline; font-size: 14px;}
 span.trail-end{color: #777; font-weight: bold; font-size: 14px;} 
-.title-data h1 a{font-weight: bold; font-size: 40px; font-family: "Open sans"; text-transform: uppercase; border-left: 10px solid #313131; padding-left: 5px;}
+.title-data h1 a{font-weight: bold; font-size: 40px; font-family: "Open sans"; text-transform: uppercase; border-left: 10px solid #575757; padding-left: 5px; color: #575757;}
 .author span,
 .date span{font-weight:normal !important;}
 .title-data p.author,
@@ -3412,15 +3417,32 @@ p.data{margin:5px 0;}
 .time-capsule{background: #00aeff; border-radius: 45px; width: 75px; height: 75px; float: left; margin-right: 15px;}
 .time-capsule p{text-align: center; line-height: 130%; color: #fff; padding: 18px;}
 .type-post .activity-content{width:85%; float:left; }
+/*.entry.act{margin-left: 14%;}*/
 .entry.act p{float:left; padding-right: 10px;}
 .entry p strong{color: #000; font-weight: bold;}
 .entry a{color: #ff8000; font-weight: normal; text-decoration: underline;}
 .entry a:hover{color: #b85c00;}
-
+.activity-content{margin-left: 13%;}
+.entry-act p blockquote:before{padding-left: 15px; border-left:10px solid #666; font-style: italic; font-weight: normal;}
+.extract p{font-size:18px; line-height: 160%;}
 
 /* Estilos relacionados a los Post Meta */
 .post-meta{float: left; list-style: none;}
 .post-meta ul li{list-style: none;}
+
+
+/* Estilos relacionados con los reseñistas */
+.reviewer{float: left; padding-right: 15px;}
+.reviewer img{border-radius: 90%; width: 90%; height: auto; max-width: 164px; float: left; border: none; padding: 0;}
+.sign{background-image: url("../mystile/images/redirect-icon.png"); height: 40px; width: 40px; display: block; background-position: 0px 0px; background-repeat: no-repeat; background-size: 40px; clear: both; position: relative; top: -20px; left: 55px; }
+.post-content{float: left; padding-left: 0px; width: 75%;}
+.resign-data h1 a{font-size: 30px; font-family: Times, serif; font-weight: 300; text-transform: initial; color: #000;}
+header.resign-data h1{margin-bottom:0; line-height:90%;}
+span.stronged{font-weight: bold !important; 
+  color: #ff8000;}
+.rev-excerpt p{margin-bottom:10px; font-style: italic; border-left: 10px solid #666; padding-left: 10px;}
+.rev-excerpt a{font-weight: bold; text-decoration: none; }
+.rev-insight p{margin-bottom:10px;}
 
 
 

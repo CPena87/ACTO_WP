@@ -34,10 +34,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			</p>
 		</div>
 		<section class="activity-content">
-			<!-- <a href="<?php //echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-			</a> -->
 
-			<header class="title-data">
+			<header class="title-data ptop15">
 				<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			</header>
 		  
