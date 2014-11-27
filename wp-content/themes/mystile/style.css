@@ -348,7 +348,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bree Serif", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #363230;
   margin: 0 0 .618em;
   font-weight: normal;
@@ -1900,11 +1900,12 @@ div.quantity .minus:hover {
   color: #dd2600;
 }
 div.quantity .qty {
-  margin: 0 .618em;
-  width: 2.618em;
+  width: 42px;
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  height: 42px; 
+  margin:10px;
 }
 table div.quantity {
   font-size: .857em;
@@ -1912,7 +1913,6 @@ table div.quantity {
 .single-product div.quantity {
   float: left;
   margin-right: 1.618em;
-  border-right: 4px double #e8e4e3;
   padding-right: 1.618em;
 }
 .single-product table div.quantity {
@@ -2004,9 +2004,9 @@ dl.variation dd ul {
   font-size: .857em;
 }
 /* 7.2 Products */
-.price del {
+/*.price del {
   opacity: 0.5;
-  filter: alpha(opacity=@opacity * 100);
+  filter: alpha(opacity=@opacity * 100);*/
 }
 .price ins {
   text-decoration: none;
@@ -2151,9 +2151,9 @@ table.variations tr:last-child th {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  padding: .618em;
+/*  padding: .618em;
   background: #fff;
-  border: 1px solid #e8e4e3;
+  border: 1px solid #e8e4e3;*/
   width: 100%;
 }
 .images .thumbnails {
@@ -2227,12 +2227,13 @@ table.variations tr:last-child th {
 .single-product .summary .product_meta {
   font-size: .857em;
   color: #9f9693;
-  border-top: 4px double #e8e4e3;
   padding-top: 1.618em;
   clear: both;
 }
 .single-product .summary .product_meta a {
-  color: #6c6360;
+  color: #fff;
+  background: #ff8000;
+  padding: 5px;
 }
 .single-product .summary .social {
   border-top: 4px double #e8e4e3;
@@ -2946,22 +2947,9 @@ a.comment-reply-link.checkout,
 input[type=submit].checkout,
 input.button.checkout,
 button.button.checkout {
-  background-color: #777777;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#444444));
-  /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #777777, #444444);
-  /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #777777, #444444);
-  /* FF3.6+ */
-  background-image: -ms-linear-gradient(top, #777777, #444444);
-  /* IE10 */
-  background-image: -o-linear-gradient(top, #777777, #444444);
-  /* Opera 11.10+ */
-  background-image: linear-gradient(to bottom, #777777, #444444);
-  text-shadow: 0 1px 0 #333333;
-  border: 1px solid #222222;
-  -webkit-box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #999999, inset 0 -1px #333333;
-  box-shadow: 0 0 0 0.327em rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px #999999, inset 0 -1px #333333;
+  background-color: #ff8000;
+  padding: 10px;
+  text-transform: none;
 }
 a.button.alt:hover,
 a.comment-reply-link.alt:hover,
@@ -3239,7 +3227,7 @@ transition: all 0.5s ease-in-out;}
 .mtop55{margin-top:55px;}
 .mbottom10{margin-bottom:10px;}
 .mbottom30{margin-bottom:30px;}
-.mbottom50{margin-bottom: 60px;}
+.mbottom50{margin-bottom: 60px;}  
 .pleft0{padding-left: 0;}
 .pdbottom10{padding-bottom:10px;}
 .ptop15{padding-top: 15px;}
@@ -3249,6 +3237,10 @@ transition: all 0.5s ease-in-out;}
 .light-grey{background:#f3f3f3;}
 .white{background:#ffffff;}
 .opal-white{background:#fcfcfc;}
+.medium-gray{background:#e6e6e6;}
+
+/* Colores para texto */
+.blackened{color:#313131;}
 
 /* Border's */
 .brdbottom{border-bottom:1px solid #575757;}
@@ -3408,7 +3400,7 @@ span.trail-end{color: #777; font-weight: bold; font-size: 14px;}
 .sidecontent p{margin-bottom:15px;}
 .sidecontent a{background: #ff8000; padding: 5px; color: #fff;} 
 .sidecontent a:hover{background:#b85c00;}
-.sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 1px;}
+.sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 1px; font-family:"Bree Serif", sans-serif;}
 h4.sidebar{font-size: 24px; font-family: Times, serif; font-weight: 300;} 
 h3.sidebar{margin: 20px 0 5px;}
 p.data{margin:5px 0;}
@@ -3434,7 +3426,7 @@ p.data{margin:5px 0;}
 /* Estilos relacionados con los reseñistas */
 .reviewer{float: left; padding-right: 15px;}
 .reviewer img{border-radius: 90%; width: 90%; height: auto; max-width: 164px; float: left; border: none; padding: 0;}
-.sign{background-image: url("../mystile/images/redirect-icon.png"); height: 40px; width: 40px; display: block; background-position: 0px 0px; background-repeat: no-repeat; background-size: 40px; clear: both; position: relative; top: -20px; left: 55px; }
+.sign{background-image: url("../mystile/images/redirect-icon.png"); height: 40px; width: 40px; display: block; background-position: 0px 0px; background-repeat: no-repeat; background-size: 40px; clear: both; position: relative; top: -20px; left: 50px; }
 .post-content{float: left; padding-left: 0px; width: 75%;}
 .resign-data h1 a{font-size: 30px; font-family: Times, serif; font-weight: 300; text-transform: initial; color: #000;}
 header.resign-data h1{margin-bottom:0; line-height:90%;}
@@ -3445,8 +3437,31 @@ span.stronged{font-weight: bold !important;
 .rev-insight p{margin-bottom:10px;}
 
 
+/* Estilos relacionados con los autores */
+.avatarautor p.description{font-size:; font-weight:bold; font-family:"Open Sans", sans-serif;}
+.avatarautor img{margin: 0 auto; width: 85%; max-width: 310px; border-radius: 100%; border: none; padding: 0;}
+.desc-autor a{font-size: 25px; text-align: center; font-weight: bold; font-family: "Open Sans"; display: block; color: #575757; text-decoration: none;}
+.desc-autor p{text-align: center; line-height: 160%; font-size: 18px; color: #575757; font-family: "Open Sans", sans-serif;}
+.desc-team{color: #313131; font-size: 20px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
+.quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px;}
 
+/* Estilos relacionados al single de autores */
+.prof-avatar img{width: 100%; height: auto; border-radius: 100%;}
+.prof-name h1{font-size:45px; font-weight:bold; color:#575757; border-left:10px solid #575757; font-family:"Open Sans"; padding-left:10px; margin-bottom:0;}
+.archive-description p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px;}
 
-
-
+/************* ESTILOS RELACIONADOS CON EL CATALOGO *************/
+/* Single del catalogo */
+.product_title.entry-title{color:#575757; font-weight:bold; font-size:45px; border-left: 10px solid #575757; text-transform: uppercase; font-family:"Open Sans"; padding-left: 10px;}
+.price.bigged{padding:0;}
+.price del span{font-size: 45px; color:#ff8000;}
+.price ins span{font-size: 40px; color:#313131;}
+.author-ref,
+.quant-text{color:#313131; font-size:20px; font-weight:bold; font-family: "Open Sans"; margin-bottom:5px;}
+span.text-random{font-weight:normal;}
+button.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
+ img.cart-icon{width: 20px; margin-right: 10px;}
+ span.posted_in{font-size: 14px; color: #313131; }
+/* Informacion Adicional del Catalogo */
+h2.additional{color: #575757; font-weight: bold; font-size: 30px; border-left: 10px solid #575757; text-transform: uppercase; font-family: "Open Sans"; padding-left: 10px;}
 

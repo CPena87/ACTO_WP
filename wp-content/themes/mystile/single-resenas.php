@@ -58,9 +58,16 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         ?>                                                           
             <article <?php post_class('post'); ?>>
 
-               <div class="reviewer">       
-                        <img src="<?php bloginfo('template_directory') ?>/images/avatar-male.jpg">        
-                        <div class="sign"></div>      
+               <div class="reviewer">
+                        <?php 
+
+                            $image = get_field('imagen' , $post->ID);
+                            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                            $src = wp_get_attachment_image_src( $image, $size )
+
+                        ?>
+                        <img src="<?php echo $src[0]?>">
+                        <div class="sign"></div>    
                 </div>
 
                 <section class="post-content">

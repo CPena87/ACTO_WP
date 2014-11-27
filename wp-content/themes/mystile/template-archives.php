@@ -18,11 +18,25 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  global $woo_options; 
  get_header();
 ?> 
+<div class="novedad-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div id="take" class="carousel-
+                caption jumbotron fleft">
+                    <h1>Catálogo</h1>
+                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>   
     <div id="content" class="page col-full">
     
     	<?php woo_main_before(); ?>
     
-		<section id="main" class="col-left">
+		<section id="main" >
 			
 			<article <?php post_class(); ?>>
 			    

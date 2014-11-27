@@ -497,8 +497,8 @@ INDEX
     float: right;
   }
   #respond {
-    width: 82.7%;
-    float: right;
+/*    width: 82.7%;
+    float: right;*/
   }
   #fancybox-outer #respond {
     width: 100%;
@@ -703,11 +703,11 @@ INDEX
   }
   /* 7.2.1 Single Product */
   .single-product .images {
-    width: 48%;
-    float: left;
+/*    width: 48%;
+    float: left;*/
   }
   .single-product .summary {
-    width: 48%;
+/*    width: 48%;*/
     float: right;
   }
   .single-product .woocommerce_tabs,
@@ -853,9 +853,9 @@ INDEX
   .woocommerce_tabs .panel,
   .woocommerce-tabs .panel,
   .ui-tabs .panel {
-    background: #fff;
+/*    background: #fff;
     padding: 2.618em;
-    border: 1px solid #e8e4e3;
+    border: 1px solid #e8e4e3;*/
   }
   .woocommerce_tabs table.shop_attributes p,
   .woocommerce-tabs table.shop_attributes p,

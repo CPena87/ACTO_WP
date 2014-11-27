@@ -26,26 +26,28 @@ $var = get_queried_object();
 
 ?>
     
-    <div id="content" class="col-full">
+    <div id="content" class="col-full container">
     	
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left"> 
+		<section class="row"> 
 
 		<?php if (have_posts()) : $count = 0; ?>
-        
-        	<header class="archive-header">
-        		<h1><?php echo $var->name?></h1> 
-        	</header>        
-        
-            <section>
-            	<?php echo get_field('descripcion' , 'autores_'.$var->term_id) ?>
-            </section>
 
-        <?php
-        	// Display the description for this archive, if it's available.
-        	woo_archive_description();
-        ?>
+            <?php 
+                $image = get_field('avatarautor' , 'autores_'. $var->term_id);
+                $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                $avatarautor = wp_get_attachment_image_src( $image, $size );
+            ?>
+                
+        <div class="col-md-3 prof-avatar">
+            <img src="<?php echo $avatarautor[0]?>">
+        </div>
+        <aside class="col-md-9 prof-name">
+            <h1 class="name"><?php echo $var->name ?></h1>
+            <?php woo_archive_description(); ?>
+            <?php echo get_field('descripcion' , 'autores_'.$var->term_id) ?>
+        </aside>
         
 	        <div class="fix"></div>
         
@@ -80,7 +82,6 @@ $var = get_queried_object();
 		
 		<?php woo_main_after(); ?>
 
-        <?php get_sidebar('content'); ?>
 
     </div><!-- /#content -->
 		

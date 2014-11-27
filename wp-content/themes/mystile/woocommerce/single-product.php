@@ -13,20 +13,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header(  ); ?>
 
-<div class="container-fluid home-bg">
-	<div class="row">
-		<div class="quoteline col-md-6">
-			<div id="take" class="carousel-
-			caption jumbotron">
-				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
-	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
-	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
-	        </div>
+<div class="novedad-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div id="take" class="carousel-
+                caption jumbotron fleft">
+                    <h1>Catálogo</h1>
+                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
 
-		</div>
-	</div>
-</div>
-
+            </div>
+        </div>
+    </div>
+</div>  
 
 	<?php
 		/**
