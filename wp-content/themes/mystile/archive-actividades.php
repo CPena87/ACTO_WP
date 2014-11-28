@@ -50,11 +50,15 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
                 <article <?php post_class('brdbottom'); ?>>
 
-                    <div class="time-capsule">
+                    <div class="time-capsule hide-on-mobile">
                         <p><span><?php the_time( 'j M' ); ?></span>
                         </p>
                     </div>
                     <section class="activity-content">
+                        <div class="time-capsule display-on-mobile">
+                            <p><span><?php the_time( 'j M' ); ?></span>
+                            </p>
+                        </div>
                         <header class="title-data ptop15">
                             <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                         </header>

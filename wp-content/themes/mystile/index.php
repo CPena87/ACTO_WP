@@ -171,9 +171,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    			</figcaption>
 		    		</figure>
 		    		<!-- Fin datos de libro -->
-<?php woo_main_before(); ?>
+  
+    		</div>
+    	</div>
+    </div>
+</section>
+<!-- Fin destacados del catálogo -->
+
+<!-- Area loops -->
+<section class="cont-full light-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<?php woo_main_before(); ?>
     
-		<section id="main" class="col-left">  
+		<section id="main" class="col-full">  
 		
 		<?php mystile_homepage_content(); ?>		
 		
@@ -225,12 +238,11 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		
 		<?php woo_main_after(); ?>
 
-        <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "true" ) get_sidebar(); ?>
-    		</div>
-    	</div>
-    </div>
+			</div>
+		</div>
+	</div>
 </section>
-<!-- Fin destacados del catálogo -->
+<!-- Fin Area loops -->
 
 <!-- Variacion de subcontenidos -->
 <section class="cont-full white">

@@ -57,7 +57,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                           
             <article <?php post_class(); ?>>
-                <div class="time-capsule">
+                <div class="time-capsule mleft15mob">
                     <p><span><?php the_time( 'j M' ); ?></span>
                     </p>
                 </div>

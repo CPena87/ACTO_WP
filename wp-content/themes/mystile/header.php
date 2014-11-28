@@ -27,6 +27,8 @@ global $woo_options, $woocommerce;
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stemplate_directory'); ?>/css/bootstrap-theme.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
+<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.js" /></script>
+<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.min.js" /></script>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	wp_head();
@@ -51,13 +53,40 @@ global $woo_options, $woocommerce;
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 				    </a>
 			    <?php } ?>
-
+				<!-- Navegacion secundaria carro de compra en vista mobile -->
+			    
 			</hgroup>
 
 	        <?php woo_nav_before(); ?>
 
-			<nav id="navigation" class="col-md-6" role="navigation">
+			<nav id="navigation" class="col-md-6 navbar-header" role="navigation">
+				<div class="col-md-12 display-on-mobile hide-on-desktop fleft pleft0">
+	  			      
+						<nav class="col-md-6 cart-nav navbar-collapsed fleft" role="navigation">
+							<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
+							<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
+							<?php } ?>
+							<?php
+								if ( class_exists( 'woocommerce' ) ) {
+									echo '<ul class="nav wc-nav">';
+									woocommerce_cart_link();
+									//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+									// echo get_search_form();
+									echo '</ul>';
+								}
+							?>
+						</nav>
+						<!-- Fin Navegacion -->
 
+						<!--  Redes Sociales en vista mobile -->
+						<nav class="col-md-6 fleft social-top">
+							<ul>
+								<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
+								<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
+								<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
+							</ul>
+						</nav>
+	  		</div>
 				<?php
 				if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
 					wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
@@ -70,12 +99,22 @@ global $woo_options, $woocommerce;
 				</ul><!-- /#nav -->
 		        <?php } ?>
 
+
 			</nav><!-- /#navigation -->
+
+			<button class="nav-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+			</button>
+
+
 
 			<?php woo_nav_after(); ?>
 
-			<!-- Navegacion secundaria carro de compra -->
-			<nav class="col-md-3 cart-nav" role="navigation">
+			<!-- Navegacion secundaria carro de compra en vista escritorio-->
+			<nav class="col-md-3 cart-nav navbar-collapsed hide-on-mobile" role="navigation">
 				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
 				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
 				<?php } ?>
@@ -91,7 +130,8 @@ global $woo_options, $woocommerce;
 			</nav>
 			<!-- Fin Navegacion -->
 
-			<nav class="col-md-esp fleft social-top">
+			<!--  Redes Sociales en vista escritorio -->
+			<nav class="col-md-esp fleft social-top hide-on-mobile">
 				<ul>
 					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>

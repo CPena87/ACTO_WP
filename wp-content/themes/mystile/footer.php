@@ -15,7 +15,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  */
 	global $woo_options;
 	
-	echo '<div class="container-fluid">';
+	echo '<div class="container-fluid grey-footer pd0mob">';
 	echo '<div class="footer-wrap">';
 
 	$total = 4;
@@ -48,7 +48,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	<?php } // End IF Statement ?>
 		<footer id="footer" class="col-full">
 
-		<div class="col-md-4">
+		<div class="col-md-4 mbottom20mob">
 
 				<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
