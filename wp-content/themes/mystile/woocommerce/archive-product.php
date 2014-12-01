@@ -1,4 +1,4 @@
-hajshkaljdhaksjhdlkajshdklajshdlk ajshd klajshdlkajshd kajsh<?php
+<?php
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive.
  *
@@ -11,83 +11,69 @@ hajshkaljdhaksjhdlkajshdklajshdlk ajshd klajshdlkajshd kajsh<?php
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-get_header( 'shop' ); ?>
+get_header(  ); ?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
 
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+<div class="novedad-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div id="take" class="carousel-
+                caption jumbotron fleft">
+                    <h1>Catálogo</h1>
+                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+            </div>
+        </div>
+    </div>
+</div>
 
-		<?php endif; ?>
+		<!-- Corresponde a los destacados del catálogo -->
+<section class="cont-full light-grey">
+	<div class="container">
+    	<div class="row">
+    		<div class="col-md-12 outstanding mtop30 mbottom30">
+    			<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
+    				
+    				<?php foreach($libros as $libro): ?>
+		    		
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10">
+		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior">
+		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
+		    					<p>
+		    						<?php foreach  ($autores as $autor): ?>
+		    						<?php $linkautor = get_term_link( $autor); ?>
+									<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
+								<?php endforeach ?>
+		    					</p>
+		    				</header>
+		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
+		    				<footer class="inferior">
+		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
+		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+		    					
+			    				<span class="price">$<?php echo $price[0]; ?></span>
 
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
+			    				<?php } ?>
 
-		<?php if ( have_posts() ) : ?>
+		    				</footer>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
+		    		<?php endforeach ?>
+  
+    		</div>
+    	</div>
+    </div>
+</section>
 
-			<?php woocommerce_product_loop_start(); ?>
-
-				<?php woocommerce_product_subcategories(); ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-                
-                	hola! soy un producto
-
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-		<?php endif; ?>
-
-	<?php
-		/**
-		 * woocommerce_after_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
-
-<?php get_footer( 'shop' ); ?>
+<?php get_footer( ); ?>

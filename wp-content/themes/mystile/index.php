@@ -97,152 +97,48 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     		<div class="col-md-12 outstanding mtop30 mbottom30">
 
     			<h2>Destacados</h2>
+    			<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
+    				
+    				<?php foreach($libros as $libro): ?>
+		    		
 		    		<!-- Corresponde a los datos del libro -->
 		    		<figure class="col-md-3 producto pdbottom10">
-		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
+		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior">
-		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
-		    					<p>Umberto Eco</p>
+		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
+		    					<p>
+		    						<?php foreach  ($autores as $autor): ?>
+		    						<?php $linkautor = get_term_link( $autor); ?>
+									<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
+								<?php endforeach ?>
+		    					</p>
 		    				</header>
-		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
+		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
 		    				<footer class="inferior">
-			    				<span class="price">$25000</span>
-			    				<span class="oferta">$19500</span>
+		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
+		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+		    					
+			    				<span class="price">$<?php echo $price[0]; ?></span>
+
+			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
+			    				<?php } ?>
+
 		    				</footer>
 		    			</figcaption>
 		    		</figure>
 		    		<!-- Fin datos de libro -->
 
-		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10">
-		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
-		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
-		    			<figcaption class="white">
-		    				<header class="superior">
-		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
-		    					<p>Umberto Eco</p>
-		    				</header>
-		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
-		    				<section class="inferior">
-			    				<span class="price">$25000</span>
-			    				<span class="oferta">$19500</span>
-		    				</section>
-		    			</figcaption>
-		    		</figure>
-		    		<!-- Fin datos de libro -->
-
-		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10">
-		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
-		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
-		    			<figcaption class="white">
-		    				<header class="superior">
-		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
-		    					<p>Umberto Eco</p>
-		    				</header>
-		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
-		    				<section class="inferior">
-			    				<span class="price">$25000</span>
-			    				<span class="oferta">$19500</span>
-		    				</section>
-		    			</figcaption>
-		    		</figure>
-		    		<!-- Fin datos de libro -->
-
-		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10">
-		    			<img src="<?php bloginfo('template_directory'); ?>/images/book1.jpg" alt="">
-		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
-		    			<figcaption class="white">
-		    				<header class="superior">
-		    					<h4>Historias de las Tierras y Lugares Extraños</h4>
-		    					<p>Umberto Eco</p>
-		    					<p>Andrea Nuñez</p>
-		    					<p>Rodrigo Sotomayor</p>
-		    					<p>Joaquín Jara</p>
-		    				</header>
-		    				<a class="cart" href="/" title="Ver producto" rel="help">Ver producto</a>
-		    				<section class="inferior">
-			    				<span class="price">$25000</span>
-			    				<span class="oferta">$19500</span>
-		    				</section>
-		    			</figcaption>
-		    		</figure>
-		    		<!-- Fin datos de libro -->
+		    		<?php endforeach ?>
   
     		</div>
     	</div>
     </div>
 </section>
 <!-- Fin destacados del catálogo -->
-
-<!-- Area loops -->
-<section class="cont-full light-grey">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<?php woo_main_before(); ?>
-    
-		<section id="main" class="col-full">  
-		
-		<?php mystile_homepage_content(); ?>		
-		
-		<?php woo_loop_before(); ?>
-		
-		<?php if ( $woo_options[ 'woo_homepage_blog' ] == "true" ) { 
-			$postsperpage = $woo_options['woo_homepage_blog_perpage'];
-		?>
-		
-		<?php
-			
-			$the_query = new WP_Query( array( 'posts_per_page' => $postsperpage ) );
-			
-        	if ( have_posts() ) : $count = 0;
-        ?>
-        
-			<?php /* Start the Loop */ ?>
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $count++; ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php 
-				endwhile; 
-				// Reset Post Data
-				wp_reset_postdata();
-			?>
-			
-			
-
-		<?php else : ?>
-        
-            <article <?php post_class(); ?>>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-            </article><!-- /.post -->
-        
-        <?php endif; ?>
-        
-        <?php } // End query to see if the blog should be displayed ?>
-        
-        <?php woo_loop_after(); ?>
-		                
-		</section><!-- /#main -->
-		
-		<?php woo_main_after(); ?>
-
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Fin Area loops -->
 
 <!-- Variacion de subcontenidos -->
 <section class="cont-full white">

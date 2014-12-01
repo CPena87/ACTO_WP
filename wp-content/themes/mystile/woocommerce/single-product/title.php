@@ -16,6 +16,5 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <h2 class="author-ref">Autor: 
 <?php foreach  ($autores as $autor): ?>
 	<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
-
 <?php endforeach ?>
 </h2>

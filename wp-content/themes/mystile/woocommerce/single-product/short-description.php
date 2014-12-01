@@ -18,4 +18,5 @@ if ( ! $post->post_excerpt ) return;
 
 	<?php the_content(); ?>
 
+
 </div>
