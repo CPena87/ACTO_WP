@@ -62,4 +62,71 @@ get_header(  ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+
+					<h3>Libros Recomendados</h3>
+					<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
+    				
+    				<?php foreach($libros as $libro): ?>
+		    		
+		    		<!-- Corresponde a los datos del libro -->
+		    		<figure class="col-md-3 producto pdbottom10 pleft0">
+		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
+		    				<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    			</a>
+		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+		    			<figcaption class="white">
+		    				<header class="superior reference">
+		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
+		    					<p>
+		    						<?php foreach  ($autores as $autor): ?>
+		    						<?php $linkautor = get_term_link( $autor); ?>
+									<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
+								<?php endforeach ?>
+		    					</p>
+		    				</header>
+		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
+		    				<footer class="inferior">
+		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
+		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+		    					
+			    				<span class="price">$<?php echo $price[0]; ?></span>
+
+			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
+			    				<?php } ?>
+
+		    				</footer>
+		    			</figcaption>
+		    		</figure>
+		    		<!-- Fin datos de libro -->
+
+		    		<?php endforeach ?>
+
+			</div>
+
+			<div class="col-md-4">
+				<h3>Novedades</h3>
+
+				<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+    		 	<?php $countnovedades = 0 ?>
+    		 	<?php foreach ($novedades as $novedad): ?>
+    		 	<?php $countnovedades++ ?>
+
+    		 	<article class="col-md-12 pd0 wide">
+
+    				
+    					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+    					<p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
+    				
+	    		</article>
+	    	<?php endforeach ?>
+
+			</div>
+		</div>
+	</div>
+
 <?php get_footer( 'shop' ); ?>

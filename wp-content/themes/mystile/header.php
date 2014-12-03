@@ -20,7 +20,7 @@ global $woo_options, $woocommerce;
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-<title><?php woo_title(''); ?></title>
+<title><?php //woo_title(''); ?></title>
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-theme.css" media="screen"/>
@@ -39,6 +39,25 @@ global $woo_options, $woocommerce;
 
 <body <?php body_class('opal-white') ?> >
 
+	<div class="container">
+		<div class="fixed">
+			<nav class="hide-on-mobile col-md-8 col-md-offset-3" role="navigation">
+				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
+				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
+				<?php } ?>
+				<?php
+					if ( class_exists( 'woocommerce' ) ) {
+						echo '<ul class="nav wc-nav">';
+						woocommerce_cart_link();
+						//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+						// echo get_search_form();
+						echo '</ul>';
+					}
+				?>
+			</nav>
+		</div>
+	</div>
+
 <div id="wrapper" >
 	<?php woo_header_before(); ?>
 	
@@ -46,8 +65,9 @@ global $woo_options, $woocommerce;
 			<header id="header" class="col-full">
 		
 		    		<hgroup class="col-md-logo col-md-1">
-		    			<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
-		    	
+		    			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+		    				<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
+		    			</a>
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
@@ -114,24 +134,11 @@ global $woo_options, $woocommerce;
 			<?php woo_nav_after(); ?>
 
 			<!-- Navegacion secundaria carro de compra en vista escritorio-->
-			<nav class="col-md-3 cart-nav navbar-collapsed hide-on-mobile" role="navigation">
-				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
-				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-				<?php } ?>
-				<?php
-					if ( class_exists( 'woocommerce' ) ) {
-						echo '<ul class="nav wc-nav">';
-						woocommerce_cart_link();
-						//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
-						// echo get_search_form();
-						echo '</ul>';
-					}
-				?>
-			</nav>
+			
 			<!-- Fin Navegacion -->
 
 			<!--  Redes Sociales en vista escritorio -->
-			<nav class="col-md-esp fleft social-top hide-on-mobile">
+			<nav class="col-md-esp col-md-offset-2 fleft social-top hide-on-mobile">
 				<ul>
 					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>

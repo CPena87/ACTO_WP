@@ -14,7 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php $autores = get_the_terms( $post->ID, 'autores' ); ?>
 <?php //var_dump($terms)?>
 <h2 class="author-ref">Autor: 
-<?php foreach  ($autores as $autor): ?>
+<?php foreach ($autores as $autor): ?>
 	<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
 <?php endforeach ?>
 </h2>
+<?php $tipos = get_the_terms( $post->ID, 'tipos' ); ?>
+<span>
+	<?php if($tipos){?>
+	<?php foreach ($tipos as $tipo): ?>
+		<?php $linktipo = get_term_link( $tipo); ?>
+		<a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
+	<?php endforeach ?>
+	<?php } ?>
+</span>

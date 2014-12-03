@@ -32,57 +32,119 @@ $var = get_queried_object();
     	
 		<section class="row"> 
 
-		<?php if (have_posts()) : $count = 0; ?>
+    		<?php if (have_posts()) : $count = 0; ?>
 
-            <?php 
-                $image = get_field('avatarautor' , 'autores_'. $var->term_id);
-                $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-                $avatarautor = wp_get_attachment_image_src( $image, $size );
-            ?>
+                <?php 
+                    $image = get_field('avatarautor' , 'autores_'. $var->term_id);
+                    $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+                    $avatarautor = wp_get_attachment_image_src( $image, $size );
+                ?>
+                    
+            <div class="col-md-3 prof-avatar">
+                <img src="<?php echo $avatarautor[0]?>">
+            </div>
+
+            <aside class="col-md-9 prof-name">
+                <h1 class="name"><?php echo $var->name ?></h1>
+                <?php woo_archive_description(); ?>
+                <?php echo get_field('descripcion' , 'autores_'.$var->term_id) ?>
+
+                <!-- Content Area -->
+                <?php woo_loop_before(); ?>
                 
-        <div class="col-md-3 prof-avatar">
-            <img src="<?php echo $avatarautor[0]?>">
-        </div>
-        <aside class="col-md-9 prof-name">
-            <h1 class="name"><?php echo $var->name ?></h1>
-            <?php woo_archive_description(); ?>
-            <?php echo get_field('descripcion' , 'autores_'.$var->term_id) ?>
-        </aside>
-        
-	        <div class="fix"></div>
-        
-        	<?php woo_loop_before(); ?>
-        	
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); $count++; ?>
+                <?php /* Start the Loop */ ?>
+                <?php while ( have_posts() ) : the_post(); $count++; ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+                   
 
-			<?php endwhile; ?>
-            
-	        <?php else: ?>
-	        
-	            <article <?php post_class(); ?>>
-	                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-	            </article><!-- /.post -->
-	        
-	        <?php endif; ?>  
-	        
-	        <?php woo_loop_after(); ?>
-    
-			<?php woo_pagenav(); ?>
+                <?php endwhile; ?>
                 
+                <?php else: ?>
+                
+                    <article <?php post_class(); ?>>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+                    </article><!-- /.post -->
+                
+                <?php endif; ?>  
+                
+                <?php woo_loop_after(); ?>
+                <!-- Content Area Fin -->
+            </aside>
+		
 		</section><!-- /#main -->
+
+        <section class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Publicaciones Relacionadas al Autor</h2>
+                <!-- Textos relacionados -->
+                <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
+                    
+                    <?php foreach($libros as $libro): ?>
+                    
+                    <!-- Corresponde a los datos del libro -->
+                    <figure class="col-md-3 producto pdbottom10 pleft0">
+                        <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
+                        <?php echo get_the_post_thumbnail($libro->ID); ?>
+                    </a>
+                        <div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+                        <figcaption class="white">
+                            <header class="superior related">
+                                <h4><?php echo $libro->post_title ?></h4>
+                                <?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
+                                <p>
+                                    <?php foreach  ($autores as $autor): ?>
+                                    <?php $linkautor = get_term_link( $autor); ?>
+                                    <a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
+                                <?php endforeach ?>
+                                </p>
+                            </header>
+                            <a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
+                            <footer class="inferior">
+                                <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
+                                <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+                                
+                                <span class="price">$<?php echo $price[0]; ?></span>
+
+                                <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                                <span class="oferta">$<?php echo $dprice[0]; ?></span>
+                                <?php } ?>
+
+                            </footer>
+                        </figcaption>
+                    </figure>
+                    <!-- Fin datos de libro -->
+
+                    <?php endforeach ?>
+                <!-- Fin de textos relacionados -->
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Novedades</h3>
+
+                    <?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+                    <?php $countnovedades = 0 ?>
+                    <?php foreach ($novedades as $novedad): ?>
+                    <?php $countnovedades++ ?>
+
+                    <article class="col-md-12 pd0 wide">
+
+                        
+                            <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+                            <p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
+                        
+                    </article>
+                    <?php endforeach ?>
+
+                </div>
+            </div>
+        </section>
 		
 		<?php woo_main_after(); ?>
 
+    </div>
+    <!-- /#content -->
 
-    </div><!-- /#content -->
+
 		
 <?php get_footer(); ?>

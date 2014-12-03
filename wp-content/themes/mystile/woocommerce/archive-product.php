@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-get_header(  ); ?>
+get_header(); ?>
 
 
 <div class="novedad-bg">
@@ -40,10 +40,12 @@ get_header(  ); ?>
 		    		
 		    		<!-- Corresponde a los datos del libro -->
 		    		<figure class="col-md-3 producto pdbottom10">
+		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    		</a>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
-		    				<header class="superior">
+		    				<header class="superior catalogue">
 		    					<h4><?php echo $libro->post_title ?></h4>
 		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
 		    					<p>

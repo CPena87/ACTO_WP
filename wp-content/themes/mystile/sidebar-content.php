@@ -18,22 +18,18 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	if ( isset( $woo_options['woo_layout'] ) && ( $woo_options['woo_layout'] != 'layout-full' ) ) {
 ?>	
 <aside id="sidebar" class="col-right sidecontent mbottom50">
+<h4 class="sidebar">Novedades Relacionadas</h4>
+<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 3)); ?>
+       <?php $countnovedades = 0 ?>
+       <?php foreach ($novedades as $novedad): ?>
+       <?php $countnovedades++ ?>
+	
+	<h3 class="sidebar"><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+	
+	<?php echo get_the_excerpt(); ?>
+	<a href="<?php echo get_permalink($novedad->ID) ?>" title="Continua Leyendo>">Continua Leyendo...</a>
+<?php endforeach ?>
 
-	<h4 class="sidebar">Ediciones Relacionadas</h4>
-	<h3 class="sidebar"><a href="/" rel="nofollow" title="Reedición Cementerio de Praga">Reedición Cementerio de Praga</a></h3>
-	<p class="data"><strong>Autor: </strong>María José Correa Gómez</p>
-	<p>Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now</p>
-	<a href="/" title="Continua Leyendo" rel="nofollow">Continua Leyendo...</a>
-
-	<h3 class="sidebar"><a href="/" rel="nofollow" title="Reedición Cementerio de Praga">Reedición Cementerio de Praga</a></h3>
-	<p class="data"><strong>Autor: </strong>María José Correa Gómez</p>
-	<p>Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now</p>
-	<a href="/" title="Continua Leyendo" rel="nofollow">Continua Leyendo...</a>
-
-	<h3 class="sidebar"><a href="/" rel="nofollow" title="Reedición Cementerio de Praga">Reedición Cementerio de Praga</a></h3>
-	<p class="data"><strong>Autor: </strong>María José Correa Gómez</p>
-	<p>Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now</p>
-	<a href="/" title="Continua Leyendo" rel="nofollow">Continua Leyendo...</a>
 
 
 	<form class="send-news mtop30">

@@ -42,29 +42,38 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <section class="container mtop30">
     	<div class="row">
     		 <div class="col-md-9 sortcontent mbottom30">
-    		 	<h2>Noticias</h2>
-    		 	<figure class="col-md-4 relevance">
-    		 		<img src="<?php bloginfo('template_directory'); ?>/images/relevance-1.jpg" alt="">
+
+    		 	<h2>Novedades</h2>
+
+    		 	<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 3)); ?>
+    		 	<?php $countnovedades = 0 ?>
+    		 	<?php foreach ($novedades as $novedad): ?>
+    		 	<?php $countnovedades++ ?>
+
+    		 	<?php if ($countnovedades == 1){ 
+    		 		$col = 'col-md-4';}
+    		 		elseif ($countnovedades == 2) {
+    		 		$col = 'col-md-8';} 
+    		 		elseif ($countnovedades == 3) {
+    		 		$col ='col-md-12';}
+    		 		
+    		 		?>
+
+    		 	<figure class="<?php echo $col ?> relevance">
+    		 		<?php echo get_the_post_thumbnail( $novedad->ID , $col) ?>
+
     				<figcaption>
-    					<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
-    					<p>I used to think the world was this great place where everybody.</p>
+    					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+    					<p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
     				</figcaption>
 	    		</figure>
-	    		<figure class="col-md-8 relevance">
-	    			<img src="<?php bloginfo('template_directory'); ?>/images/relevance-2.jpg" alt="">
-	    			<figcaption>
-						<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
-    					<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. </p>
-    				</figcaption>
-	    		</figure>
-	    		<figure class="col-md-12 relevance">
-	    			<img src="<?php bloginfo('template_directory'); ?>/images/relevance-3.jpg" alt="">
-    				<figcaption>
-    					<h3><a href="" title="" rel="">Lorem Ipsum</a></h3>
-    					<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke.</p>
-    				</figcaption>
-   	    		</figure>
-   	    		<a class="go-cta news" href="/" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
+	    	<?php endforeach ?>
+
+	    		
+
+   	    		<div class="ctrl-div">
+   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link() ?>" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
+   	    		</div>
     		 </div>
     		 <aside class="col-md-3 sidecall pleft0">
     		 	<h2>Reseñas</h2>
@@ -103,7 +112,9 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    		
 		    		<!-- Corresponde a los datos del libro -->
 		    		<figure class="col-md-3 producto pdbottom10">
+		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    		</a>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior">

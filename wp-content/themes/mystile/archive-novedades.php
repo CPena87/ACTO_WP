@@ -52,7 +52,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 				<article <?php post_class('post'); ?>>
 
-                    <section class="post-content">
+                    <section class="nov-content">
                         <!-- <a href="<?php //echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
                         </a> -->
                     

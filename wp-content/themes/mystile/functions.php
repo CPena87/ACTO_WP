@@ -48,6 +48,9 @@ add_post_type_support('page', 'excerpt');
 if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
 add_image_size('encabezado', 870, 200, true );
+add_image_size('col-md-4', 235, 237, true);
+add_image_size('col-md-8', 500, 237, true);
+add_image_size('col-md-12', 765, 237, true);
 // add_image_size('libros',);
 };
 
@@ -112,6 +115,10 @@ function resenas_register() {
 }
 
 register_taxonomy('autores', array('product'), array("hierarchical" => true, "label" => "Autores", "singular_label" => "Autor", "rewrite" => 'hierarchical'));
+
+register_taxonomy('tipos', array('product'), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => 'hierarchical'));
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */

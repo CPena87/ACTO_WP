@@ -3111,7 +3111,7 @@ img.ui-datepicker-trigger {
 
 .bg-head{background-color: rgba(0, 0, 0, 0.5); background-size: cover !important; width: 100% !important; position: absolute; right: 0;
 left: 0; z-index: 9999;}
-span.amount{color: #fff; padding-right: 10px; font-size: 20px; /*font-family: 'ambleregular';*/} 
+span.amount{color: #fff; padding-right: 10px; font-size: 15px; /*font-family: 'ambleregular';*/} 
 span.contents{color:#fff; background: #ff8000; padding: 5px; border-radius: 20px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -3120,6 +3120,7 @@ span.contents{color:#fff; background: #ff8000; padding: 5px; border-radius: 20px
     transition: all 0.5s ease-in-out;}
 .cart-nav{padding-right:0; padding-left: 0; padding-top:15px;}
 a.cart-parent{padding: 20px 0px;}
+.fixed {position: absolute; z-index: 999999; right: 0; width: 370px; border-radius: ; }
 
 .social-top ul{float:left; margin:25px 0 0;}
 .social-top li{display: block; float:left;}
@@ -3218,6 +3219,7 @@ margin: 15px;-webkit-transition: all 0.5s ease-in-out;
 -ms-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
+.ctrl-div{padding-top:20px; clear:both;}
 /* Iconos */
 .news, .news:hover
 {background-image: url("images/news-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
@@ -3243,6 +3245,7 @@ transition: all 0.5s ease-in-out;}
 .white{background:#ffffff;}
 .opal-white{background:#fcfcfc;}
 .medium-gray{background:#e6e6e6;}
+.orange-medium{background: rgba(255, 128, 0, 0.4);}
 
 
 /* Colores para texto */
@@ -3321,7 +3324,7 @@ h1.outstand,
 .sortcontent h2, 
 .outstanding h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 15px 20px;}
 figure.relevance{height: 260px; margin-bottom: 10px;}
-.relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; bottom:80px;}
+.relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; bottom:80px; height:80px;}
 .relevance h3{padding-top: 10px; margin-bottom: 5px;}
 .relevance h3 a{padding: 10px 0 0 10px; color: #fff; font-size: 20px; text-decoration:none;
 -webkit-transition: all 0.5s ease-in-out;
@@ -3357,11 +3360,21 @@ p.brdbttm{font-size: 14px !important; border-bottom: 1px solid #777777; padding-
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
 .producto img{width:100%;}
+a.entered{width: 100%; margin-bottom: 10px;}
 
 /* Estilos para productos de catalogo en single y en vista destacados */
-header.superior{height:180px;}
+header.superior{height:330px;}
+header.superior.reference{height:415px;}
+header.superior.catalogue{height:530px;}
+header.superior.related{height:415px;}
 .superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 17px; line-height: 140%;}
 .superior p{font-family: "Open Sans"; margin-top:0; margin-bottom:0;color:#666666; font-size: 13px; padding: 0 5px 5px; }
+li.cart{background: rgba(255, 128, 0, 0.4);-webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;}
 a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
 .producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; float: left; display: block; clear: both;}
 .producto a:hover{color:#ff8000;}
@@ -3375,6 +3388,8 @@ footer.inferior{clear:both;}
 .over-oustand img,
 .over-audio img,
 .over-coffee img{width:70%; height:auto;}
+.wide{height:auto;}
+.wide img{width:100% !important;}
 
 /* Estilos correspondientes a elementos de columnas independientes */
 .launch{height: auto;}
@@ -3437,6 +3452,7 @@ p.data{margin:5px 0;}
 .reviewer img{border-radius: 90%; width: 90%; height: auto; max-width: 164px; float: left; border: none; padding: 0;}
 .sign{background-image: url("../mystile/images/redirect-icon.png"); height: 40px; width: 40px; display: block; background-position: 0px 0px; background-repeat: no-repeat; background-size: 40px; clear: both; position: relative; top: -20px; left: 50px; }
 .post-content{float: left; padding-left: 0px; width: 75%;}
+.act-content{float: left; padding-left: 0px;}
 .resign-data h1 a{font-size: 30px; font-family: Times, serif; font-weight: 300; text-transform: initial; color: #000;}
 header.resign-data h1{margin-bottom:0; line-height:90%;}
 span.stronged{font-weight: bold !important; 
@@ -3534,6 +3550,8 @@ select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
 
 
 }
+
+
 
 
 

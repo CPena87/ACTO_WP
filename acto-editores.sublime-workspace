@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"col"
+			],
+			[
+				"li",
+				"libro"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"s",
+				"span	Tag"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"a",
+				"avatarautor"
+			],
+			[
+				"autores",
+				"autores_"
+			],
+			[
+				"auo",
+				"autores"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
 				"font-",
 				"font-style"
 			],
@@ -30,10 +70,6 @@
 			[
 				"border",
 				"border-radius"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"text",
@@ -70,10 +106,6 @@
 			[
 				"bol",
 				"bold"
-			],
-			[
-				"h",
-				"h3	Tag"
 			],
 			[
 				"margi",
@@ -196,10 +228,6 @@
 				"margin-left"
 			],
 			[
-				"s",
-				"solid"
-			],
-			[
 				"d",
 				"display"
 			],
@@ -252,18 +280,58 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/mystile/taxonomy-autores.php",
+			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 2358,
+				"buffer_size": 95576,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/style.css",
+			"file": "wp-content/themes/mystile/index.php",
 			"settings":
 			{
-				"buffer_size": 91088,
+				"buffer_size": 7992,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/taxonomy-autores.php",
+			"settings":
+			{
+				"buffer_size": 5952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product.php",
+			"settings":
+			{
+				"buffer_size": 4078,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/sidebar-content.php",
+			"settings":
+			{
+				"buffer_size": 1671,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/functions.php",
+			"settings":
+			{
+				"buffer_size": 4676,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/header.php",
+			"settings":
+			{
+				"buffer_size": 6536,
 				"line_ending": "Unix"
 			}
 		},
@@ -271,23 +339,31 @@
 			"file": "wp-content/themes/mystile/css/bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 120977,
+				"buffer_size": 120992,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/css/bootstrap.min.css",
+			"file": "wp-content/themes/mystile/template-autores.php",
 			"settings":
 			{
-				"buffer_size": 109382,
+				"buffer_size": 2660,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/archive-resenas.php",
+			"file": "wp-content/themes/mystile/page-63.php",
 			"settings":
 			{
-				"buffer_size": 3964,
+				"buffer_size": 5136,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/archive-product.php",
+			"settings":
+			{
+				"buffer_size": 2804,
 				"line_ending": "Unix"
 			}
 		}
@@ -316,47 +392,73 @@
 	},
 	"file_history":
 	[
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentact.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/content.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-attributes.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/result-count.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/content-product_cat.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-thumbnails.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/price.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/additional-information.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/tabs.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/description.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-woocommerce.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/includes/admin/views/html-admin-page-addons.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/loop-start.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/sale-flash.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product-reviews.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/related.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/up-sells.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/simple.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/layout.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/variable.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/external.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-archives.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/sale-flash.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.min.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/includes/class-wc-cart.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-blog.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentact.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentnov.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-novedades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/style-admin.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/style.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-options.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-functions.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-woocommerce.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.min.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentresena.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/content.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-archives.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-thumbnails.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/includes/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-content.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-hooks.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-fullwidth.php",
@@ -417,33 +519,7 @@
 		"/Users/upmedia/Dropbox/Super Team/@ipchile/Landing/IPChile/index.html",
 		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile_capacita/__db__/promo.php",
 		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/assets/js/bootstrap.js",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/assets/js/app.js",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/archive-jurisprudencia.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/page-17.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/page-linea-investigacion.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/single-eventos.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/single-directorio.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/search.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/header.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/__archive-publicaciones.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/archive-directores.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/comments.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/page.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/page-directores.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/fullpage.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/category.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/category-noticias.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/index.php",
-		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/functions.php",
-		"/Users/upmedia/Desktop/IRAM_WP/wp-content/themes/iram/js/jquery.bxslider.js",
-		"/Users/upmedia/Desktop/IRAM_WP/wp-content/themes/iram/js/jquery.easing.1.3.js",
-		"/Users/upmedia/Desktop/IRAM_WP/wp-content/themes/iram/bootstrap/css/bootstrap-theme.min.css",
-		"/Users/upmedia/Desktop/IRAM_WP/wp-content/themes/iram/bootstrap/css/bootstrap-theme.css.map",
-		"/Users/upmedia/Desktop/IRAM_WP/wp-content/themes/iram/functions.php",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/index.html",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/page_banners.php",
-		"/Users/upmedia/Desktop/SITIOS/UPMEDIA/public_html/regcom/wp-content/themes/front/page-actividades.php",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/style.css"
+		"/Users/upmedia/Desktop/programagobierno_WP/wp-content/themes/jt-theme/assets/js/app.js"
 	],
 	"find":
 	{
@@ -451,9 +527,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"<wp-content>",
+			"<ACTO_WP>",
+			"<folders>",
 			"<open folders>"
 		]
 	},
@@ -462,6 +541,58 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$linkautor",
+			"$autores",
+			"class=\"sku_wrapper\"",
+			"auxiliares",
+			"Añadir al carro",
+			"class=\"col-md-4 pleft0 pd0mob\"",
+			"$product",
+			"product",
+			"<?php wc_get_template_part( 'content', 'product' ); ?>",
+			"woocommerce_product_loop_start",
+			"woocommerce columns-",
+			"woocommerce columns-4",
+			"woocommerce_before_shop_loop",
+			"shop",
+			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\"\n<div id=\"main\" ",
+			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\">\n<div id=\"main\" ",
+			"<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">\n<div id=\"main\" ",
+			"<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">",
+			"class=\"woocommerce-result-count\"",
+			"hola! soy un producto",
+			"auxiliares",
+			"col-md-4 pleft0",
+			"class=\"minus\"",
+			"<span class=\"price\">",
+			"hola! soy un producto",
+			"hajshkaljdhaksjhdlkajshdklajshdlk ajshd klajshdlkajshd kajsh",
+			"Featured Products",
+			"class=\"col-md-12\"",
+			"columns-4<div class=\"col-md-12\">\n\n				    \n<section class=\"col-full\">  ",
+			"class=\"woocommerce ",
+			"columns-4",
+			"class=\"woocommerce columns-4\"",
+			"auxiliares",
+			"@media",
+			"class=\"product\"",
+			"product type-product status-publish has-post-thumbnail first sale shipping-taxable purchasable product-type-simple",
+			"class=\"products\"",
+			"class=\"woocommerce-result-count\"",
+			"id=\"reviews\"",
+			"cart-icon",
+			"price ins",
+			"price del",
+			"left",
+			"class=\"images\"",
+			"images",
+			".woocommerce-tabs .panel",
+			"tab-reviews",
+			"col-left",
+			"onsale",
+			"shop",
+			"itemscope",
+			"a",
 			"auxili",
 			"entry",
 			"thumbnail",
@@ -537,59 +668,7 @@
 			"col-md-6",
 			"button",
 			" span.amount",
-			"#top",
-			"h1.page-title",
-			"tbag",
-			"input[type=text], input.input-text, textarea, input.txt, input[type=tel], input[type=email]",
-			"#header .nav-toggle",
-			"ul.products li.product img",
-			"navigation",
-			"wrapper",
-			"footer-wrap",
-			"#header #navigation",
-			"a{",
-			"a{}",
-			"#top ul.nav > li a:hover",
-			"#top",
-			"#top .wc-nav li.cart a .contents",
-			"p{",
-			"p",
-			".footer-wrap",
-			".footer-wrap.footer-wrap",
-			".footer-wrap",
-			"search",
-			"navigation",
-			"slide",
-			"description",
-			"slide",
-			".fav-caption",
-			"indicates",
-			"inside",
-			"background-image",
-			".pic-page img",
-			"quad",
-			".login h1 a",
-			"login",
-			"position",
-			"navigation",
-			"navi",
-			"navigation",
-			"navi",
-			"navigation",
-			"navigatiob",
-			"navi",
-			"navigation",
-			"map",
-			"post-thumbnails",
-			"{\n",
-			"navigation",
-			"type and press",
-			"see more",
-			".slider",
-			"bin",
-			"a.nav",
-			"analytics",
-			".lacampana p"
+			"#top"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -607,33 +686,200 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/mystile/taxonomy-autores.php",
+					"file": "wp-content/themes/mystile/style.css",
 					"settings":
 					{
-						"buffer_size": 2358,
+						"buffer_size": 95576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1172,
-								1172
+								85359,
+								85359
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 58493.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/mystile/index.php",
+					"settings":
+					{
+						"buffer_size": 7992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2672,
+								2672
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 586.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/mystile/taxonomy-autores.php",
+					"settings":
+					{
+						"buffer_size": 5952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5298,
+								5298
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 278.0,
+						"translation.y": 1941.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/mystile/woocommerce/single-product.php",
+					"settings":
+					{
+						"buffer_size": 4078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3370,
+								4029
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1335.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/mystile/sidebar-content.php",
+					"settings":
+					{
+						"buffer_size": 1671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1036,
+								1036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/mystile/functions.php",
+					"settings":
+					{
+						"buffer_size": 4676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4435,
+								4435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/mystile/header.php",
+					"settings":
+					{
+						"buffer_size": 6536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -645,48 +891,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
-					"file": "wp-content/themes/mystile/style.css",
-					"settings":
-					{
-						"buffer_size": 91088,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89602,
-								89602
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 59815.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
+					"buffer": 7,
 					"file": "wp-content/themes/mystile/css/bootstrap.css",
 					"settings":
 					{
-						"buffer_size": 120977,
+						"buffer_size": 120992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								81117,
-								81117
+								18301,
+								18301
 							]
 						],
 						"settings":
@@ -696,52 +913,53 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 66787.0,
+						"translation.y": 23989.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "wp-content/themes/mystile/css/bootstrap.min.css",
+					"buffer": 8,
+					"file": "wp-content/themes/mystile/template-autores.php",
 					"settings":
 					{
-						"buffer_size": 109382,
+						"buffer_size": 2660,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75585,
-								75585
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 16048.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "wp-content/themes/mystile/archive-resenas.php",
+					"buffer": 9,
+					"file": "wp-content/themes/mystile/page-63.php",
 					"settings":
 					{
-						"buffer_size": 3964,
+						"buffer_size": 5136,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2007,
-								2007
+								2351,
+								2351
 							]
 						],
 						"settings":
@@ -752,7 +970,34 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 632.0,
+						"translation.y": 716.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "wp-content/themes/mystile/woocommerce/archive-product.php",
+					"settings":
+					{
+						"buffer_size": 2804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -788,7 +1033,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.679458270958,
 			1.0
 		],
 		"rows":
