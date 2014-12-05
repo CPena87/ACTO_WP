@@ -83,7 +83,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			<ul class="foot-col">
 				<li><a href="<?php echo home_url('actividades') ?>/" title="Actividades" rel="nofollow">Actividades</a></li>
 				<li><a href="<?php echo home_url('novedades') ?>/" title="Novedades" rel="nofollow">Novedades</a></li>
-				<li><a href="<?php echo home_url('sobre-acto') ?>">Sobre Acto</a></li>
+				<li><a href="<?php echo home_url('sobre-acto') ?>/">Sobre Acto</a></li>
 			</ul>
 		</nav>
 		

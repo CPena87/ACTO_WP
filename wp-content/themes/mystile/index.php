@@ -67,7 +67,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     				<figcaption>
     					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-    					<p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
+    					<p><?php echo substr($post->post_content , 0 , 120 )?>...</p>
     				</figcaption>
 	    		</figure>
 	    	<?php endforeach ?>
@@ -80,13 +80,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     		 </div>
     		 <aside class="col-md-3 sidecall pleft0">
     		 	<h2>Reseñas</h2>
+
     		 	<article class="quote">
     		 		<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
-    		 		<?php the_excerpt('resenas'); ?>
-    		 		<p>I used to think the world was this great place where everybody.</p>
-    		 		<a class="namerev" href="">Ruperthuz Honorato</a>
-    		 		<span class="tagrev"><a href="">Debates Contemporáneos</a></span>
+    		 		<?php $resenas = get_posts(array('post_type' => 'resena' , 'numberposts' => '1')); ?>
+    		 		<?php $countnovedades = 0 ?>
+					<?php foreach($resenas as $resena): ?>
+					<?php $countnovedades++ ?>
+							<h4><?php echo $resena->post_title ?></h4>
+							<?php echo substr($resena->post_content , 0 , 100 )?>...
+							<a href="<?php echo get_post_type_archive_link('resena') ?>" title="Ver Catálogo" rel="nofollow">Ver Reseña</a>
+					<?php endforeach ?>
+						
     		 	</article>
+
+    		 	
+
     		 	<article class="sales mtop55">
     		 		<h4>Venta y Distribuición</h4>
     		 		<p class="brdbttm">I used to think the world was this great place where everybody.</p>
@@ -150,7 +159,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    		<?php endforeach ?>
 
 		    		<div class="ctrl-div">
-   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('product') ?>" title="Ir a Noticias" rel="nofollow">Ir a Catálogo</a>
+   	    			<a class="go-cta catalog" href="<?php echo get_post_type_archive_link('product') ?>" title="Ir a Noticias" rel="nofollow">Ir a Catálogo</a>
    	    		</div>
   
     		</div>
@@ -195,6 +204,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 						<p class="comments">“And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers.”</p>
 					<a href="">Por Umberto Eco</a>
 					</article>
+					<?php get_comment_pages_count( $comments, $producto ); ?>
 				</div>
 				<!-- Fin Comentarios -->
 

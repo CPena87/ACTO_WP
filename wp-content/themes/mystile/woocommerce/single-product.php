@@ -62,6 +62,75 @@ get_header(  ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
+	<!-- Comentarios  -->
+	<section class="container">
+        	<div class="row">
+            
+            <div class="col-md-6 col-md-offset-4 comment-area">
+            	<h3>Comentarios acerca del Libro</h3>
+                    <div class="separator clear"></div>
+                    <?php
+                        //Gather comments for a specific page/post 
+                        $comments = get_comments(array(
+                            'post_id' => $post->ID,
+                            //'status' => 'approve', //Change this to the type of comments to be displayed
+                            'orderby' => 'ID',
+                            'order' => 'ASC',
+                        ));
+                    ?>
+                   
+                    <?php foreach($comments as $comentario):?>
+                        
+                        <?php if( $comentario->comment_parent == 0){?>
+                                <div class="comentario col-md-12 comentario-user">
+                                    <div class="avatar col-md-4 hide-on-mobile pleft0">
+                                        <img src="<?php bloginfo('template_directory')?>/images/avatar-male.jpg" alt="" />
+                                    </div>
+                                     <p><?php echo $comentario->comment_content?></p>
+                                </div>
+                         
+                                
+                        <?php }?>
+                    <?php endforeach;?>
+                   
+                
+            </div>    
+            
+        	</div>
+        </section>
+
+        <section class="container contactt">
+        	<div class="row">
+                <div class="form">
+                    <?php $args = array(
+        				'fields' => apply_filters( 'comment_form_default_fields', array(
+            			'author' => '<div class="col-md-6"><p class="comment-form-author">'. ( $req ? '<span class="required">*</span>' : '' ) .
+                        '<input id="author" name="author" type="text" placeholder="Nombre" value="' .
+                        esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
+                        '</p></div>',
+                        'email'  => '<div class="col-md-6"><p class="comment-form-email">' .
+                        '' .
+                        ( $req ? '<span class="required">*</span>' : '' ) .
+                        '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
+        		        '</p></div>',
+                        'url'    => '' )),
+        				
+        				'label_submit'=>'Enviar Comentario',
+        					
+        				'comment_field' => '<div class="col-md-12"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true"></textarea></p></div>',
+    				);?>
+                    
+                    <?php comment_form($args)?>
+                </div>
+            </div>
+        </section>
+        
+        
+ 
+
+
+	<!-- Comentarios Fin -->
+
 	<div class="container mtop20mob">
 		<div class="row">
 			<div class="col-md-8">

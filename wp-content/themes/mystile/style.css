@@ -3223,6 +3223,8 @@ transition: all 0.5s ease-in-out;}
 /* Iconos */
 .news, .news:hover
 {background-image: url("images/news-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
+.catalog, .catalog:hover
+{background-image: url("images/catalogue-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
 /* Auxiliares */
 .cta-center{margin: 0 auto; display: table; float: none; text-align: center; padding: 2% 30px;}
 .fleft{float:left;}
@@ -3505,7 +3507,11 @@ button.cart{background: url("images/cart-icon.png"); background-repeat: no-repea
 /* Informacion Adicional del Catalogo */
 h2.additional{color: #575757; font-weight: bold; font-size: 30px; border-left: 10px solid #575757; text-transform: uppercase; font-family: "Open Sans"; padding-left: 10px;}
 select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
-
+/* Comentarios */
+.comment-area{border-top: 1px solid #D2D2D2; margin-top: 20px; padding-top: 20px;}
+.avatar img{border-radius: 50px; width: 100%; max-width: 100px; padding: 0;}
+.comentario{margin-top: 15px; margin-bottom: 20px; padding-left:0;}
+.comentario p{margin-top:35px; font-style: italic; font-size:15px;}
 
 /* MEDIA QUERIES Y RESPONSIVE STYLES */
 
