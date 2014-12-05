@@ -60,8 +60,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				
                 <header class="title-data">
                     <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                    <p class="author">Autor: <span><?php the_author(); ?></span></p>
-                    <p class="date fright">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
+<!--                     <p class="author">Autor: <span><?php the_author(); ?></span></p>
+ -->                    <p class="date">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
                 </header>
 
                 <div class="extract clearless">              

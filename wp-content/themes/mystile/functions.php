@@ -119,6 +119,16 @@ register_taxonomy('autores', array('product'), array("hierarchical" => true, "la
 register_taxonomy('tipos', array('product'), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => 'hierarchical'));
 
 
+// Activación de Options en Advance Custom Fields
+if( function_exists('acf_add_options_page') ) {
+    
+   acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'redirect'      => false
+    )); 
+}
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */

@@ -131,7 +131,7 @@ $var = get_queried_object();
 
                         
                             <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-                            <p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
+                            <?php echo substr($post->post_content , 0 , 150 )?>
                         
                     </article>
                     <?php endforeach ?>

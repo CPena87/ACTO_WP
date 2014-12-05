@@ -62,11 +62,11 @@ get_header(  ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
-	<div class="container">
+	<div class="container mtop20mob">
 		<div class="row">
 			<div class="col-md-8">
 
-					<h3>Libros Recomendados</h3>
+					<h3 class="title-sidebar">Libros Recomendados</h3>
 					<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
     				
     				<?php foreach($libros as $libro): ?>
@@ -108,15 +108,15 @@ get_header(  ); ?>
 
 			</div>
 
-			<div class="col-md-4">
-				<h3>Novedades</h3>
+			<div class="col-md-4 sidecontent">
+				<h3 class="title-sidebar">Novedades</h3>
 
 				<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
     		 	<?php $countnovedades = 0 ?>
     		 	<?php foreach ($novedades as $novedad): ?>
     		 	<?php $countnovedades++ ?>
 
-    		 	<article class="col-md-12 pd0 wide">
+    		 	<article class="col-md-12 pd0 wide ">
 
     				
     					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>

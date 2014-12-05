@@ -31,7 +31,28 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 <!-- if ( ! $product->is_purchasable() ) return;
 ?> -->
 
+<table class="shop_attributes">
 
+	<?php if ( $product->enable_dimensions_display() ) : ?>
+
+		<?php if ( $product->has_weight() ) : $has_row = true; ?>
+			<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
+				<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
+				<td class="product_weight"><?php echo $product->get_weight() . ' ' . esc_attr( get_option( 'woocommerce_weight_unit' ) ); ?></td>
+			</tr>
+		<?php endif; ?>
+
+		<?php if ( $product->has_dimensions() ) : $has_row = true; ?>
+			<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
+				<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+				<td class="product_dimensions"><?php echo $product->get_dimensions(); ?></td>
+			</tr>
+		<?php endif; ?>
+
+	<?php endif; ?>
+
+
+</table>
 
 <?php if ( $product->is_in_stock() ) : ?>
 
@@ -61,5 +82,8 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
+
+
+
 
 

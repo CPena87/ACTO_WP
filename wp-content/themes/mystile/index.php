@@ -20,12 +20,15 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     
 <div class="container-fluid home-bg">
 	<div class="row">
-		<div class="quoteline col-md-6">
+		<div class="quoteline col-md-8">
 			<div id="take" class="carousel-
 			caption jumbotron">
-				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
-	              <h1>We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</h1>
-	             <a class="btn-cta cta-center" href="/" title="" rel="">Ver Libro</a>
+				<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">	
+					<?php $quote = get_field('quote-text' , 'options') ?>
+	              	<h1><?php echo $quote ?></h1>
+					"<?php $vinculo = get_field('vinculo-quote' , 'options') ?>"
+
+	              <a class="btn-cta cta-center" href="<?php echo $vinculo?>" title="" rel="">Ver Referencia</a>
 	        </div>
 
 		</div>
@@ -72,13 +75,14 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	    		
 
    	    		<div class="ctrl-div">
-   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link() ?>" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
+   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('novedades') ?>" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
    	    		</div>
     		 </div>
     		 <aside class="col-md-3 sidecall pleft0">
     		 	<h2>Reseñas</h2>
     		 	<article class="quote">
     		 		<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
+    		 		<?php the_excerpt('resenas'); ?>
     		 		<p>I used to think the world was this great place where everybody.</p>
     		 		<a class="namerev" href="">Ruperthuz Honorato</a>
     		 		<span class="tagrev"><a href="">Debates Contemporáneos</a></span>
@@ -144,6 +148,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    		<!-- Fin datos de libro -->
 
 		    		<?php endforeach ?>
+
+		    		<div class="ctrl-div">
+   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('product') ?>" title="Ir a Noticias" rel="nofollow">Ir a Catálogo</a>
+   	    		</div>
   
     		</div>
     	</div>
@@ -158,18 +166,21 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 			<div class="col-md-12">
 				<!-- Lanzamientos -->
 				<div class="col-md-4 mtop30 mbottom30">
+					<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '1')) ?>
+					<?php foreach($libros as $libro): ?>
 					<h2 class="subs">Lanzamientos</h2>
 					<figure class="launch">
-						<img  src="<?php bloginfo('template_directory'); ?>/images/book-launch.jpg" alt="">
+						<?php echo get_the_post_thumbnail($libro->ID); ?>
 						<figcaption class="launchdata light-grey">
 							<header>
-								<h4>Anna Karenina</h4>
-								<span>Leo Tolstoi</span>
+								<h4><?php echo $libro->post_title ?></h4>
+								<span><?php $autores = get_the_terms( $libro->ID, 'autores' ); ?></span>
 							</header>
-							<p>Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.</p>
-							<a href="/" title="Ver Catálogo" rel="nofollow">Ver Catálogo</a>
+							<?php echo substr($libro->post_content , 0 , 172 )?>...
+							<a href="<?php echo get_post_type_archive_link('product') ?>" title="Ver Catálogo" rel="nofollow">Ver Catálogo</a>
 						</figcaption>
 					</figure>
+					<?php endforeach ?>
 				</div>
 				<!-- Fin Lanzamientos -->
 

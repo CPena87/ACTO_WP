@@ -53,7 +53,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                         <?php foreach($autores as $autor): ?>
                             <?php $linkautor = get_term_link( $autor); ?>
                             
-                               <figure class="col-md-4 avatarautor">
+                               <figure class="col-md-4 avatarautor ">
                                     <?php 
                                         $image = get_field('avatarautor' , 'autores_'. $autor->term_id);
                                         $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
@@ -62,7 +62,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                                     <a href="<?php echo $linkautor ?>"><img src="<?php echo $avatarautor[0]?>"></a>
                                     <figcaption class="desc-autor">
                                         <a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
-                                        <?php echo get_field('descripcion' , 'autores_'.$autor->term_id) ?>
+                                        <?php $descripcionn = get_field('descripcion' , 'autores_'.$autor->term_id) ?>
+                                        <?php echo substr($descripcionn, 0, 125 ) ?>
                                     </figcaption>
                               </figure>
                          

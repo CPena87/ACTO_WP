@@ -52,7 +52,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 				<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
-				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+				    <a id="logo" href="<?php echo esc_url( home_url() ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 				    </a>
 			    <?php } ?>
@@ -70,21 +70,20 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Editorial</h5>
 			<ul class="foot-col">
-				<li><a href="/" title="Novedades" rel="nofollow">Novedades</a></li>
-				<li><a href="/" title="Catálogo" rel="nofollow">Catálogo</a></li>
-				<li><a href="/" title="Autores" rel="nofollow">Autores</a></li>
-				<li><a href="/" title="Distribuición" rel="nofollow">Distribuición</a></li>
-				<li><a href="/" title="Sobre Acto" rel="faq">Sobre Acto</a></li>
+				<li><a href="<?php echo home_url('shop') ?>">Catálogo</a></li>
+				<li><a href="<?php echo home_url('autores') ?>">Autores</a></li>
+				<li><a href="<?php echo home_url('distribuicion') ?>">Distribuición</a></li>
+				<li><a href="<?php echo home_url('destacados') ?>/" title="Destacados" rel="nofollow">Destacados</a></li>
+				
 			</ul>
 		</nav>
 
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Medios</h5>
 			<ul class="foot-col">
-				<li><a href="/" title="Actividades" rel="nofollow">Actividades</a></li>
-				<li><a href="/" title="Editorial" rel="nofollow">Editorial</a></li>
-				<li><a href="/" title="Prensa" rel="nofollow">Prensa</a></li>
-				<li><a href="/" title="Destacados" rel="nofollow">Destacados</a></li>
+				<li><a href="<?php echo home_url('actividades') ?>/" title="Actividades" rel="nofollow">Actividades</a></li>
+				<li><a href="<?php echo home_url('novedades') ?>/" title="Novedades" rel="nofollow">Novedades</a></li>
+				<li><a href="<?php echo home_url('sobre-acto') ?>">Sobre Acto</a></li>
 			</ul>
 		</nav>
 		

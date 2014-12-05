@@ -24,9 +24,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
        <?php foreach ($novedades as $novedad): ?>
        <?php $countnovedades++ ?>
 	
-	<h3 class="sidebar"><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+	<div class="mbottom20">
+		<h3 class="sidebar"><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
 	
-	<?php echo get_the_excerpt(); ?>
+	<?php echo substr($post->post_content , 0 , 150 )?>
+	</div>
 	<a href="<?php echo get_permalink($novedad->ID) ?>" title="Continua Leyendo>">Continua Leyendo...</a>
 <?php endforeach ?>
 
