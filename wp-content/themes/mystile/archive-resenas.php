@@ -56,7 +56,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
                             $image = get_field('imagen' , $post->ID);
                             $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-                            $src = wp_get_attachment_image_src( $image, $size )
+                            $src = wp_get_attachment_image_src( $image, $size );
+                            $zine = get_field('revista' , $post->ID);
 
                         ?>
                         <img src="<?php echo $src[0]?>">
@@ -67,6 +68,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                     
                         <header class="resign-data">
                             <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+
+                            <span><?php echo $zine;?></span>
                             <p class="author mbottom10">Por: <span class="stronged"><?php the_author(); ?></span></p>
                         </header>
                 

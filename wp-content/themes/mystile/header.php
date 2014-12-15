@@ -39,24 +39,48 @@ global $woo_options, $woocommerce;
 
 <body <?php body_class('opal-white') ?> >
 
-	<div class="container">
-		<div class="fixed">
-			<nav class="hide-on-mobile col-md-8 col-md-offset-3" role="navigation">
+<div class="container">
+	<div class="fixed col-full">
+		<nav class="hide-on-mobile col-md-3 col-md-offset-10" role="navigation">
 				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
 				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
 				<?php } ?>
 				<?php
 					if ( class_exists( 'woocommerce' ) ) {
 						echo '<ul class="nav wc-nav">';
+						//echo '<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">';
 						woocommerce_cart_link();
-						//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
-						// echo get_search_form();
+						//echo '</button>';
 						echo '</ul>';
 					}
 				?>
-			</nav>
-		</div>
+		</nav>
 	</div>
+</div>
+
+<!-- Ventana Modal para vista de carro en funcionamiento -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Fin Ventana Modal -->
 
 <div id="wrapper" >
 	<?php woo_header_before(); ?>

@@ -114,6 +114,24 @@ function resenas_register() {
     flush_rewrite_rules();
 }
 
+add_action('init', 'direcciones_register');
+function direcciones_register() {
+    $args = array(
+        'label' => 'Direcciones',
+        'singular_label' => 'Dirección',
+        'public' => true,
+        'menu_position' => 14, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'direcciones'),
+        'supports' => array('title' , 'editor' )
+    );
+    register_post_type('direcciones', $args);
+    flush_rewrite_rules();
+}
+
 register_taxonomy('autores', array('product'), array("hierarchical" => true, "label" => "Autores", "singular_label" => "Autor", "rewrite" => 'hierarchical'));
 
 register_taxonomy('tipos', array('product'), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => 'hierarchical'));

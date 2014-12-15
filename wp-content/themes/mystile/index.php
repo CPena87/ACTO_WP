@@ -67,7 +67,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     				<figcaption>
     					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-    					<p><?php echo substr($post->post_content , 0 , 120 )?>...</p>
+    					<p><?php echo substr($post->post_content , 0 , 105 )?>...</p>
     				</figcaption>
 	    		</figure>
 	    	<?php endforeach ?>
@@ -75,36 +75,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	    		
 
    	    		<div class="ctrl-div">
-   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('novedades') ?>" title="Ir a Noticias" rel="nofollow">Ir a Noticias</a>
+   	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('novedades') ?>" title="Ir a Noticias" rel="nofollow" target="_blank">Ir a Novedades</a>
    	    		</div>
     		 </div>
     		 <aside class="col-md-3 sidecall pleft0">
-    		 	<h2>Reseñas</h2>
-
-    		 	<article class="quote">
-    		 		<img src="<?php bloginfo('template_directory'); ?>/images/quote.png">
-    		 		<?php $resenas = get_posts(array('post_type' => 'resena' , 'numberposts' => '1')); ?>
-    		 		<?php $countnovedades = 0 ?>
-					<?php foreach($resenas as $resena): ?>
-					<?php $countnovedades++ ?>
-							<h4><?php echo $resena->post_title ?></h4>
-							<?php echo substr($resena->post_content , 0 , 100 )?>...
-							<a href="<?php echo get_post_type_archive_link('resena') ?>" title="Ver Catálogo" rel="nofollow">Ver Reseña</a>
-					<?php endforeach ?>
-						
-    		 	</article>
-
-    		 	
-
-    		 	<article class="sales mtop55">
-    		 		<h4>Venta y Distribuición</h4>
+    		 	<article class="sales mtop95">
+    		 		<h4>Distribuición</h4>
     		 		<p class="brdbttm">I used to think the world was this great place where everybody.</p>
-    		 		<a href="">Lorem Ipsum</a>
-    		 		<p>I used to think the world was this great place where everybody.</p>
-    		 		<a href="">Lorem Ipsum</a>
-    		 		<p>I used to think the world was this great place where everybody.</p>
-    		 		<a href="">Lorem Ipsum</a>
-    		 		<p>I used to think the world was this great place where everybody.</p>
+    		 		
+    		 		<?php $direcciones= get_posts(array('post_type' => 'direcciones', 'numberposts' => 8)); ?>
+    		 			<?php foreach ($direcciones as $direccion): ?>
+
+    		 			<span><?php echo $direccion->post_title ?></span>
+    		 			<p><?php echo substr($direccion->post_content , 0 , 105 )?></p>
+
+    		 			<?php endforeach ?>
+    		 		
     		 	</article>
     		 </aside>
     	</div>
@@ -159,7 +145,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    		<?php endforeach ?>
 
 		    		<div class="ctrl-div">
-   	    			<a class="go-cta catalog" href="<?php echo get_post_type_archive_link('product') ?>" title="Ir a Noticias" rel="nofollow">Ir a Catálogo</a>
+   	    			<a class="go-cta catalog" href="<?php echo get_post_type_archive_link('product') ?>" title="Ir a Noticias" rel="nofollow" target="_blank">Ir a Catálogo</a>
    	    		</div>
   
     		</div>
@@ -182,7 +168,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 						<?php echo get_the_post_thumbnail($libro->ID); ?>
 						<figcaption class="launchdata light-grey">
 							<header>
-								<h4><?php echo $libro->post_title ?></h4>
+								<h4><?php echo substr($libro->post_title , 0 , 35 ) ?></h4>
 								<span><?php $autores = get_the_terms( $libro->ID, 'autores' ); ?></span>
 							</header>
 							<?php echo substr($libro->post_content , 0 , 172 )?>...
@@ -193,20 +179,24 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 				</div>
 				<!-- Fin Lanzamientos -->
 
+
+
 				<!-- Comentarios -->
 				<div class="col-md-4 mtop30 mbottom30">
 					<h2 class="subs">Comentarios</h2>
+					<?php $comentarioss = get_comments(array('post_type' => 'product' , 'number' => 2)) ?>
+					<?php foreach($comentarioss as $comentario): ?>
+					
 					<article class="brdbottom">
-						<p class="comments">“And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers.”</p>
-					<a href="">Por Umberto Eco</a>
+						<p class="comments"><?php echo substr($comentario->comment_content , 0 , 140 ) ?>...</p>
+					<a href="<?php echo get_the_permalink( $comentario->comment_post_ID) ?>">Por <?php echo $comentario->comment_author ?></a>
 					</article>
-					<article class="brdbottom">
-						<p class="comments">“And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers.”</p>
-					<a href="">Por Umberto Eco</a>
-					</article>
-					<?php get_comment_pages_count( $comments, $producto ); ?>
+					<?php endforeach ?>
+
 				</div>
 				<!-- Fin Comentarios -->
+
+
 
 				<!-- Newsletter -->
 				<div class="col-md-4 mtop30 mbottom30">
