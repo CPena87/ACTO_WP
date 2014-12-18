@@ -19,7 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php endforeach ?>
 </h2>
 <?php $tipos = get_the_terms( $post->ID, 'tipos' ); ?>
-<span>
+
+<span class="clear">
 	<?php if($tipos){?>
 	<?php foreach ($tipos as $tipo): ?>
 		<?php $linktipo = get_term_link( $tipo); ?>

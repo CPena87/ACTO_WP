@@ -3247,6 +3247,7 @@ transition: all 0.5s ease-in-out;}
 .hide-on-desktop{display:none;}
 .display-on-mobile{display:none;}
 .centered{text-align:center;}
+.inbl{display: inline-block;}
 
 /* Colores */
 .light-grey{background:#f3f3f3;}
@@ -3418,6 +3419,7 @@ footer.inferior{clear:both;}
 .comments{font-family: "Open Sans", sans-serif; font-weight: 100; font-size: 15px; margin-bottom: 5px; line-height:150%;}
 .send-news h4{font-size: 17px; font-family: "Open Sans"; text-transform: uppercase; font-weight: bold; color: #ff8000; margin-bottom: 5px;}
 .send-news p{margin-bottom: 5px;}
+p.inp{float: left; clear: both; color: #ff8000; font-weight: bold; font-size: 15px;}
 
 /* Corresponde a estilos de migas pan en general */
 .breadcrumbs{padding: 8px 0; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 4px; margin-top: 30px;
@@ -3499,7 +3501,7 @@ font-weight: bold;}
 
 /************* ESTILOS RELACIONADOS CON EL CATALOGO *************/
 /* Single del catalogo */
-.product_title.entry-title{color:#575757; font-weight:bold; font-size:45px; border-left: 10px solid #575757; text-transform: uppercase; font-family:"Open Sans"; padding-left: 10px;}
+.product_title.entry-title{color:#575757; font-weight:bold; font-size:30px; border-left: 10px solid #575757; text-transform: uppercase; font-family:"Open Sans"; padding-left: 10px; width: 100% !important;}
 .price.bigged{padding:0;}
 .price del span{font-size: 45px; color:#ff8000;}
 .price ins span{font-size: 40px; color:#313131;}

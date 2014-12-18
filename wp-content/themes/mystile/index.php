@@ -126,6 +126,16 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 								<?php endforeach ?>
 		    					</p>
 		    				</header>
+		    				<div>
+		    				<?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
+					
+								<?php if($tipos){?>
+								<?php foreach ($tipos as $tipo): ?>
+									<?php $linktipo = get_term_link( $tipo); ?>
+									<a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
+								<?php endforeach ?>
+								<?php } ?>
+							</div>
 		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
 		    				<footer class="inferior">
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
@@ -206,12 +216,13 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 						<p>I used to think the world was this great place where everybody.</p>
 					
 
-						<label for="contacto-nombre">Nombre</label>
-						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre" />
+<!-- 						<label for="contacto-nombre">Nombre</label>
+						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre Lala" />
 						<label for="contacto-nombre">Email</label>
 						<input type="email" id="contacto-nombre" placeholder="Ingresa tu Nombre" />
-						<input type="submit" placeholder="Enviar" />
+						<input type="submit" placeholder="Enviar" /> -->
 
+ 						<?php echo do_shortcode('[contact-form-7 id="124" title="Inscripción a Newsletter"]'); ?>
 					</form>
 				</div>
 				<!-- Fin newsletter -->

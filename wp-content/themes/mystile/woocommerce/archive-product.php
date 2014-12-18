@@ -55,11 +55,25 @@ get_header(); ?>
 								<?php endforeach ?>
 		    					</p>
 		    				</header>
+		    				<div class="clear"></div>
+		    				<?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
+							<span class="inbl">
+								<?php if($tipos){?>
+								<?php foreach ($tipos as $tipo): ?>
+									<?php $linktipo = get_term_link( $tipo); ?>
+									<a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
+								<?php endforeach ?>
+								<?php } ?>
+							</span>
+							<div class="clear"></div>
+
 		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
 		    				<footer class="inferior">
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
 		    					
+
+
 			    				<span class="price">$<?php echo $price[0]; ?></span>
 
 			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
