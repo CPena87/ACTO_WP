@@ -117,7 +117,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior">
-		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
 		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
 		    					<p>
 		    						<?php foreach  ($autores as $autor): ?>
@@ -126,7 +126,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 								<?php endforeach ?>
 		    					</p>
 		    				</header>
-		    				<div>
+		    				<div class="booktype mg5">
 		    				<?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
 					
 								<?php if($tipos){?>
@@ -214,14 +214,6 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 					<form class="send-news">
 						<h4>Suscribete al newsletter</h4>
 						<p>I used to think the world was this great place where everybody.</p>
-					
-
-<!-- 						<label for="contacto-nombre">Nombre</label>
-						<input type="text" id="contacto-nombre" placeholder="Ingresa tu Nombre Lala" />
-						<label for="contacto-nombre">Email</label>
-						<input type="email" id="contacto-nombre" placeholder="Ingresa tu Nombre" />
-						<input type="submit" placeholder="Enviar" /> -->
-
  						<?php echo do_shortcode('[contact-form-7 id="124" title="Inscripción a Newsletter"]'); ?>
 					</form>
 				</div>

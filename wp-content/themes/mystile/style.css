@@ -3231,6 +3231,7 @@ transition: all 0.5s ease-in-out;}
 .cta-center{margin: 0 auto; display: table; float: none; text-align: center; padding: 2% 30px;}
 .fleft{float:left;}
 .fright{float:right !important;}
+.mg5{margin:5px;}
 .mtop30{margin-top:30px;}
 .mtop55{margin-top:55px;}
 .mtop95{margin-top:95px;}
@@ -3373,9 +3374,9 @@ transition: all 0.5s ease-in-out;}
 a.entered{width: 100%; margin-bottom: 10px;}
 
 /* Estilos para productos de catalogo en single y en vista destacados */
-header.superior{height:530px;}
-header.superior.reference{height:415px;}
-header.superior.catalogue{height:530px;}
+header.superior{height:150px; margin-top:-10px;}
+header.superior.reference{height:180px;}
+header.superior.catalogue{height:150px;}
 header.superior.related{height:415px;}
 .superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 17px; line-height: 140%;}
 .superior p{font-family: "Open Sans"; margin-top:0; margin-bottom:0;color:#666666; font-size: 13px; padding: 0 5px 5px; }
@@ -3387,7 +3388,8 @@ border-bottom-right-radius: 10px;
 border-bottom-left-radius: 10px;
  margin:0 30px;}
 a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
-.producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; float: left; display: block; clear: both;}
+.booktype{height:15px;}
+.producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; display: inline-block; clear: both; margin-right:3px;}
 .producto a:hover{color:#ff8000;}
 .price{font-weight: bold; font-size:16px; color:#ff8000; font-family: "Open Sans"; padding:5px;}
 .oferta{font-family: "Open Sans"; font-size: 13px; color:#313131; float:right; padding:5px;}

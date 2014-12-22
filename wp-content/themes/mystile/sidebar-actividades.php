@@ -18,18 +18,18 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	if ( isset( $woo_options['woo_layout'] ) && ( $woo_options['woo_layout'] != 'layout-full' ) ) {
 ?>	
 <aside id="sidebar" class="col-right sidecontent mbottom50">
-<h4 class="sidebar">Novedades Relacionadas</h4>
-<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 3)); ?>
-       <?php $countnovedades = 0 ?>
-       <?php foreach ($novedades as $novedad): ?>
-       <?php $countnovedades++ ?>
+<h4 class="sidebar">Actividades</h4>
+<?php $actividades= get_posts(array('post_type' => 'actividades', 'numberposts' => 3)); ?>
+       <?php $countactividades = 0 ?>
+       <?php foreach ($actividades as $actividad): ?>
+       <?php $countnactividades++ ?>
 	
 	<div class="mbottom20">
-		<h3 class="sidebar"><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+		<h3 class="sidebar"><a href="<?php echo get_permalink($actividad->ID) ?>" title="<?php echo $actividad->post_title ?>" rel="blog"><?php echo $actividad->post_title ?></a></h3>
 	
 	<?php echo substr($post->post_content , 0 , 150 )?>
 	</div>
-	<a href="<?php echo get_permalink($novedad->ID) ?>" title="Continua Leyendo>">Continua Leyendo...</a>
+	<a href="<?php echo get_permalink($actividad->ID) ?>" title="Continua Leyendo>">Continua Leyendo...</a>
 <?php endforeach ?>
 
 

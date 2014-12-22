@@ -101,16 +101,23 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <div class=" medium-gray">
     <div class="container">
         <div class="row">
+                    <?php 
+                        $leftcol = get_field('leftcol' , $post->ID);
+                        $rightcol = get_field('rightcol' , $post->ID);
+                        $remate = get_field('lasttext' , $post->ID);
+                     ?>
              <section class="col-md-12">
+                <aside class="col-md-6 desc-team">
+
+                    
+                    <p>
+                    <?php echo $leftcol; ?>
+                    </p>
+                </aside>  
 
                 <aside class="col-md-6 desc-team">
                     <p>
-                        Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
-                    </p>
-                </aside>  
-                <aside class="col-md-6 desc-team">
-                    <p>
-                        The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die.
+                    <?php echo $rightcol; ?>
                     </p>
                 </aside> 
             </section>
@@ -121,7 +128,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <div class="container">
     <div class="row">
         <section class="col-md-12 quote-team">
-            <p>“Well, the way they make shows is, they make one show. That show's called a pilot.”</p>
+            <p>“<?php echo $remate; ?>”</p>
         </section>
     </div>
 </div>

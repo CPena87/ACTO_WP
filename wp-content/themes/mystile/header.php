@@ -23,18 +23,15 @@ global $woo_options, $woocommerce;
 <title><?php //woo_title(''); ?></title>
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-theme.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stemplate_directory'); ?>/css/bootstrap-theme.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.js" /></script>
-<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.min.js" /></script>
+
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	wp_head();
 	woo_head();
 ?>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" /></script>
 </head>
 
 <body <?php body_class('opal-white') ?> >

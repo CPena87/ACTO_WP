@@ -148,7 +148,7 @@ get_header(  ); ?>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior reference">
-		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
 		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
 		    					<p>
 		    						<?php foreach  ($autores as $autor): ?>
@@ -189,7 +189,7 @@ get_header(  ); ?>
 
     				
     					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-    					<p>Well, the way they make shows is, they make one show.<?php echo get_the_excerpt( $novedad->ID ); ?></p>
+    					<p><?php echo substr($novedad->post_content , 0 , 120 )?></p>
     				
 	    		</article>
 	    	<?php endforeach ?>
@@ -197,5 +197,30 @@ get_header(  ); ?>
 			</div>
 		</div>
 	</div>
+
+<div class="container">
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">a</div>
+    <div role="tabpanel" class="tab-pane" id="profile">b</div>
+    <div role="tabpanel" class="tab-pane" id="messages">c</div>
+    <div role="tabpanel" class="tab-pane" id="settings">x</div>
+  </div>
+
+</div>
+</div>
+
+
+
 
 <?php get_footer( 'shop' ); ?>

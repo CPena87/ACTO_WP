@@ -46,7 +46,8 @@ get_header(); ?>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior catalogue">
-		    					<h4><?php echo $libro->post_title ?></h4>
+		    					<h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
+
 		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
 		    					<p>
 		    						<?php foreach  ($autores as $autor): ?>
@@ -57,14 +58,14 @@ get_header(); ?>
 		    				</header>
 		    				<div class="clear"></div>
 		    				<?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
-							<span class="inbl">
+							<div class="booktype mg5">
 								<?php if($tipos){?>
 								<?php foreach ($tipos as $tipo): ?>
 									<?php $linktipo = get_term_link( $tipo); ?>
 									<a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
 								<?php endforeach ?>
 								<?php } ?>
-							</span>
+							</div>
 							<div class="clear"></div>
 
 		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
