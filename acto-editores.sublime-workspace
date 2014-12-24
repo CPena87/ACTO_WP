@@ -296,14 +296,6 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/mystile/index.php",
-			"settings":
-			{
-				"buffer_size": 8386,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "wp-content/themes/mystile/woocommerce/content-product_cat.php",
 			"settings":
 			{
@@ -312,26 +304,50 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
+			"file": "wp-content/themes/mystile/index.php",
 			"settings":
 			{
-				"buffer_size": 809,
+				"buffer_size": 8089,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/sidebar-content.php",
+			"settings":
+			{
+				"buffer_size": 1527,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/style.css",
+			"file": "wp-content/themes/mystile/single-actividades.php",
 			"settings":
 			{
-				"buffer_size": 97202,
+				"buffer_size": 3809,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/archive-actividades.php",
+			"settings":
+			{
+				"buffer_size": 3524,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/archive.php",
+			"settings":
+			{
+				"buffer_size": 3574,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "wp-content/themes/mystile/woocommerce/archive-product.php",
 			"settings":
 			{
-				"buffer_size": 3230,
+				"buffer_size": 3254,
 				"line_ending": "Unix"
 			}
 		},
@@ -339,26 +355,34 @@
 			"file": "wp-content/themes/mystile/woocommerce/single-product.php",
 			"settings":
 			{
-				"buffer_size": 7266,
+				"buffer_size": 8172,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 1938 files for \"class=\"tabs\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-admin/press-this.php:\n  532  \n  533  					<ul id=\"category-tabs\" class=\"category-tabs\">\n  534: 						<li class=\"tabs\"><a href=\"#category-all\"><?php echo $tax->labels->all_items; ?></a></li>\n  535  						<li class=\"hide-if-no-js\"><a href=\"#category-pop\"><?php _e( 'Most Used' ); ?></a></li>\n  536  					</ul>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-admin/includes/meta-boxes.php:\n  468  	<div id=\"taxonomy-<?php echo $tax_name; ?>\" class=\"categorydiv\">\n  469  		<ul id=\"<?php echo $tax_name; ?>-tabs\" class=\"category-tabs\">\n  470: 			<li class=\"tabs\"><a href=\"#<?php echo $tax_name; ?>-all\"><?php echo $taxonomy->labels->all_items; ?></a></li>\n  471  			<li class=\"hide-if-no-js\"><a href=\"#<?php echo $tax_name; ?>-pop\"><?php _e( 'Most Used' ); ?></a></li>\n  472  		</ul>\n  ...\n  838  <div id=\"taxonomy-linkcategory\" class=\"categorydiv\">\n  839  	<ul id=\"category-tabs\" class=\"category-tabs\">\n  840: 		<li class=\"tabs\"><a href=\"#categories-all\"><?php _e( 'All Categories' ); ?></a></li>\n  841  		<li class=\"hide-if-no-js\"><a href=\"#categories-pop\"><?php _e( 'Most Used' ); ?></a></li>\n  842  	</ul>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-admin/includes/nav-menu.php:\n  689  	<div id=\"posttype-<?php echo $post_type_name; ?>\" class=\"posttypediv\">\n  690  		<ul id=\"posttype-<?php echo $post_type_name; ?>-tabs\" class=\"posttype-tabs add-menu-item-tabs\">\n  691: 			<li <?php echo ( 'most-recent' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  692  				<a class=\"nav-tab-link\" data-type=\"tabs-panel-posttype-<?php echo esc_attr( $post_type_name ); ?>-most-recent\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($post_type_name . '-tab', 'most-recent', remove_query_arg($removed_args))); ?>#tabs-panel-posttype-<?php echo $post_type_name; ?>-most-recent\">\n  693  					<?php _e( 'Most Recent' ); ?>\n  694  				</a>\n  695  			</li>\n  696: 			<li <?php echo ( 'all' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  697  				<a class=\"nav-tab-link\" data-type=\"<?php echo esc_attr( $post_type_name ); ?>-all\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($post_type_name . '-tab', 'all', remove_query_arg($removed_args))); ?>#<?php echo $post_type_name; ?>-all\">\n  698  					<?php _e( 'View All' ); ?>\n  699  				</a>\n  700  			</li>\n  701: 			<li <?php echo ( 'search' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  702  				<a class=\"nav-tab-link\" data-type=\"tabs-panel-posttype-<?php echo esc_attr( $post_type_name ); ?>-search\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($post_type_name . '-tab', 'search', remove_query_arg($removed_args))); ?>#tabs-panel-posttype-<?php echo $post_type_name; ?>-search\">\n  703  					<?php _e( 'Search'); ?>\n  ...\n  929  	<div id=\"taxonomy-<?php echo $taxonomy_name; ?>\" class=\"taxonomydiv\">\n  930  		<ul id=\"taxonomy-<?php echo $taxonomy_name; ?>-tabs\" class=\"taxonomy-tabs add-menu-item-tabs\">\n  931: 			<li <?php echo ( 'most-used' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  932  				<a class=\"nav-tab-link\" data-type=\"tabs-panel-<?php echo esc_attr( $taxonomy_name ); ?>-pop\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($taxonomy_name . '-tab', 'most-used', remove_query_arg($removed_args))); ?>#tabs-panel-<?php echo $taxonomy_name; ?>-pop\">\n  933  					<?php _e( 'Most Used' ); ?>\n  934  				</a>\n  935  			</li>\n  936: 			<li <?php echo ( 'all' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  937  				<a class=\"nav-tab-link\" data-type=\"tabs-panel-<?php echo esc_attr( $taxonomy_name ); ?>-all\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($taxonomy_name . '-tab', 'all', remove_query_arg($removed_args))); ?>#tabs-panel-<?php echo $taxonomy_name; ?>-all\">\n  938  					<?php _e( 'View All' ); ?>\n  939  				</a>\n  940  			</li>\n  941: 			<li <?php echo ( 'search' == $current_tab ? ' class=\"tabs\"' : '' ); ?>>\n  942  				<a class=\"nav-tab-link\" data-type=\"tabs-panel-search-taxonomy-<?php echo esc_attr( $taxonomy_name ); ?>\" href=\"<?php if ( $nav_menu_selected_id ) echo esc_url(add_query_arg($taxonomy_name . '-tab', 'search', remove_query_arg($removed_args))); ?>#tabs-panel-search-taxonomy-<?php echo $taxonomy_name; ?>\">\n  943  					<?php _e( 'Search' ); ?>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php:\n   21  \n   22  	<div class=\"woocommerce-tabs\">\n   23: 		<ul class=\"tabs\">\n   24  			<?php foreach ( $tabs as $key => $tab ) : ?>\n   25  \n\n10 matches across 4 files\n",
+			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 4546,
+				"buffer_size": 97274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/header.php",
+			"settings":
+			{
+				"buffer_size": 6940,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 470 files for \"wp_head()\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-setup.php:\n  112   * @return void\n  113   */\n  114: function woothemes_wp_head() {\n  115  	do_action( 'woothemes_wp_head_before' );\n  116  	// Output alternative stylesheet\n  ...\n  130  		woo_output_custom_css();\n  131  	do_action( 'woothemes_wp_head_after' );\n  132: } // End woothemes_wp_head()\n  133  }\n  134  add_action( 'wp_head', 'woothemes_wp_head', 10 );\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/functions-changelog.txt:\n  736  \n  737  2011.02.27 - version 3.7.04\n  738:  * admin-setup.php - moved woothemes_wp_head() content into seperate pluggable functions\n  739  \n  740  2011.02.26 - version 3.7.03\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php:\n   31  <link rel=\"pingback\" href=\"<?php bloginfo( 'pingback_url' ); ?>\" />\n   32  <?php\n   33: 	wp_head();\n   34  	woo_head();\n   35  ?>\n\n4 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 978,
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
-			}
-		},
-		{
-			"file": "wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
-			"settings":
-			{
-				"buffer_size": 1010,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -386,24 +410,33 @@
 	},
 	"file_history":
 	[
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/search-form.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-mixed.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-content.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-distribuicion.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-attributes.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/content-product_cat.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/related.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/additional-information.php",
@@ -411,13 +444,9 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/tabs.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-contact.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sobre-acto.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/content.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/result-count.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
@@ -427,7 +456,6 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/includes/admin/views/html-admin-page-addons.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/loop-start.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/sale-flash.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product-reviews.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
@@ -509,11 +537,7 @@
 		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/tpl_acreditacion.php",
 		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/header.php",
 		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/footer.php",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/header-egresados.php",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/error_log",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/.htaccess-bak",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/archive.php",
-		"/Users/upmedia/GitHub/IPChile/landing.html"
+		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/header-egresados.php"
 	],
 	"find":
 	{
@@ -521,9 +545,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"<wp-content>,/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile",
 			"<wp-content>",
 			"<ACTO_WP>",
 			"<folders>",
@@ -535,6 +560,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"wp_head()",
+			"producto",
+			"fichas",
+			"auxiliares",
+			"get_field",
 			"class=\"tabs\"",
 			"label",
 			"avatarautor",
@@ -657,12 +687,7 @@
 			"collapse",
 			"caracteristicas_cancer",
 			"accordion",
-			"url(",
-			"url()",
-			".panel-default>.panel-heading",
-			".panel-default>",
-			".panel-default>.panel-heading",
-			".panel-heading"
+			"url("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -680,38 +705,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/mystile/index.php",
-					"settings":
-					{
-						"buffer_size": 8386,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5028,
-								5028
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2187.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "wp-content/themes/mystile/woocommerce/content-product_cat.php",
 					"settings":
 					{
@@ -722,8 +720,8 @@
 						"selection":
 						[
 							[
-								1377,
-								1377
+								1386,
+								1386
 							]
 						],
 						"settings":
@@ -733,25 +731,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 264.0,
+						"translation.y": 229.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
+					"buffer": 1,
+					"file": "wp-content/themes/mystile/index.php",
 					"settings":
 					{
-						"buffer_size": 809,
+						"buffer_size": 8089,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								583,
-								595
+								4353,
+								4353
 							]
 						],
 						"settings":
@@ -759,86 +757,139 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 699.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"sheets":
-			[
+				},
 				{
-					"buffer": 3,
-					"file": "wp-content/themes/mystile/style.css",
+					"buffer": 2,
+					"file": "wp-content/themes/mystile/sidebar-content.php",
 					"settings":
 					{
-						"buffer_size": 97202,
+						"buffer_size": 1527,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								93567,
-								93567
+								1035,
+								1086
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/mystile/single-actividades.php",
+					"settings":
+					{
+						"buffer_size": 3809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3681,
+								3681
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 61673.0,
+						"translation.y": 1182.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "wp-content/themes/mystile/woocommerce/archive-product.php",
+					"file": "wp-content/themes/mystile/archive-actividades.php",
 					"settings":
 					{
-						"buffer_size": 3230,
+						"buffer_size": 3524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2264,
-								2264
+								2172,
+								2193
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 906.0,
+						"translation.y": 744.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "wp-content/themes/mystile/woocommerce/single-product.php",
+					"file": "wp-content/themes/mystile/archive.php",
 					"settings":
 					{
-						"buffer_size": 7266,
+						"buffer_size": 3574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4756,
-								6507
+								2583,
+								2561
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 876.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/mystile/woocommerce/archive-product.php",
+					"settings":
+					{
+						"buffer_size": 3254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1737,
+								1737
 							]
 						],
 						"settings":
@@ -847,16 +898,100 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1574.0,
+						"translation.y": 408.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
+					"file": "wp-content/themes/mystile/woocommerce/single-product.php",
 					"settings":
 					{
-						"buffer_size": 4546,
+						"buffer_size": 8172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7232,
+								8130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2894.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/mystile/style.css",
+					"settings":
+					{
+						"buffer_size": 97274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57279.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "wp-content/themes/mystile/header.php",
+					"settings":
+					{
+						"buffer_size": 6940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1168,
+								1168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 978,
 						"regions":
 						{
 							"match":
@@ -865,44 +1000,20 @@
 								"regions":
 								[
 									[
-										179,
-										191
+										180,
+										189
 									],
 									[
-										605,
-										617
+										396,
+										405
 									],
 									[
-										972,
-										984
+										651,
+										660
 									],
 									[
-										1473,
-										1485
-									],
-									[
-										1960,
-										1972
-									],
-									[
-										2383,
-										2395
-									],
-									[
-										3011,
-										3023
-									],
-									[
-										3457,
-										3469
-									],
-									[
-										3899,
-										3911
-									],
-									[
-										4442,
-										4454
+										911,
+										920
 									]
 								],
 								"scope": ""
@@ -911,8 +1022,8 @@
 						"selection":
 						[
 							[
-								4330,
-								4330
+								977,
+								977
 							]
 						],
 						"settings":
@@ -924,34 +1035,6 @@
 							"result_line_regex": "^ +([0-9]+):",
 							"scroll_past_end": true,
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 915.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
-					"settings":
-					{
-						"buffer_size": 1010,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								770,
-								770
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -979,18 +1062,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.514338510479,
 			1.0
 		],
 		"rows":
