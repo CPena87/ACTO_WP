@@ -62,122 +62,13 @@ get_header(  ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
-	<!-- Comentarios  -->
-	<section class="container">
-        	<div class="row">
-            
-            <div class="col-md-6 col-md-offset-4 comment-area">
-            	<h3>Comentarios acerca del Libro</h3>
-                    <div class="separator clear"></div>
-                    <?php
-                        //Gather comments for a specific page/post 
-                        $comments = get_comments(array(
-                            'post_id' => $post->ID,
-                            //'status' => 'approve', //Change this to the type of comments to be displayed
-                            'orderby' => 'ID',
-                            'order' => 'ASC',
-                        ));
-                    ?>
-                   
-                    <?php foreach($comments as $comentario):?>
-                        
-                        <?php if( $comentario->comment_parent == 0){?>
-                                <div class="comentario col-md-12 comentario-user">
-                                    <div class="avatar col-md-4 hide-on-mobile pleft0">
-                                        <img src="<?php bloginfo('template_directory')?>/images/avatar-male.jpg" alt="" />
-                                    </div>
-                                     <p><?php echo $comentario->comment_content?></p>
-                                </div>
-                         
-                                
-                        <?php }?>
-                    <?php endforeach;?>
-                   
-                
-            </div>    
-            
-        	</div>
-        </section>
-
-        <section class="container contactt">
-        	<div class="row">
-                <div class="form">
-                    <?php $args = array(
-        				'fields' => apply_filters( 'comment_form_default_fields', array(
-            			'author' => '<div class="col-md-6"><p class="comment-form-author">'. ( $req ? '<span class="required">*</span>' : '' ) .
-                        '<input id="author" name="author" type="text" placeholder="Nombre" value="' .
-                        esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
-                        '</p></div>',
-                        'email'  => '<div class="col-md-6"><p class="comment-form-email">' .
-                        '' .
-                        ( $req ? '<span class="required">*</span>' : '' ) .
-                        '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
-        		        '</p></div>',
-                        'url'    => '' )),
-        				
-        				'label_submit'=>'Enviar Comentario',
-        					
-        				'comment_field' => '<div class="col-md-12"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true"></textarea></p></div>',
-    				);?>
-                    
-                    <?php comment_form($args)?>
-                </div>
-            </div>
-        </section>
-        
-        
- 
-
-
-	<!-- Comentarios Fin -->
+	
 
 	<div class="container mtop20mob">
 		<div class="row">
-			<div class="col-md-8">
+			
 
-					<h3 class="title-sidebar">Libros Recomendados</h3>
-					<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
-    				
-    				<?php foreach($libros as $libro): ?>
-		    		
-		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10 pleft0">
-		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
-		    				<?php echo get_the_post_thumbnail($libro->ID); ?>
-		    			</a>
-		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
-		    			<figcaption class="white">
-		    				<header class="superior reference">
-		    					<h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
-		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
-		    					<p>
-		    						<?php foreach  ($autores as $autor): ?>
-		    						<?php $linkautor = get_term_link( $autor); ?>
-									<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
-								<?php endforeach ?>
-		    					</p>
-		    				</header>
-		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
-		    				<footer class="inferior">
-		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
-		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-		    					
-			    				<span class="price">$<?php echo $price[0]; ?></span>
-
-			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
-			    				<?php } ?>
-
-		    				</footer>
-		    			</figcaption>
-		    		</figure>
-		    		<!-- Fin datos de libro -->
-
-		    		<?php endforeach ?>
-
-			</div>
-
-			<div class="col-md-4 sidecontent">
+			<div class="col-md-12 sidecontent">
 				<h3 class="title-sidebar">Novedades</h3>
 
 				<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
@@ -185,11 +76,11 @@ get_header(  ); ?>
     		 	<?php foreach ($novedades as $novedad): ?>
     		 	<?php $countnovedades++ ?>
 
-    		 	<article class="col-md-12 pd0 wide ">
+    		 	<article class="col-md-6 pd0 wide ">
 
     				
     					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-    					<p><?php echo substr($novedad->post_content , 0 , 120 )?></p>
+    					<p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
     				
 	    		</article>
 	    	<?php endforeach ?>
@@ -197,29 +88,6 @@ get_header(  ); ?>
 			</div>
 		</div>
 	</div>
-
-<div class="container">
-<div role="tabpanel">
-
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">a</div>
-    <div role="tabpanel" class="tab-pane" id="profile">b</div>
-    <div role="tabpanel" class="tab-pane" id="messages">c</div>
-    <div role="tabpanel" class="tab-pane" id="settings">x</div>
-  </div>
-
-</div>
-</div>
-
 
 
 

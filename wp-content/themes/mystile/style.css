@@ -3334,6 +3334,7 @@ h1.outstand,
 .sortcontent h2, 
 .outstanding h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 15px 20px;}
 figure.relevance{height: 260px; margin-bottom: 10px;}
+figure.relevance img{width:100%;}
 .relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; bottom:80px; height:80px;}
 .relevance h3{padding-top: 10px; margin-bottom: 5px;}
 .relevance h3 a{padding: 10px 0 0 10px; color: #fff; font-size: 20px; text-decoration:none;
@@ -3408,7 +3409,7 @@ footer.inferior{clear:both;}
 .launch{height: auto;}
 .launch img{float: left; width: 150px; padding-right: 5px; max-width: 170px;}
 .launchdata{height: auto; padding: 5px;}
-.launchdata h4{color: #ff8000; font-family: "Open Sans"; font-weight: bold; font-size: 18px; margin-bottom: 5px;}
+.launchdata h4{color: #ff8000; font-family: "Open Sans"; font-weight: bold; font-size: 18px; margin-bottom: 5px; line-height:140%;}
 .launchdata span{font-weight:14px; color:#666666; font-weight:bold
   ;}
 .launchdata p{font-size: 12px; line-height: 150%; margin-top: 5px; margin-bottom: 20px; }
@@ -3486,7 +3487,7 @@ span.stronged{font-weight: bold !important;
 .desc-autor a{font-size: 25px; text-align: center; font-weight: bold; font-family: "Open Sans"; display: block; color: #575757; text-decoration: none;}
 .desc-autor p{text-align: center; line-height: 160%; font-size: 18px; color: #575757; font-family: "Open Sans", sans-serif;}
 .desc-team{color: #313131; font-size: 20px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
-.quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px;}
+.quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px; text-align:center;}
 
 /* Estilos relacionados al single de autores */
 .prof-avatar img{width: 100%; height: auto; border-radius: 100%;}

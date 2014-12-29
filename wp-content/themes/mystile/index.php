@@ -181,9 +181,12 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 								<h4><?php echo substr($libro->post_title , 0 , 35 ) ?></h4>
 								<span><?php $autores = get_the_terms( $libro->ID, 'autores' ); ?></span>
 							</header>
-							<?php echo substr($libro->post_content , 0 , 172 )?>...
+							<?php echo substr($libro->post_content , 0 , 165 )?>...
+						</br>
 							<a href="<?php echo get_post_type_archive_link('product') ?>" title="Ver Catálogo" rel="nofollow">Ver Catálogo</a>
+							<div class="clear"></div>
 						</figcaption>
+
 					</figure>
 					<?php endforeach ?>
 				</div>
