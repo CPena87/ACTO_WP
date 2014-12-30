@@ -526,6 +526,8 @@ table tr th:last-child,
 table tr td:last-child {
   padding-right: 0;
 }
+.product-name a{padding-top: 20px; display: block;}
+.product-remove a{padding-top: 20px; display: block;}
 /*-------------------------------------------------------------------------------------------*/
 /* 2. SITE STRUCTURE & APPEARANCE */
 /*-------------------------------------------------------------------------------------------*/
@@ -1877,32 +1879,24 @@ div.quantity input::-webkit-outer-spin-button,
 div.quantity input::-webkit-inner-spin-button {
   display: none;
 }
-div.quantity .plus,
-div.quantity .minus {
-  font-family: 'WebSymbolsRegular';
-  background: none;
-  border: none;
-  font-size: 1.387em;
-  padding: 0;
-  color: #ff4800;
-  -webkit-transition: all ease-in-out 0.2s;
-  -moz-transition: all ease-in-out 0.2s;
-  -ms-transition: all ease-in-out 0.2s;
-  -o-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
-  display: none;
-}
+div.quantity .plus{font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff4800; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative;
+bottom: 12px; left: 68px;}
+div.quantity .minus {font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff4800; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative; top: 15px; right: 10px;}
 div.quantity .plus:hover,
 div.quantity .minus:hover {
   color: #dd2600;
 }
 div.quantity .qty {
-  width: 42px;
+  width: 45px;
   text-align: center;
   padding-left: 0;
   padding-right: 0;
   height: 42px; 
   margin:10px;
+  clear: none;
+  float: none;
+  position: relative;
+right: 10px;
 }
 table div.quantity {
   font-size: .857em;
@@ -3112,6 +3106,8 @@ img.ui-datepicker-trigger {
 .bg-head{background-color: rgba(0, 0, 0, 0.5); background-size: cover !important; width: 100% !important; position: absolute; right: 0;
 left: 0; z-index: 9999;}
 span.amount{color: #fff; padding-right: 10px; font-size: 15px; /*font-family: 'ambleregular';*/} 
+.product-subtotal span.amount,
+.product-price span.amount{color: #888888; margin-top: 15px; clear: both; display: block;}
 span.contents{color:#fff; background: #ff8000; padding: 5px; border-radius: 20px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
