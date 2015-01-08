@@ -1879,12 +1879,12 @@ div.quantity input::-webkit-outer-spin-button,
 div.quantity input::-webkit-inner-spin-button {
   display: none;
 }
-div.quantity .plus{font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff4800; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative;
+div.quantity .plus{font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff8000; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative;
 bottom: 12px; left: 68px;}
-div.quantity .minus {font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff4800; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative; top: 15px; right: 10px;}
+div.quantity .minus {font-family: 'WebSymbolsRegular'; background: none; border: none; font-size: 1.387em; padding: 0; color: #ff8000; -webkit-transition: all ease-in-out 0.2s; -moz-transition: all ease-in-out 0.2s; -ms-transition: all ease-in-out 0.2s; -o-transition: all ease-in-out 0.2s; transition: all ease-in-out 0.2s; display: none; position: relative; top: 15px; right: 10px;}
 div.quantity .plus:hover,
 div.quantity .minus:hover {
-  color: #dd2600;
+  color: #b85c00;
 }
 div.quantity .qty {
   width: 45px;
@@ -1940,13 +1940,15 @@ dl.variation dd ul {
   background: #f4e7e6;
 }
 /* 7.1 Messages */
+.woocommerce-message a{margin: 0 !important;}
+
 .woocommerce_message,
 .woocommerce_info,
 .woocommerce_error,
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error {
-  padding: .618em 1em .618em 2.618em;
+  padding: 10px 30px;
   margin-bottom: 1.618em;
   background: #fff;
   border: 1px solid #4d65a4;
@@ -1982,7 +1984,7 @@ dl.variation dd ul {
 }
 .woocommerce_message,
 .woocommerce-message {
-  border-color: #84ac50;
+  border-color: #ff8000;
 }
 .woocommerce_message:before,
 .woocommerce-message:before {
@@ -1993,6 +1995,7 @@ dl.variation dd ul {
 .woocommerce-message .button {
   float: right;
   font-size: .857em;
+  line-height:20%;
 }
 /* 7.2 Products */
 /*.price del {
@@ -2912,7 +2915,7 @@ input[type=submit],
 input.button,
 button.button {
   display: inline-block;
-  padding: .236em 1.857em;
+  padding: 10px 1.857em;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -3435,7 +3438,7 @@ span.trail-end{color: #777; font-weight: bold; font-size: 14px;}
 .sidecontent p{margin-bottom:15px;}
 .sidecontent a{background: #ff8000; padding: 5px; color: #fff;} 
 .sidecontent a:hover{background:#b85c00;}
-.sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 1px; font-family:"Bree Serif", sans-serif;}
+.sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 5px; font-family:"Bree Serif", sans-serif;}
 h4.sidebar{font-size: 23px; font-family: Times, serif; font-weight: 300;} 
 h3.sidebar{margin: 20px 0 5px; }
 h3.title-sidebar{font-size: 24px; font-family: Times, serif; font-weight: 300;}
@@ -3519,6 +3522,9 @@ select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
 .comentario{margin-top: 15px; margin-bottom: 20px; padding-left:0;}
 .comentario p{margin-top:35px; font-style: italic; font-size:15px;}
 
+.cart-collaterals span.amount{color: #888888;}
+.alt-table-row input.button[type="submit"]{padding:10px;}
+
 /* MEDIA QUERIES Y RESPONSIVE STYLES */
 
 
@@ -3576,12 +3582,14 @@ select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
   ul.social-bottom{margin-bottom: 20px; padding-bottom: 15px; clear: both;}
   ul.foot-col{clear: both;}
 
-  /* Resposive relacionado a las fichas de producto */
+  /* Responsive relacionado a las fichas de producto */
   .producto{margin-bottom: 30px; padding: 15px}
   .images{margin: 15px;}
   .product_title.entry-title{font-size: 30px;}
   .over-oustand {right: -15px; bottom: 150px; }
 
+  /* Responsive relacionado a checkout y área de compra */
+  .post, .type-page{margin: 0 15px; }
 
 }
 

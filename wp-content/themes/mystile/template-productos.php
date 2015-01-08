@@ -32,7 +32,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	    </div>
 	</div> 
        
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full container">
     
     	<?php woo_main_before(); ?>
     	
@@ -52,7 +52,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	                	<?php the_content(); ?>
 	               	</section><!-- /.entry -->
 
-					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
+					
 
                 </article><!-- /.post -->
                                                     
