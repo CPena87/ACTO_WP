@@ -72,13 +72,14 @@ get_header(); ?>
 		    				<footer class="inferior">
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-		    					
 
 
 			    				<span class="price">$<?php echo $price[0]; ?></span>
 
 			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
+			    				
+
+			    				<span class="oferta">ISBN<?php echo $isbn[0]; ?></span>
 			    				<?php } ?>
 
 		    				</footer>

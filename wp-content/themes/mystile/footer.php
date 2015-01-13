@@ -70,10 +70,10 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Editorial</h5>
 			<ul class="foot-col">
-				<li><a href="<?php echo home_url('shop') ?>">Catálogo</a></li>
-				<li><a href="<?php echo home_url('autores') ?>">Autores</a></li>
-				<li><a href="<?php echo home_url('distribuicion') ?>">Distribuición</a></li>
-				<li><a href="<?php echo home_url('destacados') ?>/" title="Destacados" rel="nofollow">Destacados</a></li>
+				<li><a href="<?php echo home_url('sobre-acto') ?>">Sobre Acto</a></li>
+				<li><a href="<?php echo home_url('actividades') ?>">Actividades</a></li>
+				<li><a href="<?php echo home_url('novedades') ?>">Novedades</a></li>
+				<li><a href="<?php echo home_url('autores') ?>/" title="Destacados" rel="nofollow">Autores</a></li>
 				
 			</ul>
 		</nav>
@@ -81,21 +81,25 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<nav class="col-md-2">
 			<h5 class="footnav-title">Medios</h5>
 			<ul class="foot-col">
-				<li><a href="<?php echo home_url('actividades') ?>/" title="Actividades" rel="nofollow">Actividades</a></li>
-				<li><a href="<?php echo home_url('novedades') ?>/" title="Novedades" rel="nofollow">Novedades</a></li>
-				<li><a href="<?php echo home_url('sobre-acto') ?>/">Sobre Acto</a></li>
+				<li><a href="<?php echo home_url('shop') ?>/" title="Actividades" rel="nofollow">Catálogo</a></li>
+				<li><a href="<?php echo home_url('novedades') ?>/" title="Novedades" rel="nofollow">Términos y Condiciones</a></li>
+				<li><a href="<?php echo home_url('ventas') ?>/">Ventas</a></li>
 			</ul>
 		</nav>
 		
 		<address class="col-md-2">
 			<h5 class="footnav-title">Contacto</h5>
 			<span class="foot-address">
-				<p>Teléfono: <a href="tel:+56945456789" title="Comunicate con nosotrs" rel="help">(+56)45456789</a></p>
+				<p>Fono: <a href="tel:+56945456789" title="Comunicate con nosotr0s" rel="help">(+56)45456789</a></p>
 				
 			</span>
 			<span class="foot-address">
 				<p>Mail: <a href="mailto:contacto@acto.cl" title="Escribenos" rel="help">contacto@acto.cl</a></p>
 				
+			</span>
+			<span class="foot-address">
+				<p>Skype: <a href="tel:+56945456789" title="Comunicate con nosotros vía Skype" rel="help">(+56)45456789</a></p>
+
 			</span>
 		</address>
 	

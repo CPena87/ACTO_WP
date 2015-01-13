@@ -71,7 +71,7 @@ get_header(  ); ?>
 			<div class="col-md-12 sidecontent">
 				<h3 class="title-sidebar">Novedades</h3>
 
-				<?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+				<?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
     		 	<?php $countnovedades = 0 ?>
     		 	<?php foreach ($novedades as $novedad): ?>
     		 	<?php $countnovedades++ ?>

@@ -55,29 +55,6 @@ global $woo_options, $woocommerce;
 	</div>
 </div>
 
-<!-- Ventana Modal para vista de carro en funcionamiento -->
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Fin Ventana Modal -->
 
 <div id="wrapper" >
 	<?php woo_header_before(); ?>
@@ -85,10 +62,10 @@ global $woo_options, $woocommerce;
 		<div class="bg-head">
 			<header id="header" class="col-full">
 		
-		    		<hgroup class="col-md-logo col-md-1">
-		    			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
-		    				<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
-		    			</a>
+		    <hgroup class="col-md-logo col-md-1">
+		    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+		    		<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
+		    	</a>
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
@@ -111,7 +88,7 @@ global $woo_options, $woocommerce;
 								if ( class_exists( 'woocommerce' ) ) {
 									echo '<ul class="nav wc-nav">';
 									woocommerce_cart_link();
-									//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+									echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
 									// echo get_search_form();
 									echo '</ul>';
 								}
@@ -127,7 +104,8 @@ global $woo_options, $woocommerce;
 								<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
 							</ul>
 						</nav>
-	  		</div>
+	  			</div>
+
 				<?php
 				if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
 					wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
