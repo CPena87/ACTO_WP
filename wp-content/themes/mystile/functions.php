@@ -136,6 +136,8 @@ register_taxonomy('autores', array('product'), array("hierarchical" => true, "la
 
 register_taxonomy('tipos', array('product'), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => 'hierarchical'));
 
+register_taxonomy('idiomas', array('product'), array("hierarchical" => true, "label" => "Idiomas", "singular_label" => "Idioma", "rewrite" => 'hierarchical'));
+
 
 // Activación de Options en Advance Custom Fields
 if( function_exists('acf_add_options_page') ) {

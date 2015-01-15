@@ -69,12 +69,12 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                         <header class="resign-data">
                             <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-                            <span><?php echo $zine;?></span>
+                            <p class="author mbottom10">Fuente: <span><?php echo $zine;?></span></p>
                             <p class="author mbottom10">Por: <span class="stronged"><?php the_author(); ?></span></p>
                         </header>
                 
                         <section class="entry rev-excerpt">
-                        <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
+                        <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(0 , 75); } ?>
                         <a class="fleft" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Continúa Leyendo</a>
                         <?php woo_post_meta(); ?>
                         </section>

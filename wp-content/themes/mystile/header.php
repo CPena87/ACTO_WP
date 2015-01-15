@@ -20,41 +20,24 @@ global $woo_options, $woocommerce;
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-<title><?php //woo_title(''); ?></title>
+<title><?php woo_title(''); ?></title>
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-theme.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stemplate_directory'); ?>/css/bootstrap-theme.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-
+<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.js" /></script>
+<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.min.js" /></script>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	wp_head();
 	woo_head();
 ?>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" /></script>
+
 </head>
 
 <body <?php body_class('opal-white') ?> >
-
-<div class="container">
-	<div class="fixed col-full">
-		<nav class="hide-on-mobile col-md-3 col-md-offset-10" role="navigation">
-				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
-				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-				<?php } ?>
-				<?php
-					if ( class_exists( 'woocommerce' ) ) {
-						echo '<ul class="nav wc-nav">';
-						//echo '<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">';
-						woocommerce_cart_link();
-						//echo '</button>';
-						echo '</ul>';
-					}
-				?>
-		</nav>
-	</div>
-</div>
-
 
 <div id="wrapper" >
 	<?php woo_header_before(); ?>
@@ -62,10 +45,9 @@ global $woo_options, $woocommerce;
 		<div class="bg-head">
 			<header id="header" class="col-full">
 		
-		    <hgroup class="col-md-logo col-md-1">
-		    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
-		    		<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
-		    	</a>
+		    		<hgroup class="col-md-logo col-md-1">
+		    			<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
+		    	
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
@@ -88,7 +70,7 @@ global $woo_options, $woocommerce;
 								if ( class_exists( 'woocommerce' ) ) {
 									echo '<ul class="nav wc-nav">';
 									woocommerce_cart_link();
-									echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+									//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
 									// echo get_search_form();
 									echo '</ul>';
 								}
@@ -104,8 +86,7 @@ global $woo_options, $woocommerce;
 								<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
 							</ul>
 						</nav>
-	  			</div>
-
+	  		</div>
 				<?php
 				if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
 					wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav fr', 'theme_location' => 'primary-menu' ) );
@@ -133,11 +114,24 @@ global $woo_options, $woocommerce;
 			<?php woo_nav_after(); ?>
 
 			<!-- Navegacion secundaria carro de compra en vista escritorio-->
-			
+			<nav class="col-md-3 cart-nav navbar-collapsed hide-on-mobile" role="navigation">
+				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
+				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
+				<?php } ?>
+				<?php
+					if ( class_exists( 'woocommerce' ) ) {
+						echo '<ul class="nav wc-nav">';
+						woocommerce_cart_link();
+						//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+						// echo get_search_form();
+						echo '</ul>';
+					}
+				?>
+			</nav>
 			<!-- Fin Navegacion -->
 
 			<!--  Redes Sociales en vista escritorio -->
-			<nav class="col-md-esp col-md-offset-2 fleft social-top hide-on-mobile">
+			<nav class="col-md-esp fleft social-top hide-on-mobile">
 				<ul>
 					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
@@ -157,4 +151,3 @@ global $woo_options, $woocommerce;
 
     
 
-	<?php woo_content_before(); ?>

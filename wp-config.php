@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('NONCE_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('NONCE_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('AUTH_KEY',         'lg6$tG1ujw-uf<-n%P^E{#m7nC]6c-oAs%;VL?_nwQ!*ZCLawqK7J_eNN|$%vT-3');
+define('SECURE_AUTH_KEY',  '$}dwC}DX^-1?+JAbUi*Z|Z;N|&M2q&W X,cw<b[wUsUz2-#1{w]tkGOjfCVtwgNX');
+define('LOGGED_IN_KEY',    'I/!_0:=PBwTK+|$;Ft[w:pnVI] su_1!4`z]eX?&eO_r|-|e;[WE[_E^M~+ZZ,C/');
+define('NONCE_KEY',        '.5{BU]80yw +rX-73^+8djcT0U!(<MHXAj0X(jiZ||0_/wVhcC|{Vv6Q8>oD1Ihs');
+define('AUTH_SALT',        '%9#IbiGTW/GBsr_ae5fVJ,*^LhBC;=deHX/-8 XwqGU-i8*wM;^bmPOGUMa>`oRY');
+define('SECURE_AUTH_SALT', 'GEYE)?foyLAgJ@RJsdEAPF6vg%iw#,IQzHdv9<OcR9_Ph a@B68hiDd#:U/>hehE');
+define('LOGGED_IN_SALT',   ']0W<Y-,gD<w.VVoJLMEPbl-|-x-#r<++l<5lf#~?i;n[CK5#j^~;&3fSsDaWg|Ya');
+define('NONCE_SALT',       '+sL]/+9YuL/]p`9,)63r[6^b{S0FW62OEWf}$_IT8eavgxSQ9&z/^.3R EsmQar;');
 
 /**#@-*/
 

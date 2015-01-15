@@ -115,9 +115,11 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
                             
                         <?php if( $comentario->comment_parent == 0){?>
                                 <div class="comentario col-md-12 comentario-user">
-                                    <div class="avatar col-md-4 hide-on-mobile pleft0">
+                                    <div class="avatar col-md-2 hide-on-mobile pleft0">
                                         <img src="<?php bloginfo('template_directory')?>/images/avatar-male.jpg" alt="" />
+                                        <?php echo $comentario->comment_ ?>
                                     </div>
+                                    <h4><?php echo $comentario->comment_author?></h4>
                                      <p><?php echo $comentario->comment_content?></p>
                                 </div>
                              
@@ -141,7 +143,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
                             
                         'label_submit'=>'Enviar Comentario',
                                 
-                        'comment_field' => '<div class="col-md-12"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true">/textarea></p></div>',
+                        'comment_field' => '<div class="col-md-12 pleft0 pright0"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true"></textarea></p></div>',
                     );?>
                         
                 <?php comment_form($args)?>
@@ -155,7 +157,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
             <?php foreach($libros as $libro): ?>
                         
             <!-- Corresponde a los datos del libro -->
-            <figure class="col-md-3 producto pdbottom10 pleft0">
+            <figure class="col-md-3 producto pdbottom10 pleft0 mtop30">
                 <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
                     <?php echo get_the_post_thumbnail($libro->ID); ?>
                 </a>

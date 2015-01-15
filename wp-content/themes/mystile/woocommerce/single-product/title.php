@@ -19,12 +19,24 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php endforeach ?>
 </h2>
 <?php $tipos = get_the_terms( $post->ID, 'tipos' ); ?>
-
-<span class="clear">
+<?php $idiomas = get_the_terms( $post->ID, 'idiomas' ); ?>
+<span class="clear character">
+	<p><strong>Tipo:</strong></p>
 	<?php if($tipos){?>
 	<?php foreach ($tipos as $tipo): ?>
 		<?php $linktipo = get_term_link( $tipo); ?>
+		
 		<a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
+	<?php endforeach ?>
+	<?php } ?>
+</span>
+<span class="clear character">
+	<p><strong>Idioma:</strong></p>
+	<?php if($idiomas){?>
+	<?php foreach ($idiomas as $idioma): ?>
+		<?php $linkidioma = get_term_link( $idioma); ?>
+
+		<a href="<?php echo $linkautor ?>"><?php echo $idioma->name ?></a>
 	<?php endforeach ?>
 	<?php } ?>
 </span>

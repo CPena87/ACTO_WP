@@ -45,5 +45,7 @@ if ( $attachment_ids ) {
 		}
 
 	?></div>
+
+
 	<?php
 }

@@ -64,11 +64,11 @@ get_header(  ); ?>
 
 	
 
-	<div class="container mtop20mob">
+	<div class="container mtop20mob brdtop">
 		<div class="row">
 			
 
-			<div class="col-md-12 sidecontent">
+			<div class="col-md-12 sidecontent mtop30">
 				<h3 class="title-sidebar">Novedades</h3>
 
 				<?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
