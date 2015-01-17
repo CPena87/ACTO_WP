@@ -3336,9 +3336,9 @@ h1.outstand,
 .sortcontent h2, 
 .outstanding h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 15px 20px;}
 figure.relevance{height: 260px; margin-bottom: 10px;}
-figure.relevance img{width:100%;}
-.relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; bottom:80px; height:80px;}
-.relevance h3{padding-top: 10px; margin-bottom: 5px;}
+figure.relevance img{width:100%; padding:0;}
+.relevance figcaption{background-color: rgba(0, 0, 0, 0.45); position: relative; top: 175px; height: 80px; margin-right: 0px;}
+.relevance h3{padding-top: 10px; margin-bottom: 5px; line-height: 120%; font-size: 15px; position: absolute;} 
 .relevance h3 a{padding: 10px 0 0 10px; color: #fff; font-size: 20px; text-decoration:none;
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
@@ -3350,7 +3350,8 @@ transition: all 0.5s ease-in-out;}
 -ms-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
-.relevance p{color: #fff; padding: 0 10px 5px; font-size: 12px; margin-bottom: 0;}
+.relevance p{color: #fff; padding: 0 10px 5px; font-size: 12px; margin-bottom: 0; position: absolute;
+top: 30px;}
 
 /* Estilos para sidebar llamado a editores */
 .sidecall h2{font-family: "Open Sans"; font-weight: bold; border-left: 15px solid; font-size: 50px; text-transform: uppercase; padding-left: 10px; margin: 10px 0 20px; }

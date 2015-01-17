@@ -44,7 +44,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     <section class="container mtop30">
     	<div class="row">
-    		 <div class="col-md-9 sortcontent mbottom30">
+    		 <div class="col-md-9 col-sm-9 sortcontent mbottom30">
 
     		 	<h2>Novedades</h2>
 
@@ -54,15 +54,21 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     		 	<?php $countnovedades++ ?>
 
     		 	<?php if ($countnovedades == 1){ 
-    		 		$col = 'col-md-4';}
+    		 		$col = 'col-md-4';
+					$class = 'col-md-4 col-sm-4';
+					}
     		 		elseif ($countnovedades == 2) {
-    		 		$col = 'col-md-8';} 
+    		 		$col = 'col-md-8';
+					$class = 'col-md-8 col-sm-8';
+					} 
     		 		elseif ($countnovedades == 3) {
-    		 		$col ='col-md-12';}
+    		 		$col = 'col-md-12';
+					$class = 'col-md-12 col-sm-12';
+					}
     		 		
     		 		?>
 
-    		 	<figure class="<?php echo $col ?> relevance">
+    		 	<figure class="<?php echo $class ?> relevance">
     		 		<?php echo get_the_post_thumbnail( $novedad->ID , $col) ?>
 
     				<figcaption>
