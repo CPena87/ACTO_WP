@@ -185,7 +185,7 @@ INDEX
   }
   /* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
   #header #navigation {
-    display: block !important;
+    display: block;
     margin-top: .382em;
   }
   #header #navigation ul.nav {

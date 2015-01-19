@@ -48,7 +48,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         
         	<?php woo_loop_before(); ?>
             <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-                <article <?php post_class('brdbottom'); ?>>
+                <article <?php post_class(''); ?>>
 
                     <div class="time-capsule hide-on-mobile">
                         <p><span><?php the_time( 'j M' ); ?></span>

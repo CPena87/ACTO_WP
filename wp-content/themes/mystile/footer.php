@@ -82,7 +82,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			<h5 class="footnav-title">Medios</h5>
 			<ul class="foot-col">
 				<li><a href="<?php echo home_url('shop') ?>/" title="Actividades" rel="nofollow">Catálogo</a></li>
-				<li><a href="<?php echo home_url('novedades') ?>/" title="Novedades" rel="nofollow">Términos y Condiciones</a></li>
+				<li><a href="<?php echo home_url('terminos') ?>/" title="Novedades" rel="nofollow">Términos y Condiciones</a></li>
 				<li><a href="<?php echo home_url('ventas') ?>/">Ventas</a></li>
 			</ul>
 		</nav>

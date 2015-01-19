@@ -84,7 +84,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
    	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('novedades') ?>" title="Ir a Noticias" rel="nofollow" target="_blank">Ir a Novedades</a>
    	    		</div>
     		 </div>
-    		 <aside class="col-md-3 sidecall pleft0">
+    		 <aside class="col-md-3 col-sm-3 sidecall pleft0">
     		 	<article class="sales mtop95">
     		 		<h4>Distribuición</h4>
     		 		<p class="brdbttm">I used to think the world was this great place where everybody.</p>
@@ -116,7 +116,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     				<?php foreach($libros as $libro): ?>
 		    		
 		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10">
+		    		<figure class="col-md-3 col-xs-6 producto pdbottom10">
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
 		    		</a>

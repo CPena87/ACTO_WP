@@ -106,7 +106,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		
 		<?php woo_main_after(); ?>
 
-        <?php get_sidebar('content'); ?>
+        <?php get_sidebar('mixed'); ?>
 
     </div><!-- /#content -->
 		

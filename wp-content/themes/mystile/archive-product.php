@@ -21,7 +21,7 @@ get_header(); ?>
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Catálogo</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                    <p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 
             </div>
@@ -38,8 +38,8 @@ get_header(); ?>
     				
     				<?php foreach($libros as $libro): ?>
 		    		
-		    		<!-- Corresponde a los datos del libro -->
-		    		<figure class="col-md-3 producto pdbottom10">
+		    		<!-- Corresponde a los datos del libro 123-->
+		    		<figure class="col-md-3 col-sm-6 col-xs-6 producto pdbottom10">
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
 		    		</a>

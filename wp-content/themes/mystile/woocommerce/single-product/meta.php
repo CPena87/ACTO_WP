@@ -65,7 +65,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 <div class="col-md-12" role="tabpanel">
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs tabclear" role="tablist">
         <li role="presentation"><a href="#dimensiones" aria-controls="dimensiones" role="tab" data-toggle="tab">Dimensiones del Producto</a></li>
         <li role="presentation"><a href="#comentarios" aria-controls="profile" role="tab" data-toggle="tab">Comentarios del Libro</a></li>
         <li role="presentation"><a href="#recomendados" aria-controls="recomendados" role="tab" data-toggle="tab">Libros Recomendados</a></li>
@@ -73,7 +73,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="dimensiones">
+        <div role="tabpanel" class="tab-pane fade in active" id="dimensiones">
                     <table class="shop_attributes">
 
                     <?php if ( $product->enable_dimensions_display() ) : ?>
@@ -97,7 +97,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
                     </table>
         </div>
-        <div role="tabpanel" class="tab-pane" id="comentarios">
+        <div role="tabpanel" class="tab-pane fade" id="comentarios">
 			<!-- Inicio Comentarios -->
                     
                     <div class="separator clear"></div>
@@ -151,7 +151,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
             </div>
         </div>
         
-        <div role="tabpanel" class="tab-pane" id="recomendados">
+        <div role="tabpanel" class="tab-pane fade" id="recomendados">
             <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
                         
             <?php foreach($libros as $libro): ?>
