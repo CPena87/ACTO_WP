@@ -3108,23 +3108,31 @@ img.ui-datepicker-trigger {
 
 /* HEADER */
 
+#cajacarro{background-color: rgba(155,155,155,.8);
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;}
+
+#cajacarro li{ float:none}
+#cajacarro li a{width: 100%; display: block;}
+
+
 .bg-head{background-color: rgba(0, 0, 0, 0.5); background-size: cover !important; width: 100% !important; position: absolute; right: 0;
 left: 0; z-index: 9999;}
-span.amount{color: #fff; padding-right: 10px; font-size: 15px; /*font-family: 'ambleregular';*/} 
+span.amount{color: #fff; padding-right: 10px; font-size: 18px; /*font-family: 'ambleregular';*/} 
 .product-subtotal span.amount,
 .product-price span.amount{color: #888888; margin-top: 15px; clear: both; display: block;}
-span.contents{color:#fff; background: #ff8000; padding: 5px; border-radius: 20px;
+span.contents{color:#fff; background: #ff8000; padding: 3px 10px; border-radius: 20px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;}
+    transition: all 0.5s ease-in-out;; float:right}
 .cart-nav{padding-right:0; padding-left: 0; padding-top:15px;}
 a.cart-parent{padding: 20px 0px;}
 .fixed {position: absolute; z-index: 999999; }
-
-.social-top ul{float:left; margin:25px 0 0;}
-.social-top li{display: block; float:left;}
+#navigation{ margin-top:50px !important;}
+.social-top ul{ margin:0 !important; text-align:right;}
+.social-top li{display: inline-block; }
 .social-top ul li a{text-decoration: none; color:transparent; font-size:0px; margin: 0 5px 0 15px;  /*font-family: 'ambleregular'*/}
 .social-top li a.facebook{background-image: url("../mystile/images/facebook.png"); height: 20px; width: 10px; display: block; background-position: 0px 0px; background-repeat: no-repeat; -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.2s ease-in-out;
@@ -3178,9 +3186,18 @@ transition: all 0.5s ease-in-out;}
 /* Background de header por single o portada correspondiente */
 .home-bg{background-image: url("../mystile/images/enc-home.jpg"); background-size: cover !important; background-position: 50% 0%; height:540px;}
 .jumbotron h1{font-size: 25px; text-transform: none; text-align: center; color:#fff; font-style:italic;font-family: "Open Sans"; font-weight: 400;}
+.invitepub p{background: #ff8000; font-size: 35px; line-height: 140%; color: #fff; padding: 2px 6px; margin-top: 5px; margin-bottom: 10px; }
+.invitepub a.btn-cta{padding: 5px; margin-top: 10px; font-size: 15px;}
 
-/* Para las otras partes del sitio */
+/* Backgrounds */
 .novedad-bg{background-image: url("../mystile/images/enc-novedad.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+.catalogo-bg{background-image: url("../mystile/images/catalogo.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+.escrito-bg{background-image: url("../mystile/images/escrito.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+.escritorio-bg{background-image: url("../mystile/images/escritorio.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+.distribuidores-bg{background-image: url("../mystile/images/enc-novedad.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+.autores-bg{background-image: url("../mystile/images/autores.jpg"); background-size: cover !important; background-position: 50% 0; height:500px;}
+
+/* Jumbotron */
 .jumbotron.fleft{float:left; padding:0;}
 .jumbotron.fleft h1{text-align: left; color: #fff; text-transform: uppercase; font-size: 40px; font-style: normal; background: #000; padding: 5px 15px; width: 60%; margin-top: 50px; }
 .jumbotron.fleft p{text-align: left; color: #fff; font-size: 20px; font-family: "Open Sans";font-weight:normal; line-height: 140%; }
@@ -3381,18 +3398,13 @@ a.entered{width: 100%; margin-bottom: 10px;}
 header.superior{height:150px; margin-top:-10px;}
 header.superior.reference{height:180px;}
 header.superior.catalogue{height:150px;}
-header.superior.related{height:415px;}
+header.superior.related{height:180px;}
 .superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 14px; line-height: 140%;}
 .superior p{font-family: "Open Sans"; margin-top:0; margin-bottom:0;color:#666666; font-size: 13px; padding: 0 5px 5px; }
-.character p{margin-bottom:10px;}
-.character p strong{float: left; display: block;}
-li.cart{background: rgba(255, 128, 0, 0.4);-webkit-border-bottom-right-radius: 10px;
--webkit-border-bottom-left-radius: 10px;
--moz-border-radius-bottomright: 10px;
--moz-border-radius-bottomleft: 10px;
-border-bottom-right-radius: 10px;
-border-bottom-left-radius: 10px;
- margin:0 30px;}
+.character p{margin-bottom:0;}
+.character p strong{float: left; display: block; color: #313131; font-size: 20px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; }
+.character a{font-size: 20px; font-weight:normal;}
+li.cart{}
 a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
 .booktype{height:15px;}
 .producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; display: inline-block; clear: both; margin-right:3px;}
@@ -3401,7 +3413,7 @@ a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; ba
 .oferta{font-family: "Open Sans"; font-size: 13px; color:#313131; float:right; padding:10px 5px;}
 footer.inferior{clear:both;}
 /* Correspondiente a los iconos de novedad, audio u otros que correspondan */
-.over-oustand{position: absolute; right: -25px; bottom: 250px;}
+.over-oustand{position: absolute; right: -25px; top: 320px;}
 .over-audio{position: absolute; right: -25px; bottom: 170px;}
 .over-coffee{position: absolute; right: -25px; bottom: 170px;}
 .over-oustand img,
@@ -3494,6 +3506,11 @@ span.stronged{font-weight: bold !important;
 .desc-autor p{text-align: center; line-height: 160%; font-size: 18px; color: #575757; font-family: "Open Sans", sans-serif;}
 .desc-team{color: #313131; font-size: 20px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
 .quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px; text-align:center;}
+/* CUESTIONARIO PROUST EN AUTORES */
+.proust h2{line-height: 140%; margin-bottom: 5px; margin-top: 20px;} 
+.proust h4{text-align: left; font-size:18px; color:#ff8000; line-height:140%; font-weight:bold;}
+.proust blockquote{text-align: left; font-size:15px; border-left:none; padding-left: 0; color:#575757; line-height:140%; font-style: italic}
+
 
 /* Estilos relacionados al single de autores */
 .prof-avatar img{width: 100%; height: auto; border-radius: 100%;}
@@ -3516,8 +3533,8 @@ font-weight: bold;}
 .price ins span{font-size: 45px !important; color:#ff8000 !important;}
 .author-ref,
 .quant-text{color:#313131; font-size:20px; font-weight:bold; font-family: "Open Sans"; margin-bottom:5px;}
-.author-ref a{margin:0 5px;}
-.character a{margin:0 3px;}
+.author-ref a{margin:0 5px; color:#ff8000;}
+.character a{margin:0 3px; color:#ff8000;}
 span.text-random{font-weight:normal;}
 button.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
  img.cart-icon{width: 20px; margin-right: 10px;}
@@ -3525,6 +3542,9 @@ button.cart{background: url("images/cart-icon.png"); background-repeat: no-repea
 /* Informacion Adicional del Catalogo */
 h2.additional{color: #575757; font-weight: bold; font-size: 30px; border-left: 10px solid #575757; text-transform: uppercase; font-family: "Open Sans"; padding-left: 10px;}
 select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
+div[itemprop="description"]{}
+.comment-reply-title h3{margin-top: 20px; font-weight: bold; color: #ff8000;} 
+h2.appendix{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 20px;}
 /* Comentarios */
 .comment-area{border-top: 1px solid #D2D2D2; margin-top: 20px; padding-top: 20px;}
 .avatar img{border-radius: 50px; width: 100%; max-width: 100px; padding: 0;}

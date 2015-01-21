@@ -66,6 +66,9 @@ ob_start();
 	<?php endforeach; ?>
 	
 </table>
+
+<?php get_comment(); ?>
+
 <?php
 if ( $has_row ) {
 	echo ob_get_clean();

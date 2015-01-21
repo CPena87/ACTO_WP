@@ -30,23 +30,26 @@ global $woo_options, $woocommerce;
 	wp_head();
 	woo_head();
 ?>
-<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.js" /></script>
-<script type="text/javascript" href="<?php bloginfo('stemplate_directory'); ?>/js/bootstrap.min.js" /></script>
+
+<script type="text/javascript" src="<?php echo  get_bloginfo('template_directory'); ?>/js/bootstrap.min.js" /></script>
 
 </head>
 
 <body <?php body_class('opal-white') ?> >
 
-<div class="container">
+<div class="container" style="z-index:2; position:relative">
 	<div class="fixed col-full">
 		<nav class="hide-on-mobile hide-cart col-md-3 col-md-offset-10" role="navigation">
-				<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
+				<?php /* if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
 				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-				<?php } ?>
+				<?php }  */?>
 				<?php
 					if ( class_exists( 'woocommerce' ) ) {
-						echo '<ul class="nav wc-nav">';
+						echo '<ul class="nav wc-nav" id="cajacarro">';
+						//echo '<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">';
 						woocommerce_cart_link();
+						//echo '</button>';
+						echo '<div class="hiddennss" data-container="body" data-toggle="popover" data-placement="bottom" data-content="PopOver en preparación" data-original-title=""></div>';
 						echo '</ul>';
 					}
 				?>
@@ -54,14 +57,23 @@ global $woo_options, $woocommerce;
 	</div>
 </div>
 
-<div id="wrapper" >
+<script>
+	jQuery('#cajacarro').click(function(event) {
+		event.preventDefault();
+		jQuery('.hiddennss').popover('toggle' , {
+				html: true
+			});
+	});
+</script>
+
+<div id="wrapper" style="z-index:1; position:relative" >
 	<?php woo_header_before(); ?>
 	
 		<div class="bg-head">
-			<header id="header" class="col-full">
+			<header id="header" class="container">
 		
 		    		<hgroup class="col-md-logo col-md-1">
-		    			<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
+		    			<a href="<?php bloginfo('url')?>"><img src="<?php bloginfo('template_directory') ?>/images/logo.png"></a>
 		    	
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 				    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
@@ -85,6 +97,8 @@ global $woo_options, $woocommerce;
 								if ( class_exists( 'woocommerce' ) ) {
 									echo '<ul class="nav wc-nav">';
 									woocommerce_cart_link();
+									//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+									// echo get_search_form();
 									echo '</ul>';
 								}
 							?>
@@ -92,7 +106,7 @@ global $woo_options, $woocommerce;
 						<!-- Fin Navegacion -->
 
 						<!--  Redes Sociales en vista mobile -->
-						<nav class="col-md-6 fleft social-top">
+						<nav class="col-md-2 col-md-offset-2 social-top">
 							<ul>
 								<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
 								<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
@@ -114,7 +128,14 @@ global $woo_options, $woocommerce;
 
 
 			</nav><!-- /#navigation -->
-
+            <!--  Redes Sociales en vista escritorio -->
+              <nav class="col-md-2 col-md-offset-2 social-top hide-on-mobile"  style="margin-top: 35px; text-align: right;">
+                  <ul>
+                      <li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
+                      <li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
+                      <li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
+                  </ul>
+              </nav>
 			<button class="nav-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
@@ -130,14 +151,7 @@ global $woo_options, $woocommerce;
 
 			<!-- Fin Navegacion -->
 
-			<!--  Redes Sociales en vista escritorio -->
-			<nav class="col-md-esp col-md-offset-1 fleft social-top hide-on-mobile">
-				<ul>
-					<li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
-					<li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>
-					<li><a class="pinterest" href="/" title="Acto Editores" rel="tag">Pinterest</a></li>
-				</ul>
-			</nav>
+			
 		    	
 
 		</header><!-- /#header -->

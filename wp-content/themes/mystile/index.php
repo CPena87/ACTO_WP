@@ -85,7 +85,14 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
    	    		</div>
     		 </div>
     		 <aside class="col-md-3 col-sm-3 sidecall pleft0">
-    		 	<article class="sales mtop95">
+    		 	<section class="invitepub mtop95">
+    		 		<p> Te invitamos</p> 
+    		 		<p>a públicar </p> 
+    		 		<p>con nosotros </p>
+
+    		 		<a class="btn-cta"href="<?php echo home_url('publica-con-nosotros') ?>">Haz Click Aquí</a>
+    		 	</section>
+    		 	<article class="sales mtop30">
     		 		<h4>Distribuición</h4>
     		 		<p class="brdbttm">I used to think the world was this great place where everybody.</p>
     		 		
@@ -147,9 +154,12 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
 		    					
+                               	<!--<pre><?php var_dump(get_post_meta($libro->ID , '_regular_price'))?></pre>
+                                <pre><?php var_dump(get_post_meta($libro->ID , '_sale_price'))?></pre> -->
+                                
 			    				<span class="price">$<?php echo $price[0]; ?></span>
 
-			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    				<?php if($dprice[0] != ''){ ?>
 			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
 			    				<?php } ?>
 

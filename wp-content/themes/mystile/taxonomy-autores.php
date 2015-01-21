@@ -6,7 +6,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 <?php get_header(); ?>
 
-<div class="novedad-bg">
+<div class="autores-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-6 ">
@@ -42,6 +42,16 @@ $var = get_queried_object();
                     
             <div class="col-md-3 prof-avatar">
                 <img src="<?php echo $avatarautor[0]?>">
+                                
+                <div class="proust">
+                    <h2>Cuestionario Proust</h2>
+                    <?php $preguntas = get_field('cuestionario' , 'autores_'.$var->term_id) ?>
+                    <?php foreach($preguntas as $pregunta): ?>
+
+                    <h4><?php echo $pregunta['ask'] ?></h4>
+                    <blockquote> <p><?php echo $pregunta['answer'] ?></p> </blockquote>
+                    <?php endforeach ?>
+                </div>  
             </div>
 
             <aside class="col-md-9 prof-name">
@@ -69,13 +79,7 @@ $var = get_queried_object();
                 
                 <?php woo_loop_after(); ?>
                 <!-- Content Area Fin -->
-            </aside>
-		
-		</section><!-- /#main -->
 
-        <section class="container">
-            <div class="row">
-                <div class="col-md-8">
                     <h2>Publicaciones Relacionadas al Autor</h2>
                 <!-- Textos relacionados -->
                 <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
@@ -117,7 +121,14 @@ $var = get_queried_object();
 
                     <?php endforeach ?>
                 <!-- Fin de textos relacionados -->
-                </div>
+               
+            </aside>
+		
+		</section><!-- /#main -->
+
+        <section class="container">
+            <div class="row">
+                
 
                 <div class="col-md-4">
                     <h3>Novedades</h3>

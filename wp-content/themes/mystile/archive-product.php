@@ -79,7 +79,7 @@ get_header(); ?>
 			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
 			    				
 
-			    				<span class="oferta">ISBN<?php echo $isbn[0]; ?></span>
+			    				<!-- <span class="oferta">ISBN<?php //echo $isbn[0]; ?></span> -->
 			    				<?php } ?>
 
 		    				</footer>

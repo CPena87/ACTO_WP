@@ -12,7 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-?>
+
+$isbn = $product->get_attribute( 'ISBN' )?>
+
+
+
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
 	<!-- Contador de productos en stock -->
@@ -42,5 +46,7 @@ global $product;
 		<span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span>.</span>
 
 	<?php endif; ?>
-
+    <div class="clear"></div>
+    <span class="sku_wrapper">ISBN: <span class="sku" itemprop="sku"><?php echo $isbn; ?></span>.</span>
+    
 </div>

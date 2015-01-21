@@ -18,7 +18,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	get_header();
 	global $woo_options;
 ?>
-<div class="novedad-bg">
+<div class="autores-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-6 ">
