@@ -56,17 +56,15 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 <?php endif; ?>
 
-<div class="col-md-12">
-	<div role="tabpanel">
+<div class="col-md-12 mtop20 pd0 clear">
 
+	<div role="tabpanel">
       <ul class="nav nav-tabs" role="tablist">
-        
         <li role="presentation" class="active"><a href="#comentarios" aria-controls="comentarios" role="tab" data-toggle="tab">Comentarios</a></li>
         <li role="presentation"><a href="#dimensiones" aria-controls="dimensiones" role="tab" data-toggle="tab">Dimensiones del producto</a></li>
         <li role="presentation"><a href="#recomendados" aria-controls="recomendados" role="tab" data-toggle="tab">Libros recomendados</a></li>
         <li role="presentation"><a href="#indice" aria-controls="indice" role="tab" data-toggle="tab">Contenidos</a></li>
       </ul>
-    
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="comentarios">
 			<?php
@@ -83,19 +81,21 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
                     <div class="avatar col-md-2 hide-on-mobile pleft0">
                         <img src="<?php bloginfo('template_directory')?>/images/avatar-male.jpg" alt="" />
                     </div>
-                    <h4><?php echo $comentario->comment_author?></h4>
-                    <p><?php echo $comentario->comment_content?></p>
+                    <div class="col-md-10">
+                        <h4><?php echo $comentario->comment_author?></h4>
+                        <p><?php echo $comentario->comment_content?></p>
+                    </div>
                 </div>
             <?php endforeach;?>
             
             <div class="form">
 			<?php $args = array(
                 'fields' => apply_filters( 'comment_form_default_fields', array(
-                'author' => '<div class="col-md-6"><p class="comment-form-author">'. ( $req ? '<span class="required">*</span>' : '' ) .
+                'author' => '<div class="col-md-6"><p class="comment-form-author" style="width:100%;">'. ( $req ? '<span class="required">*</span>' : '' ) .
                 '<input id="author" name="author" type="text" placeholder="Nombre" value="' .
                 esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
                 '</p></div>',
-                'email'  => '<div class="col-md-6"><p class="comment-form-email">' .
+                'email'  => '<div class="col-md-6"><p class="comment-form-email" style="width:100%;">' .
                 '' .
                 ( $req ? '<span class="required">*</span>' : '' ) .
                 '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
@@ -142,7 +142,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
                 <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
                     <?php echo get_the_post_thumbnail($libro->ID); ?>
                 </a>
-                <div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+                <div class="minun over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
                 <figcaption class="white">
                     <header class="superior reference">
                         <h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
@@ -158,9 +158,13 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
                     <footer class="inferior">
                         <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
                         <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+                                
+                        <!--<pre><?php var_dump(get_post_meta($libro->ID , '_regular_price'))?></pre>
+                        <pre><?php var_dump(get_post_meta($libro->ID , '_sale_price'))?></pre> -->
+                                
                         <span class="price">$<?php echo $price[0]; ?></span>
 
-                        <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                        <?php if($dprice[0] != ''){ ?>
                         <span class="oferta">$<?php echo $dprice[0]; ?></span>
                         <?php } ?>
 
@@ -172,14 +176,13 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
         </div>
         
         <div role="tabpanel" class="tab-pane" id="indice">
-        	<h2>Índice de Contenidos</h2>
+        	<h2 class="appendix">Índice de Contenidos</h2>
 
             <?php 
                 $indice = get_field('indice' , $post->ID); 
 
             ?>
             <?php echo $indice; ?>
-            
         </div>
         
       </div>

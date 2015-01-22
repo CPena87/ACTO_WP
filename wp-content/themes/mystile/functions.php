@@ -51,10 +51,15 @@ add_image_size('encabezado', 870, 200, true );
 add_image_size('col-md-4', 235, 237, true);
 add_image_size('col-md-8', 500, 237, true);
 add_image_size('col-md-12', 765, 237, true);
+add_image_size( 'encabezadopost',870, 350, true ); 
 // add_image_size('libros',);
 };
 
-
+// add_post_type_support('page', 'excerpt');
+// if ( function_exists('add_theme_support') ) {
+//     add_theme_support( 'set_post_thumbnail_size' );
+// set_post_thumbnail_size( 'corte-encabezado',150, 150 );
+// };
 
 
     //Post type register

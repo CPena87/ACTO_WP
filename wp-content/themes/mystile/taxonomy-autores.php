@@ -13,7 +13,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Autores</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                    <p>You don't get sick, I do.12345 That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 
             </div>
@@ -27,12 +27,12 @@ $var = get_queried_object();
 ?>
     
     <div id="content" class="col-full container">
-    	
-    	<?php woo_main_before(); ?>
-    	
-		<section class="row"> 
+        
+        <?php woo_main_before(); ?>
+        
+        <section class="row"> 
 
-    		<?php if (have_posts()) : $count = 0; ?>
+            <?php if (have_posts()) : $count = 0; ?>
 
                 <?php 
                     $image = get_field('avatarautor' , 'autores_'. $var->term_id);
@@ -42,15 +42,18 @@ $var = get_queried_object();
                     
             <div class="col-md-3 prof-avatar">
                 <img src="<?php echo $avatarautor[0]?>">
-                                
-                <div class="proust">
-                    <h2>Cuestionario Proust</h2>
-                    <?php $preguntas = get_field('cuestionario' , 'autores_'.$var->term_id) ?>
-                    <?php foreach($preguntas as $pregunta): ?>
+                    <div class="proust">
+                        
+                        <?php $preguntas = get_field('cuestionario' , 'autores_'.$var->term_id) ?>
+                        <?php if ($preguntas){ ?>
+                        <?php foreach($preguntas as $pregunta): ?>
 
-                    <h4><?php echo $pregunta['ask'] ?></h4>
-                    <blockquote> <p><?php echo $pregunta['answer'] ?></p> </blockquote>
-                    <?php endforeach ?>
+                        <h2>Cuestionario Proust</h2>
+
+                        <h4><?php echo $pregunta['ask'] ?></h4>
+                        <blockquote> <p><?php echo $pregunta['answer'] ?></p> </blockquote>
+                        <?php endforeach ?>
+                        <?php } ?>
                 </div>  
             </div>
 
@@ -80,18 +83,18 @@ $var = get_queried_object();
                 <?php woo_loop_after(); ?>
                 <!-- Content Area Fin -->
 
-                    <h2>Publicaciones Relacionadas al Autor</h2>
+                <h2 class="pub-autores">Publicaciones Relacionadas al Autor</h2>
                 <!-- Textos relacionados -->
                 <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
                     
                     <?php foreach($libros as $libro): ?>
                     
                     <!-- Corresponde a los datos del libro -->
-                    <figure class="col-md-3 producto pdbottom10 pleft0">
+                    <figure class="col-md-3 col-sm-3 col-xs-6 producto pdbottom10 pleft0">
                         <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
                         <?php echo get_the_post_thumbnail($libro->ID); ?>
                     </a>
-                        <div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
+                        <div class="maxim over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
                         <figcaption class="white">
                             <header class="superior related">
                                 <h4><?php echo $libro->post_title ?></h4>
@@ -110,8 +113,8 @@ $var = get_queried_object();
                                 
                                 <span class="price">$<?php echo $price[0]; ?></span>
 
-                                <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-                                <span class="oferta">$<?php echo $dprice[0]; ?></span>
+                                <?php if($dprice[0] != ''){ ?>
+                                <span class="ofering">$<?php echo $dprice[0]; ?></span>
                                 <?php } ?>
 
                             </footer>
@@ -121,41 +124,39 @@ $var = get_queried_object();
 
                     <?php endforeach ?>
                 <!-- Fin de textos relacionados -->
-               
             </aside>
-		
-		</section><!-- /#main -->
-
-        <section class="container">
-            <div class="row">
-                
-
-                <div class="col-md-4">
-                    <h3>Novedades</h3>
-
-                    <?php $novedades= get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
-                    <?php $countnovedades = 0 ?>
-                    <?php foreach ($novedades as $novedad): ?>
-                    <?php $countnovedades++ ?>
-
-                    <article class="col-md-12 pd0 wide">
-
-                        
-                            <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-                            <?php echo substr($post->post_content , 0 , 150 )?>
-                        
-                    </article>
-                    <?php endforeach ?>
-
-                </div>
-            </div>
-        </section>
-		
-		<?php woo_main_after(); ?>
+        
+        </section><!-- /#main -->
+        
+        <?php woo_main_after(); ?>
 
     </div>
     <!-- /#content -->
 
+        <div class="container mtop20mob brdtop">
+        <div class="row">
+            
+
+            <div class="col-md-12 sidecontent mtop30 mbottom50">
+                <h3 class="title-sidebar">Novedades</h3>
+
+                <?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+                <?php $countnovedades = 0 ?>
+                <?php foreach ($novedades as $novedad): ?>
+                <?php $countnovedades++ ?>
+
+                <article class="col-md-6 pd0 wide ">
+
+                    
+                        <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+                        <p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
+                    
+                </article>
+            <?php endforeach ?>
+
+            </div>
+        </div>
+    </div>
 
 		
 <?php get_footer(); ?>

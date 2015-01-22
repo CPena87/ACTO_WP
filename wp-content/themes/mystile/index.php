@@ -84,7 +84,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
    	    			<a class="go-cta news" href="<?php echo get_post_type_archive_link('novedades') ?>" title="Ir a Noticias" rel="nofollow" target="_blank">Ir a Novedades</a>
    	    		</div>
     		 </div>
-    		 <aside class="col-md-3 col-sm-3 sidecall pleft0">
+    		 <aside class="col-md-3 col-sm-3 sidecall ">
     		 	<section class="invitepub mtop95">
     		 		<p> Te invitamos</p> 
     		 		<p>a públicar </p> 

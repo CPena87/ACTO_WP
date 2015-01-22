@@ -25,7 +25,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Autores</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                    <p>You don't get sick, I do.12 That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
 
             </div>
@@ -98,32 +98,13 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<?php woo_main_after(); ?>
 
     </div><!-- /#content -->
-<div class=" medium-gray">
-    <div class="container">
-        <div class="row">
-                    <?php 
-                        $leftcol = get_field('leftcol' , $post->ID);
-                        $rightcol = get_field('rightcol' , $post->ID);
-                        $remate = get_field('lasttext' , $post->ID);
-                     ?>
-             <section class="col-md-12">
-                <aside class="col-md-6 desc-team">
 
-                    
-                    <p>
-                    <?php echo $leftcol; ?>
-                    </p>
-                </aside>  
-
-                <aside class="col-md-6 desc-team">
-                    <p>
-                    <?php echo $rightcol; ?>
-                    </p>
-                </aside> 
-            </section>
-        </div>
-    </div>
-</div>	
+    <?php 
+        $leftcol = get_field('leftcol' , $post->ID);
+        $rightcol = get_field('rightcol' , $post->ID);
+        $remate = get_field('lasttext' , $post->ID);
+    ?>
+	
 
 <div class="container">
     <div class="row">

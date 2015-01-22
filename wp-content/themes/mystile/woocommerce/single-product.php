@@ -68,7 +68,7 @@ get_header(  ); ?>
 		<div class="row">
 			
 
-			<div class="col-md-12 sidecontent mtop30">
+			<div class="col-md-12 sidecontent mtop30 mbottom50">
 				<h3 class="title-sidebar">Novedades</h3>
 
 				<?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>

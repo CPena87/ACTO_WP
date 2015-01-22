@@ -626,11 +626,11 @@ INDEX
     width: 100%;
   }
   #main {
-    width: 69.2%;
+    /*width: 69.2%;*/
   }
   #sidebar {
     margin-top: 0;
-    width: 22.05%;
+    /*width: 22.05%;*/
     font-size: .857em;
   }
   .entry:after {

@@ -886,8 +886,8 @@ transition: all 0.5s ease-in-out;
 }
 .post img,
 .type-page img {
-  padding: .53em;
-  border: 1px solid #e8e4e3;
+/*  padding: .53em;
+  border: 1px solid #e8e4e3;*/
   background: #fff;
   max-width: 100%;
   height: auto !important;
@@ -2222,6 +2222,7 @@ table.variations tr:last-child th {
   color: #9f9693;
   font-weight: bold;
   margin-bottom: .618em;
+  padding:40px 0;
 }
 .single-product .summary .product_meta {
   font-size: .857em;
@@ -3133,7 +3134,7 @@ a.cart-parent{padding: 20px 0px;}
 #navigation{ margin-top:50px !important;}
 .social-top ul{ margin:0 !important; text-align:right;}
 .social-top li{display: inline-block; }
-.social-top ul li a{text-decoration: none; color:transparent; font-size:0px; margin: 0 5px 0 15px;  /*font-family: 'ambleregular'*/}
+.social-top ul li a{text-decoration: none; color:transparent; font-size:0px; margin: 0 0 0 10px;  /*font-family: 'ambleregular'*/}
 .social-top li a.facebook{background-image: url("../mystile/images/facebook.png"); height: 20px; width: 10px; display: block; background-position: 0px 0px; background-repeat: no-repeat; -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.2s ease-in-out;
 -ms-transition: all 0.2s ease-in-out;
@@ -3250,6 +3251,7 @@ transition: all 0.5s ease-in-out;}
 .fleft{float:left;}
 .fright{float:right !important;}
 .mg5{margin:5px;}
+.mtop20{margin-top:20px;}
 .mtop30{margin-top:30px;}
 .mtop55{margin-top:55px;}
 .mtop95{margin-top:95px;}
@@ -3272,7 +3274,7 @@ transition: all 0.5s ease-in-out;}
 /* Colores */
 .light-grey{background:#f3f3f3;}
 .white{background:#ffffff;}
-.opal-white{background:#fcfcfc;}
+.opal-white{background:#fafafa;}
 .medium-gray{background:#e6e6e6;}
 .orange-medium{background: rgba(255, 128, 0, 0.4);}
 
@@ -3399,10 +3401,10 @@ header.superior{height:150px; margin-top:-10px;}
 header.superior.reference{height:180px;}
 header.superior.catalogue{height:150px;}
 header.superior.related{height:180px;}
-.superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 14px; line-height: 140%;}
+.superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 13.5px; line-height: 140%;}
 .superior p{font-family: "Open Sans"; margin-top:0; margin-bottom:0;color:#666666; font-size: 13px; padding: 0 5px 5px; }
 .character p{margin-bottom:0;}
-.character p strong{float: left; display: block; color: #313131; font-size: 20px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; }
+.character p strong{float: left; display: block; color: #313131; font-size: 14px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; }
 .character a{font-size: 20px; font-weight:normal;}
 li.cart{}
 a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
@@ -3411,7 +3413,9 @@ a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; ba
 .producto a:hover{color:#ff8000;}
 .price{font-weight: bold; font-size:16px; color:#ff8000; font-family: "Open Sans"; padding:5px;}
 .oferta{font-family: "Open Sans"; font-size: 13px; color:#313131; float:right; padding:10px 5px;}
+span.ofering{padding-right: 5px; float: right;}
 footer.inferior{clear:both;}
+.tab-pane ul{padding: 0 15px;}
 /* Correspondiente a los iconos de novedad, audio u otros que correspondan */
 .over-oustand{position: absolute; right: -25px; top: 320px;}
 .over-audio{position: absolute; right: -25px; bottom: 170px;}
@@ -3453,7 +3457,7 @@ span.trail-end{color: #777; font-weight: bold; font-size: 14px;}
 .title-data p.date {font-weight:bold !important; float: left;}
 
 /* Estilos relacionados al sidebar */
-.sidecontent p{margin-bottom:15px;}
+.sidecontent p{margin-bottom:15px; font-weight:normal;}
 .sidecontent a{background: #ff8000; padding: 5px; color: #fff;} 
 .sidecontent a:hover{background:#b85c00;}
 .sidecontent h3 a{font-size: 25px; color: #fff; margin-bottom: 0; background: #000; line-height: 180%; padding: 3px 5px; font-family:"Bree Serif", sans-serif;}
@@ -3506,6 +3510,9 @@ span.stronged{font-weight: bold !important;
 .desc-autor p{text-align: center; line-height: 160%; font-size: 18px; color: #575757; font-family: "Open Sans", sans-serif;}
 .desc-team{color: #313131; font-size: 20px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
 .quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px; text-align:center;}
+.maxim.over-oustand{top: 225px; width: 30%; right: -10px; height: auto;}
+.pub-autores{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 25px;}
+
 /* CUESTIONARIO PROUST EN AUTORES */
 .proust h2{line-height: 140%; margin-bottom: 5px; margin-top: 20px;} 
 .proust h4{text-align: left; font-size:18px; color:#ff8000; line-height:140%; font-weight:bold;}
@@ -3515,7 +3522,7 @@ span.stronged{font-weight: bold !important;
 /* Estilos relacionados al single de autores */
 .prof-avatar img{width: 100%; height: auto; border-radius: 100%;}
 .prof-name h1{font-size:45px; font-weight:bold; color:#575757; border-left:10px solid #575757; font-family:"Open Sans"; padding-left:10px; margin-bottom:0;}
-.archive-description p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px;}
+.archive-description p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px; line-height:130%;}
 
 /* Estilos Relacionados con Sobre Acto */
 .about-them img{width: 100%; max-width: 300px; padding: 5%; border: none;
@@ -3532,25 +3539,33 @@ font-weight: bold;}
 .price del span{font-size: 40px !important; color:#313131 !important;}
 .price ins span{font-size: 45px !important; color:#ff8000 !important;}
 .author-ref,
-.quant-text{color:#313131; font-size:20px; font-weight:bold; font-family: "Open Sans"; margin-bottom:5px;}
-.author-ref a{margin:0 5px; color:#ff8000;}
-.character a{margin:0 3px; color:#ff8000;}
+.quant-text{color:#868686; font-size:14px; font-weight:normal; font-family: "Open Sans"; margin-bottom:5px;}
+.author-ref,
+.quant-text strong{color:#313131;}
+.author-ref a{margin:0 5px; color:#868686;}
+.character a{margin:0 3px; color:#868686; font-size: 14px;
+}
 span.text-random{font-weight:normal;}
 button.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
  img.cart-icon{width: 20px; margin-right: 10px;}
  span.posted_in{font-size: 14px; color: #313131; }
+.minun.over-oustand{top: 185px; width: 30%; right: -10px; height: auto;}
+.sku_wrapper{color: #313131; font-size: 14px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; margin-top: 0px; display: block;}
+.sku{color: #868686; font-weight:normal;}
+form.cart{margin-bottom:-10px;}
+
 /* Informacion Adicional del Catalogo */
 h2.additional{color: #575757; font-weight: bold; font-size: 30px; border-left: 10px solid #575757; text-transform: uppercase; font-family: "Open Sans"; padding-left: 10px;}
 select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
-div[itemprop="description"]{}
+div[itemprop="description"] p{font-weight:lighter;}
 .comment-reply-title h3{margin-top: 20px; font-weight: bold; color: #ff8000;} 
-h2.appendix{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 20px;}
+h2.appendix, .comment-respond h3{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 20px;}
 /* Comentarios */
 .comment-area{border-top: 1px solid #D2D2D2; margin-top: 20px; padding-top: 20px;}
 .avatar img{border-radius: 50px; width: 100%; max-width: 100px; padding: 0;}
 .comentario{margin-top: 15px; margin-bottom: 20px; padding-left:0;}
-.comentario h4{margin: 15px 0 10px; font-size: 25px; font-weight: bold; color: #ff8000;}
-.comentario p{margin-top:10px; font-style: italic; font-size:15px;}
+.comentario h4{margin: 10px 0 10px; font-size: 25px; font-weight: bold; color: #ff8000;}
+.comentario p{margin-top:10px; font-style: italic; font-size:15px; font-weight:lighter;}
 .bigged span.amount{font-size:40px; color:#313131;}
 .cart-collaterals span.amount{color: #888888 !important;}
 .alt-table-row input.button[type="submit"]{padding:10px;}
@@ -3589,6 +3604,12 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .mtop20mob{margin-top:20px;}
   .mtop40mob{margin-top:40px;}
   .mleft15mob{margin-left:15px;}
+
+  /* Actividades */
+  .activity-content{margin-left:0;}
+
+  /* Catalogo */
+  .nav-tabs > li a{color: #4a413e !important; }
 }
 
 @media (max-width: 924px) and (min-width:769px){
@@ -3616,6 +3637,23 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .mtop40mob{margin-top:40px;}
   .mleft15mob{margin-left:15px;}
 
+  /* Actividades */
+  .activity-content{margin-left:0;}
+
+  /* Catalogo */
+  .nav-tabs > li a{color: #4a413e !important; }
+  .form{padding:0 15px;}
+
+  /* Autores */
+  .avatarautor{margin-top: 25px;}
+  .prof-avatar img{margin: 40px auto 0; width:85%; display:block;}
+
+
+    /* Footer */
+    .grey-footer {background-color: #989898; }
+    h5.footnav-title {text-align: left; display: block; float: left; width: 100%; }
+    ul.social-bottom{margin-bottom: 20px; padding-bottom: 15px; clear: both;}
+
 }
 
 @media (max-width:768px) and (min-width: 641px){
@@ -3642,6 +3680,24 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
 
     /* Home */
   figure.relevance {height: auto; margin-bottom: 0px; }
+  /* Actividades */
+  .activity-content{margin-left:0;}
+
+  /* Catalogo */
+  .nav-tabs > li a{color: #4a413e !important; }
+  .form{padding:0 15px;}
+
+  /* Autores  */
+  .avatarautor{margin-top: 25px;}
+  .prof-avatar img{margin: 40px auto 0; width:85%; display:block;}
+
+
+  /* Footer */
+  .grey-footer {background-color: #989898; }
+  h5.footnav-title {text-align: left; display: block; float: left; width: 100%; }
+  ul.social-bottom{margin-bottom: 20px; padding-bottom: 15px; clear: both;}
+
+  article.actividades{clear:both;}
 }
 
 @media (max-width: 640px){
@@ -3679,8 +3735,6 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .pd0mob{padding:0;}
   .mleft15mob{margin-left:15px;}
 
-
-
   /* Estilos para novedades */
   .col-md-4.relevance,
   .col-md-8.relevance,
@@ -3698,6 +3752,8 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .desc-team{text-align:center; line-height:140%; font-size:18px;}
   .quote-team p{text-align:center; font-size: 20px; line-height:140%;}
   .desc-autor p{font-size: 15px;}
+  .prof-name h1{font-size:29px;}
+  .archive-description p{font-size:23px; text-align: 140%;}
 
   /* Responsive para el sidebar */
   .sidecontent{width: 100%; margin: 0 auto; display: block; padding: 20px; background:#f4f4f4; clear:both;}
@@ -3715,6 +3771,10 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .reviewer {padding-right: 0; width: 55%; float: none; margin: 40px auto 0; }
   .reviewer img {border-radius: 90%; width: 100%; height: auto; max-width: 200px; float: none; border: none; padding: 0; }
   .sign{left:40%;}
+  .activity-content{margin-left:0;}
+
+  /* Catalogo */
+  .nav-tabs > li a{color: #4a413e !important; }
 
   /* Footer */
   .grey-footer{background-color:#989898;}
@@ -3727,13 +3787,23 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .producto{margin-bottom: 30px; padding: 5px}
   .images{margin: 15px;}
   .product_title.entry-title{font-size: 30px;}
-  .over-oustand {right: -15px; bottom: 275px; }
+  .over-oustand {right: -15px; top: 210px; }
   .tabclear{clear:both;}
   ul.nav.nav-tabs.tabclear li a{color:#ff8000; padding:5px;}
+  .form{padding:0 15px;}
+  #respond #commentform .comment-form-author,
+  #respond #commentform .comment-form-email,
+  #respond #commentform .comment-form-url{width:100%;}
 
   /* Responsive relacionado a checkout y área de compra */
   .post, .type-page{margin: 0 15px; }
 
+  table.cart td.actions .coupon .input-text, table.cart td.actions .coupon .button {width: 100%;}
+
+  /* Responsive relacionado a autores */
+  .avatarautor{margin-top: 25px;}
+  .prof-avatar img{margin: 40px auto 0; width:75%; display: block;}
+  .proust{display:none;}
 }
 
 

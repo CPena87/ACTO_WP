@@ -129,7 +129,7 @@ global $woo_options, $woocommerce;
 
 			</nav><!-- /#navigation -->
             <!--  Redes Sociales en vista escritorio -->
-              <nav class="col-md-2 col-md-offset-2 social-top hide-on-mobile"  style="margin-top: 35px; text-align: right;">
+              <nav class="col-md-1 col-md-offset-2 social-top hide-on-mobile"  style="margin-top: 35px; text-align: right; padding:0;">
                   <ul>
                       <li><a class="twitter" href="/" title="@Actoeditores" rel="tag">Twitter</a></li>
                       <li><a class="facebook" href="/" title="Acto Editores" rel="tag">Facebook</a></li>

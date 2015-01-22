@@ -24,7 +24,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     	
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left"> 
+		<section id="main" class="col-md-8"> 
 
 		<?php if (have_posts()) : $count = 0; ?>
                 
@@ -33,7 +33,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	
 			$settings = array(
 					'thumb_w' => 787, 
-					'thumb_h' => 300, 
+					'thumb_h' => 200, 
 					'thumb_align' => 'alignleft'
 					);
 					
@@ -62,14 +62,20 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                             <p class="date">Fecha: <span><?php the_time( 'j F' ); ?> de <?php the_time('Y')?></span></p>
                         </header>
                       <?php 
-                            if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'novedades' ) { 
-                                woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); 
+                            //set_post_thumbnail_size( 870, 200, true );
+                            //set_post_thumbnail_size( 870, 200, array( 'center', 'center')  );
+                            //woo_image( 'width=870&height=200&class=thumbnailalignleft' ); 
+                        ?>
+
+                      <?php 
+                            if ( has_post_thumbnail() ) { 
+                                the_post_thumbnail('encabezado');
                             } 
                         ?>
                 
                         <section class="entry">
                         <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(); } ?>
-                        <?php woo_post_meta(); ?>
+                        <?php //woo_post_meta(); ?>
                         </section>
                 
                           

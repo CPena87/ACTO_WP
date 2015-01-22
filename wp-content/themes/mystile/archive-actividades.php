@@ -21,11 +21,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     </div>
 </div>
     
-    <div id="content" class="col-full">
+    <div id="content" class="container pd0mob">
     	
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left"> 
+		<section id="main" class="col-md-8"> 
 
 		<?php if (have_posts()) : $count = 0; ?>
                 

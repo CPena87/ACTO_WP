@@ -17,7 +17,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	
 	if ( isset( $woo_options['woo_layout'] ) && ( $woo_options['woo_layout'] != 'layout-full' ) ) {
 ?>	
-<aside id="sidebar" class="col-right sidecontent mbottom50">
+<aside id="sidebar" class="col-md-3 col-md-offset-1 sidecontent mbottom50">
 <h4 class="sidebar">Actividades</h4>
 <?php $actividades= get_posts(array('post_type' => 'actividades', 'numberposts' => 3)); ?>
        <?php $countactividades = 0 ?>

@@ -20,7 +20,7 @@ $isbn = $product->get_attribute( 'ISBN' )?>
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
 	<!-- Contador de productos en stock -->
-	<p class="quant-text">Cantidad:
+	<p class="quant-text"><strong>Cantidad:</strong>
 	<?php
 		// Availability
 		$availability      = $product->get_availability();
@@ -32,8 +32,16 @@ $isbn = $product->get_attribute( 'ISBN' )?>
 </div>
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
+	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+
+		<span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span></span>
+
+	<?php endif; ?>
+    <div class="clear"></div>
+    <span class="sku_wrapper"><strong>ISBN:<strong> <span class="sku" itemprop="sku"><?php echo $isbn; ?></span></span>
+
 	<p class="price bigged">
-		<span class="blackened">Precio:</span>
+		<span class="blackened"><strong>Precio:<strong></span>
 		<?php echo $product->get_price_html(); ?>
 	</p>
 
@@ -41,12 +49,6 @@ $isbn = $product->get_attribute( 'ISBN' )?>
 	<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
 	<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
-	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
-		<span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span>.</span>
-
-	<?php endif; ?>
-    <div class="clear"></div>
-    <span class="sku_wrapper">ISBN: <span class="sku" itemprop="sku"><?php echo $isbn; ?></span>.</span>
     
 </div>
