@@ -42,7 +42,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         	if ( have_posts() ) { $count = 0;
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                           
-            <div <?php post_class('col-md-12'); ?>>
+            <div <?php post_class('col-md-12 pd0mob'); ?>>
 
                 <section class="entry">
                     <?php the_content(); ?>

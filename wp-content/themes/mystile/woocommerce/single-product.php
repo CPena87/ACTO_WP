@@ -67,8 +67,8 @@ get_header(  ); ?>
 
 
 
-<div class="container mtop20mob brdtop">
-	<div class="row">
+<div class="container mtop20mob mtop40 brdtop">
+	<div class="row mtop40 ">
 
 
 
