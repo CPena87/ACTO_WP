@@ -74,7 +74,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 
 
-<div class=" medium-gray">
+<div class=" medium-gray related-column">
     <div class="container">
         <div class="row">
                     <?php 
@@ -83,17 +83,17 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                         $remate = get_field('lasttext' , $post->ID);
                      ?>
              <section class="col-md-12">
-                <aside class="col-md-6 desc-team">
+                <aside class="col-md-8 col-md-offset-2">
                     <p>
                     <?php echo $leftcol; ?>
+                    
                     </p>
-                </aside>  
-
-                <aside class="col-md-6 desc-team">
                     <p>
                     <?php echo $rightcol; ?>
                     </p>
-                </aside> 
+                </aside>  
+
+
             </section>
         </div>
     </div>

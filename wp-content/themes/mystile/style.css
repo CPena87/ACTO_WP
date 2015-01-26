@@ -2173,7 +2173,7 @@ border: 1px solid #DBDBDB;
   box-sizing: border-box;
   /* Opera/IE 8+ */
   float: left;
-  border-right: 1px solid #e8e4e3;
+  /*border-right: 1px solid #e8e4e3;*/
 }
 .images .thumbnails a img {
   border: 0;
@@ -3549,6 +3549,7 @@ font-weight: bold;}
 .dobdashed{border-top: 3px double #a4a4a4; position: relative; top: 30px; z-index: -1;}
 .about-them h1{text-align: center; font-family: "Times", serif; font-size: 45px; font-weight: 500; background: #fafafa; margin: 0px 23%; z-index: 9999;}
 h1.overdash{text-align: center; font-family: "Times", serif; font-size: 45px;font-weight: 500; background: #fafafa; margin: 0px 23%; z-index: 9999; margin-bottom: 35px;}
+.related-column{padding: 35px 0; margin: 25px 0;}
 
 
 /************* ESTILOS RELACIONADOS CON EL CATALOGO *************/
@@ -3570,7 +3571,7 @@ span.text-random{font-weight:normal;}
 button.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
  img.cart-icon{width: 20px; margin-right: 10px;}
  span.posted_in{font-size: 14px; color: #313131; }
-.minun.over-oustand{top: 230px; width: 30%; right: -10px; height: auto;}
+.minun.over-oustand{top: 210px; width: 30%; right: -10px; height: auto;}
 .sku_wrapper{color: #313131; font-size: 14px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; margin-top: 0px; display: block;}
 .sku{color: #868686; font-weight:normal;}
 form.cart{margin-bottom:-10px;}
@@ -3581,6 +3582,7 @@ select#rating{border: none; background: #e5e5e5; margin-left: 5px;}
 div[itemprop="description"] p{font-weight:lighter;}
 .comment-reply-title h3{margin-top: 20px; font-weight: bold; color: #ff8000;} 
 h2.appendix, .comment-respond h3{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 20px;}
+.bg-tab{background: #fff; padding: 20px; margin-top: 45px;}
 /* Comentarios */
 .comment-area{border-top: 1px solid #D2D2D2; margin-top: 20px; padding-top: 20px;}
 .avatar img{border-radius: 50px; width: 100%; max-width: 100px; padding: 0;}
@@ -3590,6 +3592,7 @@ h2.appendix, .comment-respond h3{margin-top: 20px; font-weight: bold; color: #ff
 .bigged span.amount{font-size:40px; color:#313131;}
 .cart-collaterals span.amount{color: #888888 !important;}
 .alt-table-row input.button[type="submit"]{padding:10px;}
+.form{padding-bottom:80px;}
 
 /* shiping */
 .radio, .checkbox{margin-top: 0 !important;}

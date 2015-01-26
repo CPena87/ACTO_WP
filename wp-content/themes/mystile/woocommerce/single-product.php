@@ -70,12 +70,14 @@ get_header(  ); ?>
 <div class="container mtop20mob brdtop">
 	<div class="row">
 
+
+
 			<!-- Pestañas de Contenido -->
-	<div class="col-md-8 mtop20 clear">
+	<div class="col-md-7 mtop20 clear">
 
-<h2>Otras Características</h2>
+		<h2 style="padding:0 5px; font-weight:500;">Otras Características</h2>
 
-		<div role="tabpanel">
+		<div role="tabpanel" class="bg-tab">
 	      <ul class="nav nav-tabs" role="tablist">
 	        <li role="presentation" class="active"><a href="#comentarios" aria-controls="comentarios" role="tab" data-toggle="tab">Comentarios</a></li>
 	        <li role="presentation"><a href="#dimensiones" aria-controls="dimensiones" role="tab" data-toggle="tab">Dimensiones del producto</a></li>
@@ -165,9 +167,9 @@ get_header(  ); ?>
 	</div>
 	<!-- Fin Pestañas de Contenido -->
 
-<div class="col-md-4 mtop20" >
+<div class="col-md-4 col-md-offset-1 mtop20 ">
 
-	<h2>Libros Relacionados </h2>
+	<h2 style="font-weight:500;"> Libros Relacionados </h2>
 
             <?php $not_in = array();?>
         	<?php array_push($not_in , $post->ID)?>
