@@ -19,11 +19,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         </div>
     </div>
 </div>   
-    <div id="content" class="col-full">
+    <div id="content" class="container">
     	
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left"> 
+		<section id="main" class="col-md-8 pd0mob"> 
 
 		<?php if (have_posts()) : $count = 0; ?>
         
@@ -67,7 +67,12 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                     <section class="post-content">
                     
                         <header class="resign-data">
-                            <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                            <?php if(get_field('destino', $post->ID) == 'externo'){  ?>
+
+                            <h1><a href="<?php echo get_field('link',$post->ID); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                            <?php } elseif (get_field('destino', $post->ID) == 'local') {?>
+                            <h1><a class="fleft" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                            <?php } ?>
 
                             <p class="author mbottom10">Fuente: <span><?php echo $zine;?></span></p>
                             <p class="author mbottom10">Por: <span class="stronged"><?php the_author(); ?></span></p>
@@ -75,7 +80,14 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 
                         <section class="entry rev-excerpt">
                         <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'novedades' ) { the_content( __( 'Continue Reading &rarr;', 'woothemes' ) ); } else { the_excerpt(0 , 75); } ?>
-                        <a class="fleft" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Continúa Leyendo</a>
+                       
+
+                        <?php if(get_field('destino', $post->ID) == 'externo'){  ?>
+
+                            <a class="fleft" href="<?php echo get_field('link',$post->ID); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Continúa Leyendo</a>
+                       <?php } elseif (get_field('destino', $post->ID) == 'local') {?>
+                            <a class="fleft" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Continúa Leyendo</a>
+                       <?php } ?>
                         <?php woo_post_meta(); ?>
                         </section>
                 

@@ -49,6 +49,7 @@ if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
 add_image_size('encabezado', 870, 200, true );
 add_image_size('col-md-4', 235, 237, true);
+add_image_size('portadillas', 350, 550, true);
 add_image_size('col-md-8', 500, 237, true);
 add_image_size('col-md-12', 765, 237, true);
 add_image_size( 'encabezadopost',870, 350, true ); 

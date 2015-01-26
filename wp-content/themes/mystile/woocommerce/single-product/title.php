@@ -8,16 +8,17 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 ?>
+<div class="col-md-7">
 <h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
 <?php $autores = get_the_terms( $post->ID, 'autores' ); ?>
-<?php //var_dump($terms)?>
+
 <h2 class="author-ref"><strong>Autor: </strong>
 <?php foreach ($autores as $autor): ?>
 	<a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
 <?php endforeach ?>
 </h2>
+
 <?php $tipos = get_the_terms( $post->ID, 'tipos' ); ?>
 <?php $idiomas = get_the_terms( $post->ID, 'idiomas' ); ?>
 <span class="clear character">
@@ -30,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php endforeach ?>
 	<?php } ?>
 </span>
+
 <span class="clear character">
 	<p><strong>Idioma:</strong></p>
 	<?php if($idiomas){?>

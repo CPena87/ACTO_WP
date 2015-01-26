@@ -2145,15 +2145,11 @@ table.variations tr:last-child th {
 }
 .images img {
   -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-/*  padding: .618em;
-  background: #fff;
-  border: 1px solid #e8e4e3;*/
-  width: 100%;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 100%;
+padding: 15px;
+border: 1px solid #DBDBDB;
 }
 .images .thumbnails {
   border: 1px solid #e8e4e3;
@@ -2880,7 +2876,7 @@ input[type=email] {
   line-height: 128%;
   font-family: inherit;
   outline: none;
-  margin: 0 0 5px;
+  margin: 5px 0 5px;
   background: #f7f7f7;
   float: left;
   clear: both;
@@ -3246,6 +3242,22 @@ transition: all 0.5s ease-in-out;}
 {background-image: url("images/news-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
 .catalog, .catalog:hover
 {background-image: url("images/catalogue-icon.png"); background-repeat: no-repeat; background-position: 10% 5px; background-size: 30px;}
+/* Area para inscripcion de Autores + Call to action */
+.publish-cta h2{text-align: center; font-size: 40px; margin: 10px auto 0; color: #ff8000; font-weight: bold;} 
+.publish-cta h3{text-align: center; margin: 0px auto 10px; line-height: 135%; font-family: "Times", serif; font-size: 38px; font-weight: lighter; font-style: italic; color: #797979;}
+.publish-cta img{margin: 20px auto 0px; display: block;}
+.publish-cta .btn{background: #ff8000; border-radius: 5%; margin: 0 auto 30px; display: block; float: none; border: none; font-size: 24px; font-weight: bold;-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.publish-cta .btn:hover{background:#b85c00; border:none; -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+
+
 /* Auxiliares */
 .cta-center{margin: 0 auto; display: table; float: none; text-align: center; padding: 2% 30px;}
 .fleft{float:left;}
@@ -3277,6 +3289,7 @@ transition: all 0.5s ease-in-out;}
 .opal-white{background:#fafafa;}
 .medium-gray{background:#e6e6e6;}
 .orange-medium{background: rgba(255, 128, 0, 0.4);}
+.gray-cta{background: rgba(228, 228, 228, 0.4);}
 
 
 /* Colores para texto */
@@ -3446,7 +3459,7 @@ footer.inferior{clear:both;}
 p.inp{float: left; clear: both; color: #ff8000; font-weight: bold; font-size: 15px;}
 
 /* Corresponde a estilos de migas pan en general */
-.breadcrumbs{padding: 8px 0; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 4px; margin-top: 30px;
+.breadcrumbs{padding: 8px 15px; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 4px; margin-top: 30px;
 }
 .breadcrumb-trail a{color: #ff8000; font-weight: bold; text-decoration: underline; font-size: 14px;}
 span.trail-end{color: #777; font-weight: bold; font-size: 14px;} 
@@ -3491,7 +3504,7 @@ p.data{margin:5px 0;}
 .reviewer{float: left; padding-right: 15px;}
 .reviewer img{border-radius: 90%; width: 90%; height: auto; max-width: 164px; float: left; border: none; padding: 0;}
 .sign{background-image: url("../mystile/images/redirect-icon.png"); height: 40px; width: 40px; display: block; background-position: 0px 0px; background-repeat: no-repeat; background-size: 40px; clear: both; position: relative; top: -20px; left: 50px; }
-.post-content{float: left; padding-left: 0px; width: 75%;}
+.post-content{float: left; padding-left: 0px;  width:75%;}
 .act-content{float: left; padding-left: 0px;}
 .resign-data h1 a{font-size: 40px; font-family: Times, serif; font-weight: 300; text-transform: initial; color: #000;}
 .resign-data span, .resign-data p{ margin-right:5px;}
@@ -3508,11 +3521,14 @@ span.stronged{font-weight: bold !important;
 .avatarautor img{margin: 0 auto; width: 85%; max-width: 310px; border-radius: 100%; border: none; padding: 0;}
 .desc-autor a{font-size: 25px; text-align: center; font-weight: bold; font-family: "Open Sans"; display: block; color: #575757; text-decoration: none;}
 .desc-autor p{text-align: center; line-height: 160%; font-size: 18px; color: #575757; font-family: "Open Sans", sans-serif;}
-.desc-team{color: #313131; font-size: 20px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
+.desc-team{color: #313131; font-size: 15px; line-height: 160%; margin-top: 20px; margin-bottom: 5px; text-align: left;}
 .quote-team p{font-family:"Times", serif; color:#000; font-size:30px; font-style: italic; margin-top:20px; margin-bottom:20px; text-align:center;}
 .maxim.over-oustand{top: 225px; width: 30%; right: -10px; height: auto;}
 .pub-autores{margin-top: 20px; font-weight: bold; color: #ff8000; font-size: 25px;}
-
+/* modal autores */
+.modal-header {background: #ff8000 !important; border-radius: 5px 5px 0 0 !important;}
+.close{color: #fff !important; opacity: 1 !important; margin-top: -10px !important;}
+div.wpcf7-validation-errors {border: 2px solid #f30 !important; text-align: left !important; float: none; clear: both; }
 /* CUESTIONARIO PROUST EN AUTORES */
 .proust h2{line-height: 140%; margin-bottom: 5px; margin-top: 20px;} 
 .proust h4{text-align: left; font-size:18px; color:#ff8000; line-height:140%; font-weight:bold;}
@@ -3529,15 +3545,20 @@ span.stronged{font-weight: bold !important;
 background: transparent;}
 .about-them h4{font-size: 2em;
 font-weight: bold;}
-.about-them p{line-height:160%; text-align: center; margin-top: 10px; margin-bottom:20px; font-size: 15px; font-family: "Open Sans";}
+.about-them p{line-height:160%; text-align: left; margin-top: 10px; margin-bottom:20px; font-size: 15px; font-family: "Open Sans";}
+.dobdashed{border-top: 3px double #a4a4a4; position: relative; top: 30px; z-index: -1;}
+.about-them h1{text-align: center; font-family: "Times", serif; font-size: 45px; font-weight: 500; background: #fafafa; margin: 0px 23%; z-index: 9999;}
+h1.overdash{text-align: center; font-family: "Times", serif; font-size: 45px;font-weight: 500; background: #fafafa; margin: 0px 23%; z-index: 9999; margin-bottom: 35px;}
 
 
 /************* ESTILOS RELACIONADOS CON EL CATALOGO *************/
 /* Single del catalogo */
-.product_title.entry-title{color:#575757; font-weight:bold; font-size:30px; border-left: 10px solid #575757; text-transform: uppercase; font-family:"Open Sans"; padding-left: 10px; width: 100% !important;}
+.row #content{max-width: 1170px; width: 100%;}
+
+.product_title.entry-title{color: #575757; font-weight: 300; font-size: 20px; border-left: 5px solid #575757; text-transform: uppercase; font-family: "Open Sans"; padding-left: 10px; width: 100% !important;} 
 .price.bigged{padding:0;}
-.price del span{font-size: 40px !important; color:#313131 !important;}
-.price ins span{font-size: 45px !important; color:#ff8000 !important;}
+.price del span{font-size: 25px !important; color:#313131 !important;}
+.price ins span{font-size: 40px !important; color:#ff8000 !important;}
 .author-ref,
 .quant-text{color:#868686; font-size:14px; font-weight:normal; font-family: "Open Sans"; margin-bottom:5px;}
 .author-ref,
@@ -3549,7 +3570,7 @@ span.text-random{font-weight:normal;}
 button.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
  img.cart-icon{width: 20px; margin-right: 10px;}
  span.posted_in{font-size: 14px; color: #313131; }
-.minun.over-oustand{top: 185px; width: 30%; right: -10px; height: auto;}
+.minun.over-oustand{top: 230px; width: 30%; right: -10px; height: auto;}
 .sku_wrapper{color: #313131; font-size: 14px; font-weight: bold; font-family: "Open Sans"; margin-bottom: 5px; margin-top: 0px; display: block;}
 .sku{color: #868686; font-weight:normal;}
 form.cart{margin-bottom:-10px;}
@@ -3608,6 +3629,9 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   /* Actividades */
   .activity-content{margin-left:0;}
 
+  /* Responsive para reseñas */
+  .post-content{width:70%;}
+
   /* Catalogo */
   .nav-tabs > li a{color: #4a413e !important; }
 }
@@ -3648,6 +3672,8 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .avatarautor{margin-top: 25px;}
   .prof-avatar img{margin: 40px auto 0; width:85%; display:block;}
 
+    /* Responsive para reseñas */
+  .post-content{width:75%;}
 
     /* Footer */
     .grey-footer {background-color: #989898; }
@@ -3691,6 +3717,8 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .avatarautor{margin-top: 25px;}
   .prof-avatar img{margin: 40px auto 0; width:85%; display:block;}
 
+    /* Responsive para reseñas */
+  .post-content{width:70%;}
 
   /* Footer */
   .grey-footer {background-color: #989898; }
@@ -3711,6 +3739,14 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   ul.nav li a:focus{color:#ff8000;}
   .col-md-logo img{max-width: 80%; height: auto; width: 60px; float:left;}
   span.icon-bar{border-top: 4px solid #fff; display: block; padding-bottom: 1px; margin-top: 4px;}
+
+  /* Background's */
+  .novedad-bg,
+  .catalogo-bg,
+  .escrito-bg,
+  .escritorio-bg,
+  .distribuidores-bg,
+  .autores-bg{height:425px;}
 
   /* Home */
   .jumbotron h1{font-size: 20px;}
@@ -3759,7 +3795,8 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .sidecontent{width: 100%; margin: 0 auto; display: block; padding: 20px; background:#f4f4f4; clear:both;}
   .novedades.type-novedades{margin: 0 auto; padding: 20px 20px 0; display: block;}
   header.title-data{margin-top:5px;}
-  .jumbotron.fleft h1{width:100%;}
+  .jumbotron.fleft h1{width:100%; font-size:30px; margin-bottom: 10px}
+  .jumbotron.fleft p{font-size:18.5px; line-height: 160%;}
   .brdbottom {border-bottom: 1px solid #313131; margin-bottom: 10px; clear: both; padding: 0; margin-top: 40px;}
   .activity-content{margin:5%;}
   .send-news{margin-bottom: 95%; margin-top:35px;}
@@ -3769,8 +3806,8 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   /* Responsive relacionado a los contenidos de Actividades */
   .time-capsule.display-on-mobile{position: relative; clear: both; float:none;}
   .reviewer {padding-right: 0; width: 55%; float: none; margin: 40px auto 0; }
-  .reviewer img {border-radius: 90%; width: 100%; height: auto; max-width: 200px; float: none; border: none; padding: 0; }
-  .sign{left:40%;}
+  .reviewer img {border-radius: 90%; width: 100%; height: auto; max-width: 200px; float: none; border: none; padding: 0; margin: 0 auto; display: block;}
+  .sign{left: 40%; width: 100%; max-width: 60px; height: 60px;}
   .activity-content{margin-left:0;}
 
   /* Catalogo */
@@ -3804,6 +3841,15 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important;
   .avatarautor{margin-top: 25px;}
   .prof-avatar img{margin: 40px auto 0; width:75%; display: block;}
   .proust{display:none;}
+  /*Call to action y modal box */
+  .publish-cta h2{font-size:30px; line-height:140%; margin-bottom:10px;}
+  .publish-cta h3{font-size: 25px; line-height: 120%; margin-bottom: 15px;}
+  .publish-cta img{width: 75%; max-width: 90px; height: auto;}
+  /* Formulario */
+  div.wpcf7-validation-errors {border: 2px solid #f30 !important; text-align: left !important; float: none; clear: both; }
+
+  /* Responsive para reseñas */
+  .post-content{width:100%;}
 }
 
 

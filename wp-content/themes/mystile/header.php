@@ -49,8 +49,25 @@ global $woo_options, $woocommerce;
 						//echo '<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">';
 						woocommerce_cart_link();
 						//echo '</button>';
-						echo '<div class="hiddennss" data-container="body" data-toggle="popover" data-placement="bottom" data-content="PopOver en preparación" data-original-title=""></div>';
+						echo '<div class="hiddennss" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="';?>
+						
+						<?php global $woocommerce; 
+
+						  $items = $woocommerce->cart->get_cart();
+						  	if($items){
+								echo '<ul>';
+								foreach($items as $item => $values): ?>
+									<?php $_product = $values['data']->post; ?>
+									<li><?php echo '<a href=\''.get_permalink($_product->ID).'\'>'.substr($_product->post_title , 0 , 120).'</a></li>';
+								endforeach ;
+                                echo '</ul>';
+								echo '<a href=\''. get_page_link(16).'\' class=\'btn btn-block btn-success\'>Ir al Carro de Productos</a>';
+							}?>
+                        
+						<?php echo '" data-original-title="">';
+						echo '</div>';
 						echo '</ul>';
+						
 					}
 				?>
 		</nav>

@@ -21,6 +21,38 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     </div>
 </div>
 
+<!-- Modal -->
+<div class="gray-cta">
+    <section class="container ">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 publish-cta">
+                <img src="<?php bloginfo('template_directory'); ?>/images/writing-gray.png" alt="">
+                <h2>Tu puedes ser parte de Acto Editores</h2>
+                <h3>Te invitamos a publicar con nosotros, llenando el siguiente formulario</h3>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Escribenos aquí
+                </button>
+            </div>
+        </div>  
+    </section>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="183" title="Editar en Acto"]'); ?>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fin Modal -->
+
 <?php 
 $var = get_queried_object();
 
@@ -92,7 +124,7 @@ $var = get_queried_object();
                     <!-- Corresponde a los datos del libro -->
                     <figure class="col-md-3 col-sm-3 col-xs-6 producto pdbottom10 pleft0">
                         <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
-                        <?php echo get_the_post_thumbnail($libro->ID); ?>
+                        <?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
                     </a>
                         <div class="maxim over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
                         <figcaption class="white">
@@ -133,12 +165,13 @@ $var = get_queried_object();
     </div>
     <!-- /#content -->
 
-        <div class="container mtop20mob brdtop">
-        <div class="row">
-            
 
-            <div class="col-md-12 sidecontent mtop30 mbottom50">
-                <h3 class="title-sidebar">Novedades</h3>
+
+<div class="container mtop20mob brdtop">
+    <div class="row">
+        <div class="col-md-12 sidecontent mtop30 mbottom50">
+
+            <h3 class="title-sidebar">Novedades</h3>
 
                 <?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
                 <?php $countnovedades = 0 ?>
@@ -146,17 +179,14 @@ $var = get_queried_object();
                 <?php $countnovedades++ ?>
 
                 <article class="col-md-6 pd0 wide ">
-
-                    
-                        <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-                        <p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
-                    
+                    <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+                    <p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
                 </article>
             <?php endforeach ?>
 
-            </div>
         </div>
     </div>
+</div>
 
 		
 <?php get_footer(); ?>

@@ -32,7 +32,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         </div>
     </div>
 </div>
-    <div id="content" class="page col-full container">
+    <div id="content" class="page container">
     
     	<?php woo_main_before(); ?>
     	

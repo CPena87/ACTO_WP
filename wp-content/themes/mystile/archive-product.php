@@ -41,7 +41,7 @@ get_header(); ?>
 		    		<!-- Corresponde a los datos del libro 123-->
 		    		<figure class="col-md-3 col-sm-6 col-xs-6 producto pdbottom10">
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
-		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    			<?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
 		    		</a>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
