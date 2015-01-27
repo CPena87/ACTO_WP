@@ -11,9 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post, $product;
 
+
 $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
 $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
+
+
 ?>
+
 <div class="product_meta">
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '.</span>' ); ?>
@@ -24,29 +28,20 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 <!-- if ( ! $product->is_purchasable() ) return;
 ?> -->
 </div>
-<div class="col-md-5">
+<div class="col-md-4 white">
+
     <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
-    <?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+        <p class="price bigged">
+            <span class="blackened"><strong>Precio:<strong></span>
+            <?php echo $product->get_price_html(); ?>
+        </p>
 
-        <span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span></span>
-
-    <?php endif; ?>
-    <div class="clear"></div>
-    <span class="sku_wrapper"><strong>ISBN:<strong> <span class="sku" itemprop="sku"><?php echo $isbn; ?></span></span>
-
-    <p class="price bigged">
-        <span class="blackened"><strong>Precio:<strong></span>
-        <?php echo $product->get_price_html(); ?>
-    </p>
-
-    <meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
-    <meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
-    <link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
-
-
+        <meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
+        <meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
+        <link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
     
-</div>
+    </div>
 
 <?php if ( $product->is_in_stock() ) : ?>
 

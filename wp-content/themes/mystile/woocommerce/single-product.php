@@ -11,24 +11,14 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+global $post;
+
+if ( ! $post->post_excerpt ) return;
+
 get_header(  ); ?>
 
-<div class="novedad-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 ">
-                <div id="take" class="carousel-
-                caption jumbotron fleft">
-                    <h1>Catálogo</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div>  
-
-<div class="container">
+<div class="container mtop145">
 	<div class="row">
 
 	<?php
@@ -67,24 +57,70 @@ get_header(  ); ?>
 
 
 
-<div class="container mtop20mob mtop40 brdtop">
-	<div class="row mtop40 ">
+<div class="container mtop20mob brdtop">
+	<div class="row ptop15">
 
-
-
-			<!-- Pestañas de Contenido -->
-	<div class="col-md-7 mtop20 clear">
-
-		<h2 style="padding:0 5px; font-weight:500;">Otras Características</h2>
+	<!-- Pestañas de Contenido -->
+	<div class="col-md-8 clear">
 
 		<div role="tabpanel" class="bg-tab">
 	      <ul class="nav nav-tabs" role="tablist">
-	        <li role="presentation" class="active"><a href="#comentarios" aria-controls="comentarios" role="tab" data-toggle="tab">Comentarios</a></li>
-	        <li role="presentation"><a href="#dimensiones" aria-controls="dimensiones" role="tab" data-toggle="tab">Dimensiones del producto</a></li>
-	        <li role="presentation"><a href="#indice" aria-controls="indice" role="tab" data-toggle="tab">Contenidos</a></li>
+	      	<li role="presentation" class="active"><a href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab">Descripción</a></li>
+	      	<li role="presentation"><a href="#indice" aria-controls="indice" role="tab" data-toggle="tab">Contenidos</a></li>
+	      	<li role="presentation"><a href="#dimensiones" aria-controls="dimensiones" role="tab" data-toggle="tab">Dimensiones del producto</a></li>
+	        <li role="presentation" ><a href="#comentarios" aria-controls="comentarios" role="tab" data-toggle="tab">Comentarios</a></li>
+
+
 	      </ul>
+
 	      <div class="tab-content">
-	        <div role="tabpanel" class="tab-pane active" id="comentarios">
+	      	<div role="tabpanel" class="tab-pane active" id="descripcion">
+	      		<div itemprop="description">
+					<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+
+					<?php the_content(); ?>
+				</div>
+	      	</div>
+
+	        <div role="tabpanel" class="tab-pane" id="indice">
+	        	<h2 class="appendix">Índice de Contenidos</h2>
+
+	            <?php 
+	                $indice = get_field('indice' , $post->ID); 
+
+	            ?>
+	            <?php echo $indice; ?>
+
+
+	            <p class="appendix"><strong>Número de Páginas:</strong>
+	            <?php 
+	            	$paginas = get_field('numero_paginas' , $post->ID);
+	             ?>
+	             <?php echo $paginas; ?></p>
+	        </div>
+
+	        
+	        <div role="tabpanel" class="tab-pane" id="dimensiones">
+	            <table class="shop_attributes">
+				<?php if ( $product->enable_dimensions_display() ) : ?>
+	                <?php if ( $product->has_weight() ) : $has_row = true; ?>
+	                    <tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
+	                        <th><?php _e( 'Weight', 'woocommerce' ) ?></th>
+	                        <td class="product_weight"><?php echo $product->get_weight() . ' ' . esc_attr( get_option( 'woocommerce_weight_unit' ) ); ?></td>
+	                    </tr>
+	                <?php endif; ?>
+
+	                <?php if ( $product->has_dimensions() ) : $has_row = true; ?>
+	                    <tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
+	                        <th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+	                        <td class="product_dimensions"><?php echo $product->get_dimensions(); ?></td>
+	                    </tr>
+	                <?php endif; ?>
+	            <?php endif; ?>
+	            </table>
+	        </div>
+
+	       	<div role="tabpanel" class="tab-pane" id="comentarios">
 				<?php
 	                //Gather comments for a specific page/post 
 	                $comments = get_comments(array(
@@ -129,37 +165,9 @@ get_header(  ); ?>
 	            <!-- Fin Comentarios -->
 	            </div>
 	        </div>
-	        
-	        <div role="tabpanel" class="tab-pane" id="dimensiones">
-	            <table class="shop_attributes">
-				<?php if ( $product->enable_dimensions_display() ) : ?>
-	                <?php if ( $product->has_weight() ) : $has_row = true; ?>
-	                    <tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-	                        <th><?php _e( 'Weight', 'woocommerce' ) ?></th>
-	                        <td class="product_weight"><?php echo $product->get_weight() . ' ' . esc_attr( get_option( 'woocommerce_weight_unit' ) ); ?></td>
-	                    </tr>
-	                <?php endif; ?>
-
-	                <?php if ( $product->has_dimensions() ) : $has_row = true; ?>
-	                    <tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-	                        <th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
-	                        <td class="product_dimensions"><?php echo $product->get_dimensions(); ?></td>
-	                    </tr>
-	                <?php endif; ?>
-	            <?php endif; ?>
-	            </table>
-	        </div>
 	       
 	        
-	        <div role="tabpanel" class="tab-pane" id="indice">
-	        	<h2 class="appendix">Índice de Contenidos</h2>
 
-	            <?php 
-	                $indice = get_field('indice' , $post->ID); 
-
-	            ?>
-	            <?php echo $indice; ?>
-	        </div>
 	        
 	      </div>
 
@@ -167,7 +175,7 @@ get_header(  ); ?>
 	</div>
 	<!-- Fin Pestañas de Contenido -->
 
-<div class="col-md-4 col-md-offset-1 mtop20 ">
+<div class="col-md-4 pd0">
 
 	<h2 style="font-weight:500;"> Libros Relacionados </h2>
 
@@ -176,7 +184,7 @@ get_header(  ); ?>
             <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '2' , 'post__not_in' => $not_in)) ?>
             <?php foreach($libros as $libro): ?>
             <!-- Corresponde a los datos del libro -->
-            <figure class="col-md-6 col-sm-6 col-xs-6 producto pdbottom10 pleft0 mtop30">
+            <figure class="col-md-6 col-sm-6 col-xs-6 producto pdbottom10 pleft0">
                 <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
                     <?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
                 </a>

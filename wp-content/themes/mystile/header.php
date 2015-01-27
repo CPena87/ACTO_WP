@@ -114,7 +114,7 @@ global $woo_options, $woocommerce;
 								if ( class_exists( 'woocommerce' ) ) {
 									echo '<ul class="nav wc-nav">';
 									woocommerce_cart_link();
-									//echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
+									//echo '<a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
 									// echo get_search_form();
 									echo '</ul>';
 								}

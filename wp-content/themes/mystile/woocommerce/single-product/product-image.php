@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 
 ?>
-<div class="col-md-3 col-sm-3 pd0">
+<div class="col-md-2 col-sm-2 pd0">
 <div class="images">
 
 	<?php
@@ -45,4 +45,4 @@ global $post, $woocommerce, $product;
 
 </div>
 </div>
-<div class="col-md-9 col-sm-9 pd0">
+<div class="col-md-10 col-sm-10 pd0">

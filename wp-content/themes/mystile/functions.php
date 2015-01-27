@@ -144,6 +144,9 @@ register_taxonomy('tipos', array('product'), array("hierarchical" => true, "labe
 
 register_taxonomy('idiomas', array('product'), array("hierarchical" => true, "label" => "Idiomas", "singular_label" => "Idioma", "rewrite" => 'hierarchical'));
 
+register_taxonomy('coeditores', array('product'), array("hierarchical" => true, "label" => "Coeditores", "singular_label" => "Coeditor", "rewrite" => 'hierarchical'));
+
+register_taxonomy('alianzas', array('product'), array("hierarchical" => true, "label" => "Alianzas", "singular_label" => "Alianza", "rewrite" => 'hierarchical'));
 
 // Activación de Options en Advance Custom Fields
 if( function_exists('acf_add_options_page') ) {

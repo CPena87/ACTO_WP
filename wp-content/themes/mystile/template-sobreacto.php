@@ -27,7 +27,6 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                     <h1>Sobre Acto</h1>
                     <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
-
             </div>
         </div>
     </div>
