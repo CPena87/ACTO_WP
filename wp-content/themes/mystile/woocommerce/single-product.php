@@ -56,13 +56,18 @@ get_header(  ); ?>
 	?>
 
 
+<div class="clear"></div>
 
-<div class="container mtop20mob brdtop">
-	<div class="row ptop15">
+<div class=" mtop20mob clear">
+	<div class="row">
+    
+    <div class="brdtop"></div>
+		<div class="clear separator"></div>
+    
 
 	<!-- Pestañas de Contenido -->
-	<div class="col-md-8 clear">
-
+	<div class="col-md-8 clear" style="background-color:#fff;">
+		<div class="separator"></div>
 		<div role="tabpanel" class="bg-tab">
 	      <ul class="nav nav-tabs" role="tablist">
 	      	<li role="presentation" class="active"><a href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab">Descripción</a></li>
@@ -175,7 +180,11 @@ get_header(  ); ?>
 	</div>
 	<!-- Fin Pestañas de Contenido -->
 
-<div class="col-md-4 pd0">
+<style type="text/css">
+.layout-full #main{ max-width:100% !important}
+</style>
+
+<div class="col-md-4">
 
 	<h2 style="font-weight:500;"> Libros Relacionados </h2>
 

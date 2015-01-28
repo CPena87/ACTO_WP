@@ -15,17 +15,31 @@ $parent_product_post = $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
+
+
 <form class="cart" method="post" enctype='multipart/form-data'>
-	<table cellspacing="0" class="group_table">
-		<tbody>
+	<h4>Variaciones del Producto</h4>
+	<table class="table table-striped">
 			<?php
 				foreach ( $grouped_products as $product_id ) :
 					$product = wc_get_product( $product_id );
 					$post    = $product->post;
+
+					$tipo = wp_get_post_terms($post->ID , 'tipos');
+
+					$fa = '';
+						if($tipo[0]->slug == 'ebook'){ $fa = '<span class="fa fa-tablet fa-fw fa-lg"></span>' ;}
+						elseif($tipo[0]->slug == 'audio-book') { $fa = '<span class="fa fa-music fa-fw fa-lg"></span>'; }
+						elseif($tipo[0]->slug == 'coffee-book') { $fa = '<span class="fa fa-coffee fa-fw fa-lg"></span>' ;}
+						elseif($tipo[0]->slug == 'hardbook') { $fa = '<span class="fa fa-book fa-fw fa-lg"></span>';}
+						else{$fa = '<span class="fa fa-book fa-fw fa-lg"></span>';};
+
 					setup_postdata( $post );
 					?>
 					<tr>
-						<td>
+                    	
+                       
+						<td class="gr-suggest">
 							<?php if ( $product->is_sold_individually() || ! $product->is_purchasable() ) : ?>
 								<?php woocommerce_template_loop_add_to_cart(); ?>
 							<?php else : ?>
@@ -36,15 +50,15 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							<?php endif; ?>
 						</td>
 
-						<td class="label">
-							<label for="product-<?php echo $product_id; ?>">
-								<?php echo $product->is_visible() ? '<a href="' . get_permalink() . '">' . get_the_title() . '</a>' : get_the_title(); ?>
-							</label>
+						<td class="label" style="width:100%;">
+							
+								<?php echo $product->is_visible() ? '<a href="' . get_permalink() . '">' . $fa .''. $tipo[0]->slug. '</a>' : substr( get_the_title(), 0, 55); ?>
+							
 						</td>
 
 						<?php do_action ( 'woocommerce_grouped_product_list_before_price', $product ); ?>
 
-						<td class="price">
+						<td class="price" style="width:38%;">
 							<?php
 								echo $product->get_price_html();
 
@@ -63,7 +77,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				$product = wc_get_product( $parent_product_post->ID );
 				setup_postdata( $parent_product_post );
 			?>
-		</tbody>
 	</table>
 
 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
@@ -80,3 +93,5 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+
+</div>

@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"tabl",
+				"table-striped"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"social",
+				"social-top"
+			],
+			[
+				"hide",
+				"hide-on-desktop"
+			],
+			[
+				"display",
+				"display-on-mobile"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"public",
+				"publish-cta"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"u",
+				"ul"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"no",
+				"novedades"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"ff",
+				"ff8000"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"comment",
+				"comment_author"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"autor",
+				"author-ref"
+			],
+			[
 				"font-",
 				"font-size"
 			],
@@ -14,14 +90,6 @@
 			[
 				"avata",
 				"avatarautor"
-			],
-			[
-				"padding",
-				"padding-bottom"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"go",
@@ -50,10 +118,6 @@
 			[
 				"backgrou",
 				"background-position"
-			],
-			[
-				"pro",
-				"product"
 			],
 			[
 				"distri",
@@ -92,10 +156,6 @@
 				"autores"
 			],
 			[
-				"h",
-				"h2	Tag"
-			],
-			[
 				"block",
 				"blockquote"
 			],
@@ -114,10 +174,6 @@
 			[
 				"border",
 				"border-radius"
-			],
-			[
-				"text",
-				"text-transform"
 			],
 			[
 				"back",
@@ -174,14 +230,6 @@
 			[
 				"conten",
 				"contenedor-footer"
-			],
-			[
-				"paddin",
-				"padding-right"
-			],
-			[
-				"margin",
-				"margin-bottom"
 			],
 			[
 				"blue",
@@ -244,16 +292,8 @@
 				"focus"
 			],
 			[
-				"max",
-				"max-height"
-			],
-			[
 				"bac",
 				"background-size"
-			],
-			[
-				"no",
-				"nowrap"
 			],
 			[
 				"tex",
@@ -319,7 +359,97 @@
 			"file": "wp-content/themes/mystile/woocommerce/single-product.php",
 			"settings":
 			{
-				"buffer_size": 2317,
+				"buffer_size": 9740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 496 files for \"class=\"col-md-9 col-sm-9 pd0\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php:\n   46  </div>\n   47  </div>\n   48: <div class=\"col-md-9 col-sm-9 pd0\">\n\n1 match in 1 file\n\n\nSearching 496 files for \"Estado:\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php:\n   34  \n   35              <?php if (get_field('estado')){  ?>\n   36:                 <p class=\"quant-text\"><strong>Estado:</strong> Libro Publicado</p>\n   37              <?php } else {?>\n   38:                <p class=\"quant-text\"><strong>Estado:</strong> Libro por Publicar</p>\n   39              <?php } ?>\n   40  \n\n2 matches in 1 file\n\n\nSearching 496 files for \"enctype=\"multipart/form-data\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-functions.php:\n 1119              <h2><?php _e( 'Framework Updates', 'woothemes' ); ?></h2>\n 1120              <span style=\"display:none\"><?php echo $method; ?></span>\n 1121:             <form method=\"post\"  enctype=\"multipart/form-data\" id=\"wooform\" action=\"<?php /* echo $url; */ ?>\">\n 1122  \n 1123                  <?php if( $upd ) { ?>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-backup.php:\n   79  	<p><?php _e( 'Import your theme settings from a previously exported backup.', 'woothemes' ); ?></p>\n   80  	<div class=\"form-wrap\">\n   81: 		<form enctype=\"multipart/form-data\" method=\"post\" action=\"<?php echo admin_url( 'admin.php?page=' . $this->_token ); ?>\">\n   82  			<table class=\"form-table\">\n   83  				<tbody>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-fields.php:\n 1378  	 */\n 1379  	public function render () {\n 1380: 		echo '<form name=\"' . esc_attr( $this->_token ) . '-form\" method=\"post\" enctype=\"multipart/form-data\">' . \"\\n\";\n 1381  		wp_nonce_field( $this->_token . '_nonce', $this->_token . '_nonce' );\n 1382  		$this->maybe_render_extra_hidden_fields();\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/js/ajaxupload.js:\n  587  		// method, enctype must be specified here\n  588  		// because changing this attr on the fly is not allowed in IE 6/7		\n  589: 		var form = toElement( '<form method=\"post\" enctype=\"multipart/form-data\"></form>' );\n  590  		form.style.display = 'none';\n  591  		form.action = settings.action;\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php:\n   24  \n   25  \n   26: <form name=\"checkout\" method=\"post\" class=\"checkout\" action=\"<?php echo esc_url( $get_checkout_url ); ?>\" enctype=\"multipart/form-data\">\n   27  \n   28  	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>\n\n5 matches across 5 files\n\n\nSearching 496 files for \"–\"\n\n0 matches across 0 files\n\n\nSearching 496 files for \"<span class=\"amount\">–\"\n\n0 matches across 0 files\n\n\nSearching 496 files for \"enctype=\"multipart/form-data\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-functions.php:\n 1119              <h2><?php _e( 'Framework Updates', 'woothemes' ); ?></h2>\n 1120              <span style=\"display:none\"><?php echo $method; ?></span>\n 1121:             <form method=\"post\"  enctype=\"multipart/form-data\" id=\"wooform\" action=\"<?php /* echo $url; */ ?>\">\n 1122  \n 1123                  <?php if( $upd ) { ?>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-backup.php:\n   79  	<p><?php _e( 'Import your theme settings from a previously exported backup.', 'woothemes' ); ?></p>\n   80  	<div class=\"form-wrap\">\n   81: 		<form enctype=\"multipart/form-data\" method=\"post\" action=\"<?php echo admin_url( 'admin.php?page=' . $this->_token ); ?>\">\n   82  			<table class=\"form-table\">\n   83  				<tbody>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-fields.php:\n 1378  	 */\n 1379  	public function render () {\n 1380: 		echo '<form name=\"' . esc_attr( $this->_token ) . '-form\" method=\"post\" enctype=\"multipart/form-data\">' . \"\\n\";\n 1381  		wp_nonce_field( $this->_token . '_nonce', $this->_token . '_nonce' );\n 1382  		$this->maybe_render_extra_hidden_fields();\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/js/ajaxupload.js:\n  587  		// method, enctype must be specified here\n  588  		// because changing this attr on the fly is not allowed in IE 6/7		\n  589: 		var form = toElement( '<form method=\"post\" enctype=\"multipart/form-data\"></form>' );\n  590  		form.style.display = 'none';\n  591  		form.action = settings.action;\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php:\n   24  \n   25  \n   26: <form name=\"checkout\" method=\"post\" class=\"checkout\" action=\"<?php echo esc_url( $get_checkout_url ); ?>\" enctype=\"multipart/form-data\">\n   27  \n   28  	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>\n\n5 matches across 5 files\n\n\nSearching 496 files for \"class=\"group_table\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php:\n   17  \n   18  <form class=\"cart\" method=\"post\" enctype='multipart/form-data'>\n   19: 	<table cellspacing=\"0\" class=\"group_table\">\n   20  		<tbody>\n   21  			<?php\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 5258,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
+			"settings":
+			{
+				"buffer_size": 3162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/archive-product.php",
+			"settings":
+			{
+				"buffer_size": 3827,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product/product-image.php",
+			"settings":
+			{
+				"buffer_size": 1378,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/header.php",
+			"settings":
+			{
+				"buffer_size": 7235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product/review.php",
+			"settings":
+			{
+				"buffer_size": 2042,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
+			"settings":
+			{
+				"buffer_size": 2894,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/single-product/meta.php",
+			"settings":
+			{
+				"buffer_size": 2586,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/archive-resenas.php",
+			"settings":
+			{
+				"buffer_size": 4769,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/functions.php",
+			"settings":
+			{
+				"buffer_size": 6260,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/css/layout.css",
+			"settings":
+			{
+				"buffer_size": 23270,
 				"line_ending": "Unix"
 			}
 		},
@@ -327,96 +457,23 @@
 			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 99376,
+				"buffer_size": 113416,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 481 files for \"class=\"actions\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-screen-admin-base.php:\n  207  						$html .= '<tr class=\"' . $class . '\" id=\"' . esc_attr( dirname( $k ) ) . '\">' . \"\\n\";\n  208  						$html .= '<td class=\"plugin-name\"><p><strong>' . $v['name'] . '</strong></p>' . '<small>' . $v['description'] . '</small>' . '</td>' . \"\\n\";\n  209: 						$html .= '<td class=\"actions\"><p>' . $actions . '</p></td>' . \"\\n\";\n  210  						$html .= '</tr>' . \"\\n\";\n  211  				}\n  ...\n  264  						$html .= '<tr class=\"' . $class . '\" id=\"' . esc_attr( dirname( $k ) ) . '\">' . \"\\n\";\n  265  						$html .= '<td class=\"plugin-name\"><strong>' . $v['name'] . '</strong>' . $v['description'] . '</td>' . \"\\n\";\n  266: 						$html .= '<td class=\"actions\"><p>' . $actions . '</p></td>' . \"\\n\";\n  267  						$html .= '</tr>' . \"\\n\";\n  268  				}\n\n2 matches in 1 file\n\n\nSearching 481 files for \"name=\"update_cart\"\"\n\n0 matches across 0 files\n\n\nSearching 481 files for \"input type=\"submit\" class=\"button\" name=\"update_cart\"\"\n\n0 matches across 0 files\n\n\nSearching 481 files for \"colspan=\"6\"\"\n\n0 matches across 0 files\n\n\nSearching 481 files for \"shop_table cart\"\n\n0 matches across 0 files\n",
+			"file": "wp-content/themes/mystile/css/bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 1231,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/functions/classes/class-wf-screen-admin-base.php",
-			"settings":
-			{
-				"buffer_size": 12194,
+				"buffer_size": 120996,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/css/layout.css",
+			"file": "wp-content/themes/mystile/woocommerce/single-product/short-description.php",
 			"settings":
 			{
-				"buffer_size": 23273,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/page.php",
-			"settings":
-			{
-				"buffer_size": 2172,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/page-63.php",
-			"settings":
-			{
-				"buffer_size": 4797,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/template-productos.php",
-			"settings":
-			{
-				"buffer_size": 2034,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
-			"settings":
-			{
-				"buffer_size": 1587,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/template-fullwidth.php",
-			"settings":
-			{
-				"buffer_size": 1654,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/header.php",
-			"settings":
-			{
-				"buffer_size": 6093,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/template-sobreacto.php",
-			"settings":
-			{
-				"buffer_size": 3239,
+				"buffer_size": 414,
 				"line_ending": "Unix"
 			}
 		}
@@ -446,91 +503,99 @@
 	"file_history":
 	[
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-pay.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
+		"/Users/upmedia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/price.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/related.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/sale-flash.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/share.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/template-productos.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-functions.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-woocommerce.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-attributes.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-content.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/content-product_cat.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/description.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/up-sells.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/tabs.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/additional-information.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-mixed.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-terminos.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-ventas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-terminos.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-productos.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-shipping.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-archives.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-config.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-thumbnails.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-fullwidth.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-screen-admin-base.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-pay.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/review-order.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/cart-errors.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-login.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-billing.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/thankyou.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/variable.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/simple.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/external.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/template-productos.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-fullwidth.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/content-product_cat.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-content.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-productos.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/search-form.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-mixed.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-distribuicion.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-attributes.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/related.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/additional-information.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/description.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/tabs.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-contact.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sobre-acto.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/content.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/result-count.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-thumbnails.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/price.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-woocommerce.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/includes/admin/views/html-admin-page-addons.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/loop-start.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/sale-flash.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product-reviews.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/up-sells.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/layout.css",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-archives.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/loop/sale-flash.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.min.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/includes/class-wc-cart.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-blog.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentact.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentnov.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/style-admin.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/style.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-options.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-functions.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/contentresena.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/assets/css/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/includes/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/wp-maintenance-mode/index.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-hooks.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/content-search.php",
@@ -539,7 +604,6 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-includes/widgets.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/widgets/widget-woo-blogauthor.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-actions.php",
-		"/Users/upmedia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/theme_info.txt",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-timeline.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-init.php",
@@ -565,14 +629,7 @@
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_a.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_42.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_36.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/as_lateral.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/recetas_plato_fondo.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_34.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/noticia_2014_junio_09_00.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/index.php",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/formulario/php/enviar-landing.php",
-		"/Users/upmedia/Desktop/Sitio IP Chile/ipchile/wp-content/themes/ipchile_2013/formulario/php/enviar_admision.php"
+		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_36.php"
 	],
 	"find":
 	{
@@ -580,7 +637,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"<wp-content>,/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile",
@@ -595,6 +652,88 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=\"group_table\"",
+			"enctype=\"multipart/form-data\"",
+			"<span class=\"amount\">–",
+			"–",
+			"enctype=\"multipart/form-data\"",
+			"ins",
+			"Estado:",
+			"class=\"col-md-9 col-sm-9 pd0\"",
+			"sku_wrapper",
+			"quant-text",
+			"container mtop20mob brdtop",
+			"isbn",
+			"sku_wrapper",
+			"col-md-7 mtop20 clear",
+			"container mtop20mob mtop40 brdtop",
+			"col-md-3 col-sm-3 pd0",
+			"none",
+			"producto",
+			"auxiliares",
+			"<!--/#breadcrumbs -->",
+			"class=\"col-left",
+			"<!-- #content Starts -->",
+			"id=\"content\" class=\"col-full\"",
+			"id=\"content\" class=\"col-full parent\"",
+			"offers",
+			"itemprop=\"description\"",
+			"price",
+			"col-md-7 parent",
+			"product_meta",
+			"breadcrumb",
+			"-bg",
+			"autores",
+			"comment-form-url",
+			"@",
+			"catalogo",
+			"auxiliares",
+			"autores",
+			"clear",
+			"author-ref",
+			"quant-text",
+			"auxiliares",
+			"cart",
+			"class=\"cart\"",
+			"<div class=\"product_meta\"",
+			"product-meta",
+			"sku",
+			"over-oustand",
+			"over-outstand",
+			"get_field",
+			"background",
+			"get_field",
+			"class=\"sku_wrapper\"",
+			"itemprop=\"description\"",
+			"post id",
+			"col-md-3 prof-avatar",
+			"repeater",
+			"nav nav-tabs",
+			"col-md-3 producto pdbottom10",
+			"hide-cart",
+			"#header",
+			"h#eader",
+			"substr",
+			"shipping_calculator",
+			"class=\"shipping_calculator\"",
+			"class=\"woocommerce\"",
+			"shipping",
+			"cart-collaterals",
+			"<form class=\"shipping_calculator\"",
+			"shipping_calculator",
+			"type",
+			"comentario col-md-12 comentario-user",
+			"comment-form-comment",
+			"class=\"respond\"",
+			"respond",
+			"get_field",
+			"<?php comments_template(); ?> ",
+			"get_comment",
+			";}",
+			"author-ref",
+			"Precio:",
+			";}\n",
+			"author-ref",
 			"woocommerce-message a",
 			"alt-table-row",
 			"shop_table cart",
@@ -640,89 +779,7 @@
 			"woocommerce columns-4",
 			"woocommerce_before_shop_loop",
 			"shop",
-			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\"\n<div id=\"main\" ",
-			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\">\n<div id=\"main\" ",
-			"<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">\n<div id=\"main\" ",
-			"<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">\n<div id=\"main\" class=\"col-left\">",
-			"class=\"woocommerce-result-count\"",
-			"hola! soy un producto",
-			"auxiliares",
-			"col-md-4 pleft0",
-			"class=\"minus\"",
-			"<span class=\"price\">",
-			"hola! soy un producto",
-			"hajshkaljdhaksjhdlkajshdklajshdlk ajshd klajshdlkajshd kajsh",
-			"Featured Products",
-			"class=\"col-md-12\"",
-			"columns-4<div class=\"col-md-12\">\n\n				    \n<section class=\"col-full\">  ",
-			"class=\"woocommerce ",
-			"columns-4",
-			"class=\"woocommerce columns-4\"",
-			"auxiliares",
-			"@media",
-			"class=\"product\"",
-			"product type-product status-publish has-post-thumbnail first sale shipping-taxable purchasable product-type-simple",
-			"class=\"products\"",
-			"class=\"woocommerce-result-count\"",
-			"id=\"reviews\"",
-			"cart-icon",
-			"price ins",
-			"price del",
-			"left",
-			"class=\"images\"",
-			"images",
-			".woocommerce-tabs .panel",
-			"tab-reviews",
-			"col-left",
-			"onsale",
-			"shop",
-			"itemscope",
-			"a",
-			"auxili",
-			"entry",
-			"thumbnail",
-			"woocommerce-result-count",
-			"woo_loop_before",
-			"post-content",
-			"woo_post_meta",
-			"woo_pag",
-			"woo_pagenav",
-			"next_posts_link",
-			"woo_pagination",
-			"woo_pagination_type",
-			"next_posts_link",
-			"woo_pagenav",
-			"woo_pagination_args",
-			"pagination woo-pagination",
-			"next page-numbers",
-			"pagination woo-pagination",
-			"next",
-			"comments",
-			"LEAVE A COMMENT",
-			"cart-parent",
-			"meta",
-			"breadcrumbs",
-			"entry",
-			"post-16",
-			"post-16 page type-page status-publish hentry",
-			"white",
-			"aux",
-			"wrap",
-			"header-wrap",
-			"col-md-esp",
-			"item",
-			"col-md",
-			"amount",
-			"@media",
-			"define ('WPLANG'",
-			"tip_semana",
-			"ipchile",
-			"ipcchile",
-			"error",
-			"id",
-			"errorSede",
-			"$origen",
-			"enviado"
+			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\"\n<div id=\"main\" "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -740,7 +797,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -748,15 +805,174 @@
 					"file": "wp-content/themes/mystile/woocommerce/single-product.php",
 					"settings":
 					{
-						"buffer_size": 2317,
+						"buffer_size": 9740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								780,
-								323
+								731,
+								731
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 5258,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										199,
+										228
+									],
+									[
+										495,
+										502
+									],
+									[
+										620,
+										627
+									],
+									[
+										1058,
+										1087
+									],
+									[
+										1441,
+										1470
+									],
+									[
+										1838,
+										1867
+									],
+									[
+										2274,
+										2303
+									],
+									[
+										2620,
+										2649
+									],
+									[
+										3224,
+										3253
+									],
+									[
+										3607,
+										3636
+									],
+									[
+										4004,
+										4033
+									],
+									[
+										4440,
+										4469
+									],
+									[
+										4786,
+										4815
+									],
+									[
+										5185,
+										5204
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								5060,
+								5060
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"output_tag": 7,
+							"remote_loading": false,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"synced": false,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1815.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
+					"settings":
+					{
+						"buffer_size": 3162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3101,
+								307
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 631.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/mystile/archive-product.php",
+					"settings":
+					{
+						"buffer_size": 3827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3378,
+								3378
 							]
 						],
 						"settings":
@@ -767,25 +983,251 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 414.0,
+						"translation.y": 653.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "wp-content/themes/mystile/style.css",
+					"buffer": 4,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/product-image.php",
 					"settings":
 					{
-						"buffer_size": 99376,
+						"buffer_size": 1378,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97054,
-								97054
+								816,
+								816
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/mystile/header.php",
+					"settings":
+					{
+						"buffer_size": 7235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2085,
+								2085
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 665.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/review.php",
+					"settings":
+					{
+						"buffer_size": 2042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
+					"settings":
+					{
+						"buffer_size": 2894,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2226,
+								2226
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/meta.php",
+					"settings":
+					{
+						"buffer_size": 2586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2584,
+								2584
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 253.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "wp-content/themes/mystile/archive-resenas.php",
+					"settings":
+					{
+						"buffer_size": 4769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4119,
+								4119
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 605.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "wp-content/themes/mystile/functions.php",
+					"settings":
+					{
+						"buffer_size": 6260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5646,
+								5646
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1848.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "wp-content/themes/mystile/css/layout.css",
+					"settings":
+					{
+						"buffer_size": 23270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14039,
+								14053
 							]
 						],
 						"settings":
@@ -799,106 +1241,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 60633.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 12,
+					"file": "wp-content/themes/mystile/style.css",
 					"settings":
 					{
-						"buffer_size": 1231,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										429,
-										444
-									],
-									[
-										788,
-										803
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								1163,
-								1163
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"output_tag": 5,
-							"remote_loading": false,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"synced": false,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 561.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "wp-content/themes/mystile/functions/classes/class-wf-screen-admin-base.php",
-					"settings":
-					{
-						"buffer_size": 12194,
+						"buffer_size": 113416,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7275,
-								7342
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 262.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/mystile/css/layout.css",
-					"settings":
-					{
-						"buffer_size": 23273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12348,
-								12348
+								102321,
+								102321
 							]
 						],
 						"settings":
@@ -908,237 +1269,61 @@
 							"synced": false,
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/mystile/page.php",
-					"settings":
-					{
-						"buffer_size": 2172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1465,
-								1465
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 209.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/mystile/page-63.php",
-					"settings":
-					{
-						"buffer_size": 4797,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1593,
-								1595
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "wp-content/themes/mystile/template-productos.php",
-					"settings":
-					{
-						"buffer_size": 2034,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								995,
-								995
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 182.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
-					"settings":
-					{
-						"buffer_size": 1587,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								757,
-								757
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "wp-content/themes/mystile/template-fullwidth.php",
-					"settings":
-					{
-						"buffer_size": 1654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								523,
-								523
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "wp-content/themes/mystile/header.php",
-					"settings":
-					{
-						"buffer_size": 6093,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3637,
-								3637
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
+							"translate_tabs_to_spaces": true,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 311.0,
+						"translation.y": 42489.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "wp-content/themes/mystile/template-sobreacto.php",
+					"buffer": 13,
+					"file": "wp-content/themes/mystile/css/bootstrap.css",
 					"settings":
 					{
-						"buffer_size": 3239,
+						"buffer_size": 120996,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								22609,
+								22609
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 21506.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "wp-content/themes/mystile/woocommerce/single-product/short-description.php",
+					"settings":
+					{
+						"buffer_size": 414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
 							]
 						],
 						"settings":
@@ -1147,11 +1332,10 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 909.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1176,11 +1360,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.476506318192,
 			1.0
 		],
 		"rows":
@@ -1219,6 +1410,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
+	"side_bar_width": 139.0,
 	"status_bar_visible": true
 }

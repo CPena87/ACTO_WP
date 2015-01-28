@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 get_header(); ?>
 
 
+
 <div class="novedad-bg">
     <div class="container">
         <div class="row">
@@ -29,6 +30,7 @@ get_header(); ?>
     </div>
 </div>
 
+
 		<!-- Corresponde a los destacados del catálogo -->
 <section class="cont-full light-grey">
 	<div class="container">
@@ -37,9 +39,18 @@ get_header(); ?>
     			<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
     				
     				<?php foreach($libros as $libro): ?>
-		    		
+		    		<?php  $product = wc_get_product( $libro->ID );?>
+
+		    		<?php $gprice = $product->price;?>
+
+		    		<?php if($product->post->post_parent == '0'){ ?>
+
+
+
+
 		    		<!-- Corresponde a los datos del libro 123-->
 		    		<figure class="col-md-3 col-sm-6 col-xs-6 producto pdbottom10">
+		    			<?php //var_dump($product) ?>
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
 		    		</a>
@@ -74,19 +85,29 @@ get_header(); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
 
 
-			    				<span class="price">$<?php echo $price[0]; ?></span>
+		    					<?php if($product->product_type == 'grouped') {?>
+		    						<span class="price">Desde $<?php echo $gprice; ?></span>
+		    					<?php }else{ ?>
 
-			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+
+
+									
+			    					<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    						
+			    						<span class="oferta">Precio Descuento<?php echo $dprice[0]; ?></span>
+			    						<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php }else{ ?>
+										<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php } ?>
+		    					<?php } ?>
+
 			    				
-
-			    				<!-- <span class="oferta">ISBN<?php //echo $isbn[0]; ?></span> -->
-			    				<?php } ?>
 
 		    				</footer>
 		    			</figcaption>
 		    		</figure>
 		    		<!-- Fin datos de libro -->
-
+		    		<?php } ?>
 		    		<?php endforeach ?>
   
     		</div>

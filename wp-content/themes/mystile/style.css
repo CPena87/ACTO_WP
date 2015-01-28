@@ -1909,6 +1909,7 @@ table div.quantity {
 .single-product table div.quantity {
   padding-right: 0;
   border: 0;
+  width:65px;
 }
 .single-product #reviews .star-rating {
   float: right;
@@ -3591,10 +3592,14 @@ p.appendix strong{color: #ff8000; font-weight: bold;}
 .comentario{margin-top: 15px; margin-bottom: 20px; padding-left:0;}
 .comentario h4{margin: 10px 0 10px; font-size: 25px; font-weight: bold; color: #ff8000;}
 .comentario p{margin-top:10px; font-style: italic; font-size:15px; font-weight:lighter;}
-.bigged span.amount{font-size:40px; color:#313131;}
+.bigged span.amount{font-size:25px; color:#313131;}
 .cart-collaterals span.amount{color: #888888 !important;}
 .alt-table-row input.button[type="submit"]{padding:10px;}
 .form{padding-bottom:80px;}
+td.label{clear: both; float: left; display: block; padding: 18px 5px; width: 100%; text-align: left; white-space: normal;}
+td.label label a{line-height:140%;}
+.price span{color: #ff8000; margin: 5px 5px; padding-top: 5px; clear: both; display: block; font-size: 20px;}
+
 
 /* shiping */
 .radio, .checkbox{margin-top: 0 !important;}
@@ -3606,6 +3611,15 @@ background: url(../images/chosen-sprite.png) 0 10px no-repeat!important; }
 .product-name a{padding-top: 10px; display: block;}
 .product-remove a{padding-top: 20px; display: block;}
 td.product-name{width:40%;}
+.table-striped.table td{border-bottom:1px solid transparent; padding:5px 0;}
+.table-striped td a{font-size: 15px; border-bottom: none; clear: both; display: block; margin-top: 15px;}
+.table-striped td{ padding:5px 0;}
+.single-product div.quantity{margin-right: 0 !important;}
+.table{margin-bottom:0;}
+.table-striped td del,
+.table-striped td ins{float:left; display:block;}
+.table-striped td del span{font-size: 20px !important; margin-top:10px !important;}
+.table-striped td ins span{font-size:25px !important;}
 
 /* MEDIA QUERIES Y RESPONSIVE STYLES */
 @media (max-width:1199px) and (min-width:1025px){
@@ -3900,6 +3914,10 @@ td.product-name{width:40%;}
   .post-content{width:100%;}
 }
 
+
+
+
+.separator{ padding:15px 0;}
 
 
 

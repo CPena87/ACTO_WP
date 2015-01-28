@@ -90,7 +90,12 @@ $isbn = $product->get_attribute( 'ISBN' );
 
 	  <?php endif; ?>
 	  <div class="clear"></div>
-	  <span class="sku_wrapper"><strong>ISBN:<strong> <span class="sku" itemprop="sku"><?php echo $isbn; ?></span></span>
+	  
 
 </div>
+
+<span class="sku_wrapper"><strong>ISBN:</strong> <span class="sku" itemprop="sku"><?php echo $isbn; ?></span></span>
+
+
+
 

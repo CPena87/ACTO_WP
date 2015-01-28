@@ -15,9 +15,9 @@ global $post, $product;
 $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
 $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
-
 ?>
 
+<?php /*?>
 <div class="product_meta">
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '.</span>' ); ?>
@@ -25,15 +25,19 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 </div>
 
+
 <!-- if ( ! $product->is_purchasable() ) return;
 ?> -->
 </div>
+<?php */?>
+</div>
+<?php if($product->product_type != 'grouped'){?>
 <div class="col-md-4 white">
-
+	
     <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
+		
         <p class="price bigged">
-            <span class="blackened"><strong>Precio:<strong></span>
+            <span class="blackened"><strong>Precio:</strong></span>
             <?php echo $product->get_price_html(); ?>
         </p>
 
@@ -43,10 +47,11 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
     
     </div>
 
+
 <?php if ( $product->is_in_stock() ) : ?>
 
     <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-
+	
     <form class="cart" method="post" enctype='multipart/form-data'>
 
         <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
@@ -67,9 +72,10 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
         <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
     </form>
+    
 
     <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
 </div>
-
+<?php }?>

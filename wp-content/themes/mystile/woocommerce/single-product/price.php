@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-
 $isbn = $product->get_attribute( 'ISBN' )?>
 
 
