@@ -9,49 +9,24 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <div class="autores-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 ">
+
+            <div class="col-md-5 ">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Autores</h1>
-                    <p>You don't get sick, I do.12345 That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                
                 </div>
-
             </div>
+            <div class="col-md-6 col-md-offset-1 mtop60 mtop0mob">
+                <div class=" jumbotron fleft mtop0mob">
+                    <p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
-<!-- Modal -->
-<div class="gray-cta">
-    <section class="container ">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 publish-cta">
-                <img src="<?php bloginfo('template_directory'); ?>/images/writing-gray.png" alt="">
-                <h2>Tu puedes ser parte de Acto Editores</h2>
-                <h3>Te invitamos a publicar con nosotros, llenando el siguiente formulario</h3>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Escribenos aquí
-                </button>
-            </div>
-        </div>  
-    </section>
-</div>
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-
-      <div class="modal-body">
-        <?php echo do_shortcode('[contact-form-7 id="183" title="Editar en Acto"]'); ?>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- Fin Modal -->
 
 <?php 
 $var = get_queried_object();
@@ -120,6 +95,11 @@ $var = get_queried_object();
                 <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
                     
                     <?php foreach($libros as $libro): ?>
+                    <?php  $product = wc_get_product( $libro->ID );?>
+
+                    <?php $gprice = $product->price;?>
+
+                    <?php if($product->post->post_parent == '0'){ ?>
                     
                     <!-- Corresponde a los datos del libro -->
                     <figure class="col-md-3 col-sm-3 col-xs-6 producto pdbottom10 pleft0">
@@ -129,7 +109,7 @@ $var = get_queried_object();
                         <div class="maxim over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
                         <figcaption class="white">
                             <header class="superior related">
-                                <h4><?php echo $libro->post_title ?></h4>
+                                <h4><?php echo substr($libro->post_title , 0 , 65 )?></h4>
                                 <?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
                                 <p>
                                     <?php foreach  ($autores as $autor): ?>
@@ -138,16 +118,32 @@ $var = get_queried_object();
                                 <?php endforeach ?>
                                 </p>
                             </header>
+                            <div class="clear"></div>
+                            <?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
+                            <div class="booktype mg5">
+                                <?php if($tipos){?>
+                                <?php foreach ($tipos as $tipo): ?>
+                                    <?php $linktipo = get_term_link( $tipo); ?>
+                                    <a href="<?php echo $linkautor ?>"><?php echo $tipo->name ?></a>
+                                <?php endforeach ?>
+                                <?php } ?>
+                            </div>
+                            <div class="clear"></div>
+
                             <a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
                             <footer class="inferior">
                                 <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
                                 <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
                                 
-                                <span class="price">$<?php echo $price[0]; ?></span>
 
-                                <?php if($dprice[0] != ''){ ?>
-                                <span class="ofering">$<?php echo $dprice[0]; ?></span>
+                                <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                                        
+                                    <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
+                                    <span class="price">$<?php echo $price[0]; ?></span>
+                                <?php }else{ ?>
+                                    <span class="price">$<?php echo $price[0]; ?></span>
                                 <?php } ?>
+                            <?php } ?>
 
                             </footer>
                         </figcaption>
@@ -165,6 +161,37 @@ $var = get_queried_object();
     </div>
     <!-- /#content -->
 
+<!-- Modal -->
+<div class="gray-cta">
+    <section class="container ">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 publish-cta">
+                <img src="<?php bloginfo('template_directory'); ?>/images/writing-gray.png" alt="">
+                <h2>Tu puedes ser parte de Acto Editores</h2>
+                <h3>Te invitamos a publicar con nosotros, llenando el siguiente formulario</h3>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Escribenos aquí
+                </button>
+            </div>
+        </div>  
+    </section>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="183" title="Editar en Acto"]'); ?>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fin Modal -->
 
 
 <div class="container mtop20mob brdtop">

@@ -104,7 +104,7 @@ global $woo_options, $woocommerce;
 	        <?php woo_nav_before(); ?>
 
 			<nav id="navigation" class="col-md-6 navbar-header" role="navigation">
-				<div class="col-md-12 display-on-mobile hide-on-desktop fleft pleft0">
+				<div class="col-md-12 hide-on-desktop fleft pleft0">
 	  			      
 						<nav class="col-md-6 cart-nav navbar-collapsed fleft" role="navigation">
 							<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>

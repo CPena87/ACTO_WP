@@ -58,9 +58,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 						<?php do_action ( 'woocommerce_grouped_product_list_before_price', $product ); ?>
 
-						<td class="price" style="width:38%;">
+						<td class="price" style="width:38%; padding-top:20px; padding-left:5px;">
 							<?php
-								echo $product->get_price_html();
+								echo '$'.$product->get_price();
 
 								if ( $availability = $product->get_availability() ) {
 									$availability_html = empty( $availability['availability'] ) ? '' : '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>';

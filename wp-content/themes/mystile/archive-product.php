@@ -18,14 +18,20 @@ get_header(); ?>
 <div class="novedad-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 ">
+
+            <div class="col-md-5 ">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Catálogo</h1>
-                    <p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
-
             </div>
+
+            <div class="col-md-6 col-md-offset-1 mtop60 mtop0mob">
+            	<div class=" jumbotron fleft mtop0mob">
+            		<p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
+            	</div>
+            </div>
+            
         </div>
     </div>
 </div>
@@ -45,12 +51,8 @@ get_header(); ?>
 
 		    		<?php if($product->post->post_parent == '0'){ ?>
 
-
-
-
 		    		<!-- Corresponde a los datos del libro 123-->
 		    		<figure class="col-md-3 col-sm-6 col-xs-6 producto pdbottom10">
-		    			<?php //var_dump($product) ?>
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
 		    			<?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
 		    		</a>
@@ -94,7 +96,7 @@ get_header(); ?>
 									
 			    					<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
 			    						
-			    						<span class="oferta">Precio Descuento<?php echo $dprice[0]; ?></span>
+			    						<span class="oferta">Oferta <?php echo $dprice[0]; ?></span>
 			    						<span class="price">$<?php echo $price[0]; ?></span>
 			    					<?php }else{ ?>
 										<span class="price">$<?php echo $price[0]; ?></span>

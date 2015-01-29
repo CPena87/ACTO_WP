@@ -180,9 +180,9 @@ get_header(  ); ?>
 	</div>
 	<!-- Fin Pestañas de Contenido -->
 
-<style type="text/css">
+<!-- <style type="text/css">
 .layout-full #main{ max-width:100% !important}
-</style>
+</style> -->
 
 <div class="col-md-4">
 
@@ -190,8 +190,13 @@ get_header(  ); ?>
 
             <?php $not_in = array();?>
         	<?php array_push($not_in , $post->ID)?>
-            <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '2' , 'post__not_in' => $not_in)) ?>
+            <?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4' , 'post__not_in' => $not_in)) ?>
             <?php foreach($libros as $libro): ?>
+            <?php  $product = wc_get_product( $libro->ID );?>
+
+            <?php $gprice = $product->price;?>
+
+            <?php if($product->post->post_parent == '0'){ ?>
             <!-- Corresponde a los datos del libro -->
             <figure class="col-md-6 col-sm-6 col-xs-6 producto pdbottom10 pleft0">
                 <a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
@@ -209,18 +214,30 @@ get_header(  ); ?>
                                 <?php endforeach ?>
                             </p>
                     </header>
+                    <div class="clear"></div>
+                            <?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
+                            <div class="booktype mg5">
+                                <?php if($tipos){?>
+                                <?php foreach ($tipos as $tipo): ?>
+                                    <?php $linktipo = get_term_link( $tipo); ?>
+                                   <!--  <a href="<?php //echo $linkautor ?>"><?php //echo $tipo->name ?></a> -->
+                                <?php endforeach ?>
+                                <?php } ?>
+                    </div>
+                    <div class="clear"></div>
+
                     <a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
                     <footer class="inferior">
                         <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
                         <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
                                 
-                        <!--<pre><?php var_dump(get_post_meta($libro->ID , '_regular_price'))?></pre>
-                        <pre><?php var_dump(get_post_meta($libro->ID , '_sale_price'))?></pre> -->
-                                
-                        <span class="price">$<?php echo $price[0]; ?></span>
-
-                        <?php if($dprice[0] != ''){ ?>
-                        <span class="oferta">$<?php echo $dprice[0]; ?></span>
+                      	<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                                        
+                                  <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
+                                  <span class="price">$<?php echo $price[0]; ?></span>
+                             <?php }else{ ?>
+                                  <span class="price">$<?php echo $price[0]; ?></span>
+                             <?php } ?>
                         <?php } ?>
 
                     </footer>

@@ -8,14 +8,20 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <div class="novedad-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 ">
+
+            <div class="col-md-5">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Reseñas</h1>
-                    <p>You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
-
             </div>
+
+            <div class="col-md-6 col-md-offset-1 mtop60 mtop0mob">
+                <div class=" jumbotron fleft mtop0mob">
+                    <p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>   

@@ -46,7 +46,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	
 		</section><!-- /#footer-widgets  -->
 	<?php } // End IF Statement ?>
-		<footer id="footer" class="col-full">
+		<footer id="footer" class="container">
 
 		<div class="col-md-4 mbottom20mob">
 

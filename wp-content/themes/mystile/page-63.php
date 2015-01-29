@@ -21,17 +21,24 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <div class="autores-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 ">
+
+            <div class="col-md-5 ">
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Autores</h1>
-                    <p>You don't get sick, I do.12 That's also clear. But for some reason, you and I react the exact same way to water.</p>
                 </div>
-
             </div>
+
+            <div class="col-md-6 col-md-offset-1 mtop60 mtop0mob">
+                <div class=" jumbotron fleft mtop0mob">
+                    <p>You don't get sick, I do. 123 That's also clear. But for some reason, you and I react the exact same way to water.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
+
     <div id="content" class="page col-full container">
     
     	<?php woo_main_before(); ?>
@@ -63,7 +70,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                                     <figcaption class="desc-autor">
                                         <a href="<?php echo $linkautor ?>"><?php echo $autor->name ?></a>
                                         <?php $descripcionn = get_field('descripcion' , 'autores_'.$autor->term_id) ?>
-                                        <?php echo substr($descripcionn, 0, 125 ) ?>
+                                  <!--       <?php //echo substr($descripcionn, 0, 125 ) ?> -->
                                     </figcaption>
                               </figure>
                          
@@ -113,4 +120,37 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         </section>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="gray-cta">
+    <section class="container ">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 publish-cta">
+                <img src="<?php bloginfo('template_directory'); ?>/images/writing-gray.png" alt="">
+                <h2>Tu puedes ser parte de Acto Editores</h2>
+                <h3>Te invitamos a publicar con nosotros, llenando el siguiente formulario</h3>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Escribenos aquí
+                </button>
+            </div>
+        </div>  
+    </section>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="183" title="Editar en Acto"]'); ?>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fin Modal -->
+
 <?php get_footer(); ?>

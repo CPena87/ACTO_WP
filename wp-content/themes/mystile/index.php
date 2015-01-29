@@ -118,19 +118,24 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     		<div class="col-md-12 outstanding mtop30 mbottom30">
 
     			<h2>Destacados</h2>
-    			<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '4')) ?>
+    			<?php $libros = get_posts(array('post_type' => product , 'numberposts' => '8')) ?>
     				
     				<?php foreach($libros as $libro): ?>
+    				<?php  $product = wc_get_product( $libro->ID );?>
+
+                    <?php $gprice = $product->price;?>
+
+                    <?php if($product->post->post_parent == '0'){ ?>
 		    		
 		    		<!-- Corresponde a los datos del libro -->
 		    		<figure class="col-md-3 col-xs-6 producto pdbottom10">
 		    			<a class="entered" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">
-		    			<?php echo get_the_post_thumbnail($libro->ID); ?>
+		    			<?php echo get_the_post_thumbnail($libro->ID , 'portadillas'); ?>
 		    		</a>
 		    			<div class="over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
 		    			<figcaption class="white">
 		    				<header class="superior">
-		    					<h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
+		    					<h4><?php echo substr($libro->post_title , 0 , 70 )?></h4>
 		    					<?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
 		    					<p>
 		    						<?php foreach  ($autores as $autor): ?>
@@ -139,9 +144,9 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 								<?php endforeach ?>
 		    					</p>
 		    				</header>
-		    				<div class="booktype mg5">
-		    				<?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
-					
+		    				 <div class="clear"></div>
+		    				 <?php $tipos = get_the_terms( $libro->ID, 'tipos' ); ?>
+		    				 <div class="booktype mg5">
 								<?php if($tipos){?>
 								<?php foreach ($tipos as $tipo): ?>
 									<?php $linktipo = get_term_link( $tipo); ?>
@@ -149,19 +154,20 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 								<?php endforeach ?>
 								<?php } ?>
 							</div>
+						    <div class="clear"></div>
 		    				<a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
 		    				<footer class="inferior">
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-		    					
-                               	<!--<pre><?php var_dump(get_post_meta($libro->ID , '_regular_price'))?></pre>
-                                <pre><?php var_dump(get_post_meta($libro->ID , '_sale_price'))?></pre> -->
-                                
-			    				<span class="price">$<?php echo $price[0]; ?></span>
-
-			    				<?php if($dprice[0] != ''){ ?>
-			    				<span class="oferta">$<?php echo $dprice[0]; ?></span>
-			    				<?php } ?>
+		    		
+			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                                        
+                                    <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
+                                    <span class="price">$<?php echo $price[0]; ?></span>
+                                <?php }else{ ?>
+                                    <span class="price">$<?php echo $price[0]; ?></span>
+                                <?php } ?>
+                            <?php } ?>
 
 		    				</footer>
 		    			</figcaption>
