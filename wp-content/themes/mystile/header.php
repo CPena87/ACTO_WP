@@ -39,16 +39,14 @@ global $woo_options, $woocommerce;
 
 <div class="container" style="z-index:2; position:relative">
 	<div class="fixed col-full">
-		<nav class="hide-on-mobile hide-cart col-md-3 col-md-offset-10" role="navigation">
+		<nav class="hide-on-mobile col-md-3 col-md-offset-10" role="navigation">
 				<?php /* if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
 				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
 				<?php }  */?>
 				<?php
 					if ( class_exists( 'woocommerce' ) ) {
 						echo '<ul class="nav wc-nav" id="cajacarro">';
-						//echo '<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">';
 						woocommerce_cart_link();
-						//echo '</button>';
 						echo '<div class="hiddennss" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="';?>
 						
 						<?php global $woocommerce; 
