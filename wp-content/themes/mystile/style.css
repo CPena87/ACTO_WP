@@ -3628,7 +3628,7 @@ td.product-name{width:40%;}
   #header #navigation {display: block; }
   #header .nav-toggle{display:none;}
   #header{padding: 15px 0 0px;}
-  #header .nav-toggle{display:block; }
+  #header .nav-toggle{display:none; }
   #navigation {background-color: rgba(0, 0, 0, 0.8);  margin-top: 10px !important;}
   #header #navigation ul {float: none; clear: both;}
   ul.nav li a {color:#fff; }
@@ -3646,7 +3646,7 @@ td.product-name{width:40%;}
   #header{padding: 15px 0 0px;}
   /*li.cart{display:none;}*/
 
-  #navigation {background-color: rgba(0, 0, 0, 0.8); margin-top:30px !important; }
+  #navigation {background-color: rgba(0, 0, 0, 0.8); /*margin-top:30px !important;*/ }
   #header #navigation ul {float: none; clear: both; margin-top:-35px;}
   ul.nav li a {color:#fff; }
   ul.nav li a:hover,
@@ -3676,10 +3676,10 @@ td.product-name{width:40%;}
   div.quantity .plus{bottom:45px;}
 }
 
-@media (max-width: 924px) and (min-width:769px){
+@media (max-width: 924px) and (min-width:768px){
   .col-md-esp {width: 13%; padding-left: 0 !important; padding-right: 0 !important; }
   .hide-cart{display:none;}
-   #header #navigation {display: none;}
+   #header #navigation {display: none; padding:0;}
    #navigation{margin-top: 20px !important ; margin-bottom:0;}
   #header{padding: 15px 0 0px;}
   #navigation {background-color: rgba(0, 0, 0, 0.8); }
@@ -3726,7 +3726,7 @@ td.product-name{width:40%;}
 
 }
 
-@media (max-width:768px) and (min-width: 641px){
+@media (max-width:767px) and (min-width: 641px){
   .hide-cart{display:none;}
    #header #navigation {display: none; margin-top: 10px !important; margin-bottom: 15px !important;}
   #header .nav-toggle{display:block;}
@@ -3748,26 +3748,34 @@ td.product-name{width:40%;}
   .mtop20mob{margin-top:20px;}
   .mtop40mob{margin-top:40px;}
   .mleft15mob{margin-left:15px;}
+  .center-mob{text-align:center;}
 
   /* Responsive Sobre Acto */
   h1.overdash{font-size: 30px; margin:35px 25%;}
-  .dobdashed{top:75px;}
+  .dobdashed{bottom:75px;}
 
     /* Home */
   figure.relevance {height: auto; margin-bottom: 0px; }
   /* Actividades */
-  .activity-content{margin-left:0;}
+  .activity-content{margin-left:0; margin-top:30px;}
 
   /* Catalogo */
   .nav-tabs > li a{color: #4a413e !important; }
   .form{padding:0 15px;}
 
   /* Autores  */
-  .avatarautor{margin-top: 25px;}
+  .avatarautor{margin-top: 25px; margin-bottom:55px;}
   .prof-avatar img{margin: 40px auto 0; width:85%; display:block;}
 
-    /* Responsive para reseñas */
+  /* Reseñas */
+  .reviewer img{margin-top:20px;}
+  .post-content{margin-top:20px;}
+
+  /* Responsive para reseñas */
   .post-content{width:70%;}
+
+  /* Responsive para Novedades */
+  .nov-content{margin-top:30px;}
 
   /* Área shipping */
   table.cart td.actions .coupon .input-text, table.cart td.actions .coupon .button {width: 100%;}

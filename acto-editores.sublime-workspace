@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"hide",
+				"hide-on-mobile"
+			],
+			[
+				"Tex-",
+				"text-transform"
+			],
+			[
 				"tabl",
 				"table-striped"
 			],
@@ -14,10 +22,6 @@
 			[
 				"social",
 				"social-top"
-			],
-			[
-				"hide",
-				"hide-on-desktop"
 			],
 			[
 				"display",
@@ -356,92 +360,18 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product.php",
-			"settings":
-			{
-				"buffer_size": 9740,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 496 files for \"class=\"col-md-9 col-sm-9 pd0\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php:\n   46  </div>\n   47  </div>\n   48: <div class=\"col-md-9 col-sm-9 pd0\">\n\n1 match in 1 file\n\n\nSearching 496 files for \"Estado:\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php:\n   34  \n   35              <?php if (get_field('estado')){  ?>\n   36:                 <p class=\"quant-text\"><strong>Estado:</strong> Libro Publicado</p>\n   37              <?php } else {?>\n   38:                <p class=\"quant-text\"><strong>Estado:</strong> Libro por Publicar</p>\n   39              <?php } ?>\n   40  \n\n2 matches in 1 file\n\n\nSearching 496 files for \"enctype=\"multipart/form-data\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-functions.php:\n 1119              <h2><?php _e( 'Framework Updates', 'woothemes' ); ?></h2>\n 1120              <span style=\"display:none\"><?php echo $method; ?></span>\n 1121:             <form method=\"post\"  enctype=\"multipart/form-data\" id=\"wooform\" action=\"<?php /* echo $url; */ ?>\">\n 1122  \n 1123                  <?php if( $upd ) { ?>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-backup.php:\n   79  	<p><?php _e( 'Import your theme settings from a previously exported backup.', 'woothemes' ); ?></p>\n   80  	<div class=\"form-wrap\">\n   81: 		<form enctype=\"multipart/form-data\" method=\"post\" action=\"<?php echo admin_url( 'admin.php?page=' . $this->_token ); ?>\">\n   82  			<table class=\"form-table\">\n   83  				<tbody>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-fields.php:\n 1378  	 */\n 1379  	public function render () {\n 1380: 		echo '<form name=\"' . esc_attr( $this->_token ) . '-form\" method=\"post\" enctype=\"multipart/form-data\">' . \"\\n\";\n 1381  		wp_nonce_field( $this->_token . '_nonce', $this->_token . '_nonce' );\n 1382  		$this->maybe_render_extra_hidden_fields();\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/js/ajaxupload.js:\n  587  		// method, enctype must be specified here\n  588  		// because changing this attr on the fly is not allowed in IE 6/7		\n  589: 		var form = toElement( '<form method=\"post\" enctype=\"multipart/form-data\"></form>' );\n  590  		form.style.display = 'none';\n  591  		form.action = settings.action;\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php:\n   24  \n   25  \n   26: <form name=\"checkout\" method=\"post\" class=\"checkout\" action=\"<?php echo esc_url( $get_checkout_url ); ?>\" enctype=\"multipart/form-data\">\n   27  \n   28  	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>\n\n5 matches across 5 files\n\n\nSearching 496 files for \"–\"\n\n0 matches across 0 files\n\n\nSearching 496 files for \"<span class=\"amount\">–\"\n\n0 matches across 0 files\n\n\nSearching 496 files for \"enctype=\"multipart/form-data\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/admin-functions.php:\n 1119              <h2><?php _e( 'Framework Updates', 'woothemes' ); ?></h2>\n 1120              <span style=\"display:none\"><?php echo $method; ?></span>\n 1121:             <form method=\"post\"  enctype=\"multipart/form-data\" id=\"wooform\" action=\"<?php /* echo $url; */ ?>\">\n 1122  \n 1123                  <?php if( $upd ) { ?>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-backup.php:\n   79  	<p><?php _e( 'Import your theme settings from a previously exported backup.', 'woothemes' ); ?></p>\n   80  	<div class=\"form-wrap\">\n   81: 		<form enctype=\"multipart/form-data\" method=\"post\" action=\"<?php echo admin_url( 'admin.php?page=' . $this->_token ); ?>\">\n   82  			<table class=\"form-table\">\n   83  				<tbody>\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-fields.php:\n 1378  	 */\n 1379  	public function render () {\n 1380: 		echo '<form name=\"' . esc_attr( $this->_token ) . '-form\" method=\"post\" enctype=\"multipart/form-data\">' . \"\\n\";\n 1381  		wp_nonce_field( $this->_token . '_nonce', $this->_token . '_nonce' );\n 1382  		$this->maybe_render_extra_hidden_fields();\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/js/ajaxupload.js:\n  587  		// method, enctype must be specified here\n  588  		// because changing this attr on the fly is not allowed in IE 6/7		\n  589: 		var form = toElement( '<form method=\"post\" enctype=\"multipart/form-data\"></form>' );\n  590  		form.style.display = 'none';\n  591  		form.action = settings.action;\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php:\n   24  \n   25  \n   26: <form name=\"checkout\" method=\"post\" class=\"checkout\" action=\"<?php echo esc_url( $get_checkout_url ); ?>\" enctype=\"multipart/form-data\">\n   27  \n   28  	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>\n\n5 matches across 5 files\n\n\nSearching 496 files for \"class=\"group_table\"\"\n\n/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php:\n   17  \n   18  <form class=\"cart\" method=\"post\" enctype='multipart/form-data'>\n   19: 	<table cellspacing=\"0\" class=\"group_table\">\n   20  		<tbody>\n   21  			<?php\n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 5258,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
-			"settings":
-			{
-				"buffer_size": 3162,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/archive-product.php",
-			"settings":
-			{
-				"buffer_size": 3827,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/product-image.php",
-			"settings":
-			{
-				"buffer_size": 1378,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "wp-content/themes/mystile/header.php",
 			"settings":
 			{
-				"buffer_size": 7235,
+				"buffer_size": 7068,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/review.php",
+			"file": "wp-content/themes/mystile/footer.php",
 			"settings":
 			{
-				"buffer_size": 2042,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
-			"settings":
-			{
-				"buffer_size": 2894,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/meta.php",
-			"settings":
-			{
-				"buffer_size": 2586,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/archive-resenas.php",
-			"settings":
-			{
-				"buffer_size": 4769,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/functions.php",
-			"settings":
-			{
-				"buffer_size": 6260,
+				"buffer_size": 3845,
 				"line_ending": "Windows"
 			}
 		},
@@ -449,7 +379,7 @@
 			"file": "wp-content/themes/mystile/css/layout.css",
 			"settings":
 			{
-				"buffer_size": 23270,
+				"buffer_size": 23274,
 				"line_ending": "Unix"
 			}
 		},
@@ -457,7 +387,7 @@
 			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 113416,
+				"buffer_size": 113666,
 				"line_ending": "Unix"
 			}
 		},
@@ -468,24 +398,20 @@
 				"buffer_size": 120996,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "wp-content/themes/mystile/woocommerce/single-product/short-description.php",
-			"settings":
-			{
-				"buffer_size": 414,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 67.0,
 		"selected_items":
 		[
+			[
+				"Snippet: word",
+				"Snippet: WordPress File Header"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -502,57 +428,60 @@
 	},
 	"file_history":
 	[
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
-		"/Users/upmedia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/title.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-config-sample.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-config.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
+		"/Users/upmedia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/price.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/related.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/sale-flash.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/share.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/short-description.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-image.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/meta.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/header.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/template-productos.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-functions.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/includes/theme-woocommerce.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-attributes.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-content.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/content-product_cat.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/description.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/review.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/up-sells.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/tabs.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/tabs/additional-information.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-autores.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-actividades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/taxonomy-autores.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-63.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-resenas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/style.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-mixed.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sidebar-actividades.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/footer.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-terminos.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-ventas.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page-terminos.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-productos.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-shipping.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-novedades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-archives.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-config.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/product-thumbnails.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-fullwidth.php",
@@ -567,9 +496,7 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/thankyou.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/variable.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/simple.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/external.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/single-actividades.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/search-form.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
@@ -628,8 +555,7 @@
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_41.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_a.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_42.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_36.php"
+		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_42.php"
 	],
 	"find":
 	{
@@ -637,7 +563,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"<wp-content>,/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile",
@@ -652,6 +578,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"social-top",
+			"-bg",
+			"auxiliares",
+			"background",
+			"auxiliares",
 			"class=\"group_table\"",
 			"enctype=\"multipart/form-data\"",
 			"<span class=\"amount\">–",
@@ -774,12 +705,7 @@
 			"$product",
 			"product",
 			"<?php wc_get_template_part( 'content', 'product' ); ?>",
-			"woocommerce_product_loop_start",
-			"woocommerce columns-",
-			"woocommerce columns-4",
-			"woocommerce_before_shop_loop",
-			"shop",
-			"<div id=\"main\" class=\"col-left\">\nclass=\"col-left\"\n<div id=\"main\" "
+			"woocommerce_product_loop_start"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -797,23 +723,23 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/mystile/woocommerce/single-product.php",
+					"file": "wp-content/themes/mystile/header.php",
 					"settings":
 					{
-						"buffer_size": 9740,
+						"buffer_size": 7068,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								731,
-								731
+								1493,
+								1493
 							]
 						],
 						"settings":
@@ -822,126 +748,28 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"word_wrap": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 411.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "wp-content/themes/mystile/footer.php",
 					"settings":
 					{
-						"buffer_size": 5258,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										199,
-										228
-									],
-									[
-										495,
-										502
-									],
-									[
-										620,
-										627
-									],
-									[
-										1058,
-										1087
-									],
-									[
-										1441,
-										1470
-									],
-									[
-										1838,
-										1867
-									],
-									[
-										2274,
-										2303
-									],
-									[
-										2620,
-										2649
-									],
-									[
-										3224,
-										3253
-									],
-									[
-										3607,
-										3636
-									],
-									[
-										4004,
-										4033
-									],
-									[
-										4440,
-										4469
-									],
-									[
-										4786,
-										4815
-									],
-									[
-										5185,
-										5204
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								5060,
-								5060
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"output_tag": 7,
-							"remote_loading": false,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"synced": false,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1815.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/add-to-cart/grouped.php",
-					"settings":
-					{
-						"buffer_size": 3162,
+						"buffer_size": 3845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3101,
-								307
+								1408,
+								1408
 							]
 						],
 						"settings":
@@ -950,164 +778,10 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 631.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "wp-content/themes/mystile/archive-product.php",
-					"settings":
-					{
-						"buffer_size": 3827,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3378,
-								3378
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 653.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/product-image.php",
-					"settings":
-					{
-						"buffer_size": 1378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								816,
-								816
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/mystile/header.php",
-					"settings":
-					{
-						"buffer_size": 7235,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2085,
-								2085
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 665.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/review.php",
-					"settings":
-					{
-						"buffer_size": 2042,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								604,
-								604
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/title.php",
-					"settings":
-					{
-						"buffer_size": 2894,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2226,
-								2226
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 2.0,
+						"translation.y": 381.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1115,119 +789,23 @@
 			]
 		},
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 8,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/meta.php",
-					"settings":
-					{
-						"buffer_size": 2586,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2584,
-								2584
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 253.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "wp-content/themes/mystile/archive-resenas.php",
-					"settings":
-					{
-						"buffer_size": 4769,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4119,
-								4119
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 605.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "wp-content/themes/mystile/functions.php",
-					"settings":
-					{
-						"buffer_size": 6260,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5646,
-								5646
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1848.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
+					"buffer": 2,
 					"file": "wp-content/themes/mystile/css/layout.css",
 					"settings":
 					{
-						"buffer_size": 23270,
+						"buffer_size": 23274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14039,
-								14053
+								3958,
+								3958
 							]
 						],
 						"settings":
@@ -1241,25 +819,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2241.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 3,
 					"file": "wp-content/themes/mystile/style.css",
 					"settings":
 					{
-						"buffer_size": 113416,
+						"buffer_size": 113666,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								102321,
-								102321
+								104452,
+								104452
 							]
 						],
 						"settings":
@@ -1273,13 +851,13 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 42489.0,
+						"translation.y": 56660.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 4,
 					"file": "wp-content/themes/mystile/css/bootstrap.css",
 					"settings":
 					{
@@ -1305,37 +883,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 21506.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "wp-content/themes/mystile/woocommerce/single-product/short-description.php",
-					"settings":
-					{
-						"buffer_size": 414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								298,
-								298
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 27020.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1371,7 +919,7 @@
 		"cols":
 		[
 			0.0,
-			0.476506318192,
+			0.48504254147,
 			1.0
 		],
 		"rows":
@@ -1410,6 +958,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 139.0,
+	"side_bar_width": 231.0,
 	"status_bar_visible": true
 }

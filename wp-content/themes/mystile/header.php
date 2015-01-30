@@ -56,7 +56,8 @@ global $woo_options, $woocommerce;
 								echo '<ul>';
 								foreach($items as $item => $values): ?>
 									<?php $_product = $values['data']->post; ?>
-									<li><?php echo '<a href=\''.get_permalink($_product->ID).'\'>'.substr($_product->post_title , 0 , 80).'</a></li>';
+									<li><?php echo '<a href=\''.get_permalink($_product->ID).'\'>'.substr($_product->post_title , 0 , 40).'</a></li>';
+									// <li><?php echo ''</li>';'
 								endforeach ;
                                 echo '</ul>';
 								echo '<a href=\''. get_page_link(16).'\' class=\'btn btn-block btn-success\'>Ir al Carro de Productos</a>';
