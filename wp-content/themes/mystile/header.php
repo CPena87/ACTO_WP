@@ -39,13 +39,14 @@ global $woo_options, $woocommerce;
 
 <div class="container" style="z-index:2; position:relative">
 	<div class="fixed col-full">
-		<nav class="hide-on-mobile col-md-3 col-md-offset-10" role="navigation">
-				<?php /* if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
-				<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-				<?php }  */?>
+		<nav class="col-md-3 col-md-offset-10" role="navigation">
+
 				<?php
 					if ( class_exists( 'woocommerce' ) ) {
 						echo '<ul class="nav wc-nav" id="cajacarro">';
+						
+						echo '<img src="'.get_bloginfo('template_directory').'/images/white-cart.png" alt="">';
+						
 						woocommerce_cart_link();
 						echo '<div class="hiddennss" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="';?>
 						
@@ -56,11 +57,15 @@ global $woo_options, $woocommerce;
 								echo '<ul>';
 								foreach($items as $item => $values): ?>
 									<?php $_product = $values['data']->post; ?>
-									<li><?php echo '<a href=\''.get_permalink($_product->ID).'\'>'.substr($_product->post_title , 0 , 40).'</a></li>';
+                                    
+                                    <?php $productt = wc_get_product( $_product->ID );?>
+                                    <?php $gprice = $productt->price;?>
+                                    
+									<li><span class='badge'>&nbsp;$&nbsp;<?php echo $gprice?></span>&nbsp;<?php echo '<a href=\''.get_permalink($_product->ID).'\'>'.substr($_product->post_title , 0 , 40).'</a></li>';
 									// <li><?php echo ''</li>';'
 								endforeach ;
                                 echo '</ul>';
-								echo '<a href=\''. get_page_link(16).'\' class=\'btn btn-block btn-success\'>Ir al Carro de Productos</a>';
+								echo '<a href=\''. get_page_link(16).'\' class=\'btn btn-block contents\'>Ir al Carro de Productos</a>';
 							}?>
                         
 						<?php echo '" data-original-title="">';

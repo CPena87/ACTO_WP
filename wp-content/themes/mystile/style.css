@@ -3111,6 +3111,10 @@ border-bottom-right-radius: 10px;}
 
 #cajacarro li{ float:none}
 #cajacarro li a{width: 100%; display: block;}
+.popover-content li {list-style: none; }
+.btn.btn-block.contents{color: #fff; background: #ff8000; padding: 3px 10px; border-radius: 20px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;}
+.btn.btn-block.contents:hover{color: #fff; background: #b85c00; padding: 3px 10px; border-radius: 20px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;}
+
 
 
 .bg-head{background-color: rgba(0, 0, 0, 0.5); background-size: cover !important; width: 100% !important; position: absolute; right: 0;
@@ -3183,7 +3187,7 @@ transition: all 0.5s ease-in-out;}
 /* Background de header por single o portada correspondiente */
 .home-bg{background-image: url("../mystile/images/enc-home.jpg"); background-size: cover !important; background-position: 50% 0%; height:540px;}
 .jumbotron h1{font-size: 25px; text-transform: none; text-align: center; color:#fff; font-style:italic;font-family: "Open Sans"; font-weight: 400;}
-.invitepub p{background: #ff8000; font-size: 35px; line-height: 140%; color: #fff; padding: 2px 6px; margin-top: 5px; margin-bottom: 10px; }
+.invitepub p{font-size: 35px; line-height: 140%; color: #ff8000; padding: 2px 6px; margin-top: 5px; margin-bottom: 10px; text-align: center; line-height: 140%; }
 .invitepub a.btn-cta{padding: 5px; margin-top: 10px; font-size: 15px;}
 
 /* Backgrounds */
@@ -3256,6 +3260,8 @@ transition: all 0.5s ease-in-out;}
 -ms-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;}
+/* Cart Simplificado */
+#cajacarro img{width: 20px; margin:10px 5px 5px; float: left;}
 
 
 /* Auxiliares */
@@ -3637,6 +3643,9 @@ td.product-name{width:40%;}
   .col-md-logo img{max-width: 80%; height: auto; width: 60px; float:left;}
   span.icon-bar{border-top: 4px solid #fff; display: block; padding-bottom: 1px; margin-top: 4px;}
   .social-top.hide-on-mobile{display: none;}
+  .cart-parent span.amount,
+  .cart-parent span.contents{display:none;}
+  #cajacarro.nav.wc-nav{width:15%;}
 }
 
 @media (max-width:1024px) and (min-width:925px){
@@ -3654,6 +3663,11 @@ td.product-name{width:40%;}
   .social-top{display:none;}
   .col-md-logo img{max-width: 80%; height: auto; width: 60px; float:left;}
   span.icon-bar{border-top: 4px solid #fff; display: block; padding-bottom: 1px; margin-top: 4px;}
+  .cart-parent span.amount,
+  .cart-parent span.contents{display:none;}
+  #cajacarro.nav.wc-nav{width: 4.5%; position: absolute; left: 100%; }
+  #cajacarro img{margin: 10px 5px 5px;}
+  .popover.bottom {margin-top: 25px; }
 
     /* Auxiliares nivel responsive */
   .hide-on-mobile{display:none;}
@@ -3679,6 +3693,8 @@ td.product-name{width:40%;}
 @media (max-width: 924px) and (min-width:768px){
   .col-md-esp {width: 13%; padding-left: 0 !important; padding-right: 0 !important; }
   .hide-cart{display:none;}
+  .cart-parent span.amount,
+  .cart-parent span.contents{display:none;}
    #header #navigation {display: none; padding:0;}
    #navigation{margin-top: 20px !important ; margin-bottom:0;}
   #header{padding: 15px 0 0px;}
@@ -3693,6 +3709,7 @@ td.product-name{width:40%;}
 
   .relevance figcaption{bottom:0; height:80px;}
   figure.relevance {height: 190px; margin-bottom: 80px; padding: 5px;}
+  #cajacarro.nav.wc-nav{width:15%; display: none;}
 
     /* Auxiliares nivel responsive */
   .hide-on-mobile{display:none;}
@@ -3740,6 +3757,9 @@ td.product-name{width:40%;}
   .col-md-logo img{max-width: 80%; height: auto; width: 60px; float:left;}
   span.icon-bar{border-top: 4px solid #fff; display: block; padding-bottom: 1px; margin-top: 4px;}
   nav.col-md-2 .col-md-offset-2 .social-top{display: none;}
+  .cart-parent span.amount,
+  .cart-parent span.contents{display:none;}
+  #cajacarro.nav.wc-nav{width: 100%; position: absolute; left: 46vw;}
 
     /* Auxiliares nivel responsive */
   .hide-on-mobile{display:none;}
@@ -3803,6 +3823,10 @@ td.product-name{width:40%;}
   ul.nav li a:focus{color:#ff8000;}
   .col-md-logo img{max-width: 80%; height: auto; width: 60px; float:left;}
   span.icon-bar{border-top: 4px solid #fff; display: block; padding-bottom: 1px; margin-top: 4px;}
+  .cart-parent span.amount,
+  .cart-parent span.contents{display:none;}
+  #cajacarro.nav.wc-nav{width: 100%; position: absolute; left: 43vw;}
+  .popover.bottom {margin-top: 30px; }
 
   /* Background's */
   .novedad-bg,
