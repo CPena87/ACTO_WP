@@ -26,6 +26,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 <div id="take" class="carousel-
                 caption jumbotron fleft">
                     <h1>Sobre Acto</h1>
+                   
                 </div>
             </div>
 

@@ -3249,8 +3249,8 @@ transition: all 0.5s ease-in-out;}
 /* Area para inscripcion de Autores + Call to action */
 .publish-cta h2{text-align: center; font-size: 30px; margin: 0 auto; color: #ff8000; font-weight: bold;} 
 .publish-cta h3{text-align: center; margin: 5px auto 10px; line-height: 135%; font-family: "Times", serif; font-size: 28px; font-weight: lighter; font-style: italic; color: #797979;}
-.publish-cta img{margin: 10px auto 0px; display: block; max-width:120px; width:7%; height:auto;}
-.publish-cta .btn{background: #ff8000; border-radius: 5%; margin: 0 auto 15px; display: block; float: none; border: none; font-size: 24px; font-weight: bold;-webkit-transition: all 0.5s ease-in-out;
+.publish-cta img{margin: 25px auto 0px; display: block; max-width:120px; width:7%; height:auto;}
+.publish-cta .btn{background: #ff8000; border-radius: 5%; margin: 0 auto 30px; display: block; float: none; border: none; font-size: 24px; font-weight: bold;-webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -ms-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
@@ -3297,6 +3297,7 @@ transition: all 0.5s ease-in-out;}
 .white{background:#ffffff;}
 .opal-white{background:#fafafa;}
 .medium-gray{background:#e6e6e6;}
+.prefooter-gray{background: #D3D3D3;}
 .orange-medium{background: rgba(255, 128, 0, 0.4);}
 .gray-cta{background: rgba(228, 228, 228, 0.4);}
 
@@ -3419,10 +3420,10 @@ transition: all 0.5s ease-in-out;}
 a.entered{width: 100%; margin-bottom: 10px;}
 
 /* Estilos para productos de catalogo en single y en vista destacados */
-header.superior{height:150px; margin-top:-10px;}
-header.superior.reference{height:180px;}
+header.superior{height:85px; margin-top:-10px;}
+header.superior.reference{height:85px;}
 header.superior.catalogue{height:150px;}
-header.superior.related{height:180px;}
+header.superior.related{height:115px;}
 .superior h4{font-family: "Open Sans"; padding: 5px 5px 0; margin-bottom: 0; color: #000; font-size: 13.5px; line-height: 140%;}
 .superior p{font-family: "Open Sans"; margin-top:0; margin-bottom:0;color:#666666; font-size: 13px; padding: 0 5px 5px; }
 .character p{margin-bottom:0;}
@@ -3431,12 +3432,12 @@ header.superior.related{height:180px;}
 li.cart{}
 a.cart{background: url("images/cart-icon.png"); background-repeat: no-repeat; background-size: 18px; padding: 0px 5px 5px 25px; margin-left: 5px;}
 .booktype{height:45px;}
-.producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; display: inline-block; clear: both; margin-right:3px;}
+.producto a{color: #313131; text-decoration: none; font-family: "Open Sans"; font-size: 12px; text-align: left; display: inline-block; clear: both; margin-right:3px; margin-bottom: 8px;}
 .producto a:hover{color:#ff8000;}
 .price{font-weight: bold; font-size:16px; color:#ff8000; font-family: "Open Sans"; padding:5px;}
-.oferta{font-family: "Open Sans"; font-size: 13px; color:#313131; float:right; /*padding:10px 5px;*/}
+.oferta{font-family: "Open Sans"; font-size: 20px; padding: 2px; color: #fff; background: #ff8000; margin: 5px; font-weight: bold;} 
 span.ofering{padding-right: 5px; float: right;}
-footer.inferior{clear:both;}
+footer.inferior{clear:both; height: 60px;}
 .tab-pane ul{padding: 0 15px;}
 /* Correspondiente a los iconos de novedad, audio u otros que correspondan */
 .over-oustand{position: absolute; right: -25px; top: 320px;}

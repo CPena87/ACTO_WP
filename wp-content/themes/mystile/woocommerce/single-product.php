@@ -205,7 +205,7 @@ get_header(  ); ?>
                 <div class="minun over-oustand"><img src="<?php bloginfo('template_directory'); ?>/images/new-icon.png" alt=""></div>
                 <figcaption class="white">
                     <header class="superior reference">
-                        <h4><?php echo substr($libro->post_title , 0 , 75 )?></h4>
+                        <h4><?php echo substr($libro->post_title , 0 , 75 )?>...</h4>
                             <?php $autores = get_the_terms( $libro->ID, 'autores' ); ?>
                             <p>
                                 <?php foreach  ($autores as $autor): ?>
@@ -228,48 +228,59 @@ get_header(  ); ?>
 
                     <a class="cart" href="<?php echo get_permalink($libro->ID) ?>" title="Ver producto" rel="help">Ver producto</a>
                     <footer class="inferior">
-                        <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
-                        <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-                                
-                      	<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-                                        
-                                  <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
-                                  <span class="price">$<?php echo $price[0]; ?></span>
-                             <?php }else{ ?>
-                                  <span class="price">$<?php echo $price[0]; ?></span>
-                             <?php } ?>
-                        <?php } ?>
+		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
+		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
+
+		    					<?php if($product->product_type == 'grouped') {?>
+		    						<span class="price">Desde $<?php echo $gprice; ?></span>
+		    					<?php }else{ ?>
+									
+			    					<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    						
+			    						<span class="oferta">Oferta <?php echo $dprice[0]; ?></span>
+			    						<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php }else{ ?>
+										<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php } ?>
+		    					<?php } ?>
 
                     </footer>
                 </figcaption>
             </figure>
             <!-- Fin datos de libro -->
+            <?php } ?>
             <?php endforeach ?>
         </div>
-			
 
-			<div class="col-md-12 sidecontent mtop30 mbottom50">
-				<h3 class="title-sidebar">Novedades</h3>
-
-				<?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
-    		 	<?php $countnovedades = 0 ?>
-    		 	<?php foreach ($novedades as $novedad): ?>
-    		 	<?php $countnovedades++ ?>
-
-    		 	<article class="col-md-6 pd0 wide ">
-
-    				
-    					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-    					<p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
-    				
-	    		</article>
-	    	<?php endforeach ?>
-
-			</div>
 		</div>
 	</div>
 
 </div>
 </div>
+<div class="prefooter-gray mtop30">
+	<div class="container ">
+		<div class="row">
+			<div class="col-md-12 sidecontent mtop30 mbottom50">
+					<h3 class="title-sidebar">Novedades</h3>
+
+					<?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+	    		 	<?php $countnovedades = 0 ?>
+	    		 	<?php foreach ($novedades as $novedad): ?>
+	    		 	<?php $countnovedades++ ?>
+
+	    		 	<article class="col-md-6 pd0 wide ">
+
+	    				
+	    					<h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+	    					<p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
+	    				
+		    		</article>
+		    	<?php endforeach ?>
+
+			</div>	
+		</div>
+	</div>
+</div>
+
 
 <?php get_footer( 'shop' ); ?>

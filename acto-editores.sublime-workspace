@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cart",
+				"cart-parent"
+			],
+			[
 				"hide",
 				"hide-on-mobile"
 			],
@@ -363,7 +367,7 @@
 			"file": "wp-content/themes/mystile/header.php",
 			"settings":
 			{
-				"buffer_size": 7068,
+				"buffer_size": 7206,
 				"line_ending": "Unix"
 			}
 		},
@@ -376,10 +380,34 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/mystile/css/layout.css",
+			"file": "wp-content/themes/mystile/functions.php",
 			"settings":
 			{
-				"buffer_size": 23274,
+				"buffer_size": 6258,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
+			"settings":
+			{
+				"buffer_size": 1587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/checkout/form-shipping.php",
+			"settings":
+			{
+				"buffer_size": 2160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mystile/woocommerce/checkout/review-order.php",
+			"settings":
+			{
+				"buffer_size": 8282,
 				"line_ending": "Unix"
 			}
 		},
@@ -387,15 +415,7 @@
 			"file": "wp-content/themes/mystile/style.css",
 			"settings":
 			{
-				"buffer_size": 113666,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mystile/css/bootstrap.css",
-			"settings":
-			{
-				"buffer_size": 120996,
+				"buffer_size": 115384,
 				"line_ending": "Unix"
 			}
 		}
@@ -428,6 +448,8 @@
 	},
 	"file_history":
 	[
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
+		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/index.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/archive-product.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-sobreacto.php",
@@ -486,7 +508,6 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/rating.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-fullwidth.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/page.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/layout.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/functions/classes/class-wf-screen-admin-base.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/form-pay.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/checkout/review-order.php",
@@ -499,7 +520,6 @@
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/woocommerce/single-product/add-to-cart/external.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/search-form.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/plugins/woocommerce 2/templates/single-product/tabs/tabs.php",
-		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/css/bootstrap.css",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-distribuicion.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/template-contact.php",
 		"/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile/sobre-acto.php",
@@ -563,7 +583,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"<wp-content>,/Users/upmedia/GitHub/ACTO_WP/wp-content/themes/mystile",
@@ -578,6 +598,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=\"col-md-3 col-md-offset-1 sidecontent mbottom50\"",
+			"class=\"mbottom20\"",
 			"social-top",
 			"-bg",
 			"auxiliares",
@@ -703,9 +725,7 @@
 			"Añadir al carro",
 			"class=\"col-md-4 pleft0 pd0mob\"",
 			"$product",
-			"product",
-			"<?php wc_get_template_part( 'content', 'product' ); ?>",
-			"woocommerce_product_loop_start"
+			"product"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -731,15 +751,15 @@
 					"file": "wp-content/themes/mystile/header.php",
 					"settings":
 					{
-						"buffer_size": 7068,
+						"buffer_size": 7206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1493,
-								1493
+								1524,
+								1524
 							]
 						],
 						"settings":
@@ -748,10 +768,11 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 411.0,
+						"translation.y": 297.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -781,7 +802,129 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 2.0,
-						"translation.y": 381.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/mystile/functions.php",
+					"settings":
+					{
+						"buffer_size": 6258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/mystile/woocommerce/checkout/form-checkout.php",
+					"settings":
+					{
+						"buffer_size": 1587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1160,
+								1160
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/mystile/woocommerce/checkout/form-shipping.php",
+					"settings":
+					{
+						"buffer_size": 2160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/mystile/woocommerce/checkout/review-order.php",
+					"settings":
+					{
+						"buffer_size": 8282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1845,
+								471
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 155.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -789,55 +932,22 @@
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "wp-content/themes/mystile/css/layout.css",
-					"settings":
-					{
-						"buffer_size": 23274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3958,
-								3958
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2241.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "wp-content/themes/mystile/style.css",
 					"settings":
 					{
-						"buffer_size": 113666,
+						"buffer_size": 115384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								104452,
-								104452
+								77758,
+								77758
 							]
 						],
 						"settings":
@@ -851,39 +961,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 56660.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/mystile/css/bootstrap.css",
-					"settings":
-					{
-						"buffer_size": 120996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22609,
-								22609
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 27020.0,
+						"translation.y": 48635.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -919,7 +997,7 @@
 		"cols":
 		[
 			0.0,
-			0.48504254147,
+			0.595331861672,
 			1.0
 		],
 		"rows":
@@ -958,6 +1036,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 231.0,
+	"side_bar_width": 149.0,
 	"status_bar_visible": true
 }

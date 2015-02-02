@@ -159,21 +159,25 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		    				<footer class="inferior">
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-		    		
-			    				<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-                                        
-                                    <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
-                                    <span class="price">$<?php echo $price[0]; ?></span>
-                                <?php }else{ ?>
-                                    <span class="price">$<?php echo $price[0]; ?></span>
-                                <?php } ?>
-                            <?php } ?>
+
+		    					<?php if($product->product_type == 'grouped') {?>
+		    						<span class="price">Desde $<?php echo $gprice; ?></span>
+		    					<?php }else{ ?>
+									
+			    					<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+			    						
+			    						<span class="oferta">Oferta <?php echo $dprice[0]; ?></span>
+			    						<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php }else{ ?>
+										<span class="price">$<?php echo $price[0]; ?></span>
+			    					<?php } ?>
+		    					<?php } ?>
 
 		    				</footer>
 		    			</figcaption>
 		    		</figure>
 		    		<!-- Fin datos de libro -->
-
+		    		<?php } ?>
 		    		<?php endforeach ?>
 
 		    		<div class="ctrl-div">

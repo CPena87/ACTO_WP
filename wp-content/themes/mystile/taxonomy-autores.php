@@ -134,22 +134,25 @@ $var = get_queried_object();
                             <footer class="inferior">
                                 <?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
                                 <?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
-                                
 
-                                <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
-                                        
-                                    <span class="oferta">Dcto.<?php echo $dprice[0]; ?></span>
-                                    <span class="price">$<?php echo $price[0]; ?></span>
+                                <?php if($product->product_type == 'grouped') {?>
+                                    <span class="price">Desde $<?php echo $gprice; ?></span>
                                 <?php }else{ ?>
-                                    <span class="price">$<?php echo $price[0]; ?></span>
+                                    
+                                    <?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
+                                        
+                                        <span class="oferta">Oferta <?php echo $dprice[0]; ?></span>
+                                        <span class="price">$<?php echo $price[0]; ?></span>
+                                    <?php }else{ ?>
+                                        <span class="price">$<?php echo $price[0]; ?></span>
+                                    <?php } ?>
                                 <?php } ?>
-                            <?php } ?>
 
                             </footer>
                         </figcaption>
                     </figure>
                     <!-- Fin datos de libro -->
-
+                    <?php } ?>
                     <?php endforeach ?>
                 <!-- Fin de textos relacionados -->
             </aside>
@@ -194,23 +197,27 @@ $var = get_queried_object();
 <!-- Fin Modal -->
 
 
-<div class="container mtop20mob brdtop">
-    <div class="row">
-        <div class="col-md-12 sidecontent mtop30 mbottom50">
+<div class="prefooter-gray">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12 sidecontent mtop30 mbottom50">
+                    <h3 class="title-sidebar">Novedades</h3>
 
-            <h3 class="title-sidebar">Novedades</h3>
+                    <?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
+                    <?php $countnovedades = 0 ?>
+                    <?php foreach ($novedades as $novedad): ?>
+                    <?php $countnovedades++ ?>
 
-                <?php $novedades = get_posts(array('post_type' => 'novedades', 'numberposts' => 2)); ?>
-                <?php $countnovedades = 0 ?>
-                <?php foreach ($novedades as $novedad): ?>
-                <?php $countnovedades++ ?>
+                    <article class="col-md-6 pd0 wide ">
 
-                <article class="col-md-6 pd0 wide ">
-                    <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
-                    <p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
-                </article>
-            <?php endforeach ?>
+                        
+                            <h3><a href="<?php echo get_permalink($novedad->ID) ?>" title="<?php echo $novedad->post_title ?>" rel="blog"><?php echo $novedad->post_title ?></a></h3>
+                            <p><?php echo substr($novedad->post_content , 0 , 200 )?>...</p>
+                        
+                    </article>
+                <?php endforeach ?>
 
+            </div>  
         </div>
     </div>
 </div>

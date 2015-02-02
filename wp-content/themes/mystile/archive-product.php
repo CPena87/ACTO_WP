@@ -86,13 +86,9 @@ get_header(); ?>
 		    					<?php $price = get_post_meta( $libro->ID, '_regular_price'); ?>
 		    					<?php $dprice = get_post_meta( $libro->ID, '_sale_price'); ?>
 
-
 		    					<?php if($product->product_type == 'grouped') {?>
 		    						<span class="price">Desde $<?php echo $gprice; ?></span>
 		    					<?php }else{ ?>
-
-
-
 									
 			    					<?php if(get_post_meta( $libro->ID, '_sale_price')){ ?>
 			    						
@@ -102,9 +98,7 @@ get_header(); ?>
 										<span class="price">$<?php echo $price[0]; ?></span>
 			    					<?php } ?>
 		    					<?php } ?>
-
-			    				
-
+		    					
 		    				</footer>
 		    			</figcaption>
 		    		</figure>

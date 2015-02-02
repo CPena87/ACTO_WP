@@ -49,8 +49,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<footer id="footer" class="container">
 
 		<div class="col-md-4 mbottom20mob">
-
-				<img src="<?php bloginfo('template_directory') ?>/images/logo.png">
+				<a href="<?php echo home_url()?>">
+				<img src="<?php bloginfo('template_directory') ?>/images/logo.png"></a>
 				<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 				    <a id="logo" href="<?php echo esc_url( home_url() ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
 				    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
